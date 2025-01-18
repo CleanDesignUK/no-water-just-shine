@@ -32,11 +32,205 @@
 
     <!-- Additional Styles for Swindon Page -->
     <link rel="stylesheet" href="swindon.css">
+
+    <style>
+        /* Additional Swindon-specific Styles */
+
+        /* Hero Banner */
+        #hero .hero-banner {
+            background: url('images/swindon-hero.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #hero .hero-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        #hero .hero-content .btn-primary {
+            padding: 8px 25px;
+            font-size: 0.9em;
+            border-radius: 20px;
+        }
+
+        /* Service Packages */
+        #packages .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Contact Form */
+        .web3-form {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .web3-form .form-label {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .web3-form .form-control, .web3-form .form-select, .web3-form textarea {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .web3-form .form-control:focus, .web3-form .form-select:focus, .web3-form textarea:focus {
+            border-color: #0066cc;
+            box-shadow: none;
+        }
+
+        .web3-form .btn-primary {
+            background-color: #0066cc;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .web3-form .btn-primary:hover {
+            background-color: #004999;
+        }
+
+        /* Calendly Booking */
+        #calendly-booking .calendly-inline-widget {
+            border-radius: 10px;
+        }
+
+        /* Service Areas */
+        #service-areas {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        #service-areas h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #service-areas ul {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+        }
+
+        #service-areas ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        #testimonials h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0066cc;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial h5 {
+            margin-top: 10px;
+            color: #0066cc;
+        }
+
+        /* FAQs */
+        #faqs {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        #faqs h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .faq-item .faq-answer {
+            display: none;
+            padding-top: 10px;
+            color: #555;
+        }
+
+        /* Gallery */
+        #gallery {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        #gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        #gallery .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        #gallery .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #hero .hero-banner {
+                height: 350px;
+            }
+
+            #service-areas ul {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    
-    <!-- HEADER SECTION -->
-    <header id="header">
+      <!-- HEADER SECTION -->
+      <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
             <div class="container">
                 <!-- Logo -->
@@ -44,41 +238,46 @@
                     <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
                 </a>
                 <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar Links with Dropdowns -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" 
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item active" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <!-- List of Services with Anchors -->
-                                <li><a class="dropdown-item" href="#package1">Premium Wash</a></li>
-                                <li><a class="dropdown-item" href="#package2">Deluxe Detailing</a></li>
-                                <li><a class="dropdown-item" href="#package3">Ultimate Protection</a></li>
+                                <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
+                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" 
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Franchise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
-                                <li><a class="dropdown-item" href="franchise.html#swindon">Swindon</a></li>
-                                <li><a class="dropdown-item" href="franchise.html#oxford">Oxford</a></li>
-                                <li><a class="dropdown-item" href="franchise.html#birmingham">Birmingham</a></li>
+                                <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
+                                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
                             </ul>
@@ -89,15 +288,15 @@
                         </li>
                         <!-- About Us Link -->
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a></li>
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
                         <!-- Contact Link -->
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a></li>
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
                         <!-- Book Now Button -->
                         <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="#book-at-branch">
-                                <i class="fa fa-book me-2"></i>Book Now
-                            </a>
+                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
                         </li>
                     </ul>
                 </div>
@@ -162,23 +361,124 @@
                 </div>
             </section>
             
+            <!-- Service Areas -->
+            <section id="service-areas">
+                <h2>Areas We Serve</h2>
+                <ul>
+                    <li>Swindon Town Centre</li>
+                    <li>Highworth</li>
+                    <li>Cricklade</li>
+                    <li>Wroughton</li>
+                    <li>South Marston</li>
+                    <li>Stratton St Margaret</li>
+                    <li>Bishop Sutton</li>
+                    <li>Lydiard Millicent</li>
+                    <li>Bradford on Avon</li>
+                    <li>Walcot</li>
+                </ul>
+            </section>
+            
+            <!-- Testimonials -->
+            <section id="testimonials">
+                <h2>What Our Customers Say</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Outstanding service! My car looks flawless after the Deluxe Detailing."</p>
+                            <h5>- Mark T.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Eco-friendly and efficient. I love the waterless wash method."</p>
+                            <h5>- Laura P.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Professional team and excellent results. Highly recommended for Ultimate Protection."</p>
+                            <h5>- David S.</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- FAQs -->
+            <section id="faqs">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is included in the Deluxe Detailing package?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Deluxe Detailing package includes comprehensive interior and exterior cleaning, vacuuming, dashboard dusting, tyre treatment, and glass cleaning to ensure your car looks pristine both inside and out.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How do I schedule a mobile detailing service?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can schedule a mobile detailing service by booking an appointment through our online booking system or by contacting us directly via phone or email.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Are your products safe for all vehicle types?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we use specially formulated eco-friendly products that are safe for all types of vehicles, ensuring effective cleaning without damaging any surfaces.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Gallery -->
+            <section id="gallery">
+                <h2>Our Work</h2>
+                <div class="gallery-grid">
+                    <img src="images/gallery/oxford1.jpg" alt="Before and After Wash">
+                    <img src="images/gallery/oxford2.jpg" alt="Deluxe Detailing">
+                    <img src="images/gallery/oxford3.jpg" alt="Ultimate Protection">
+                    <img src="images/gallery/oxford4.jpg" alt="Eco-friendly Solutions">
+                    <img src="images/gallery/oxford5.jpg" alt="Customer Satisfaction">
+                    <img src="images/gallery/oxford6.jpg" alt="Professional Team">
+                </div>
+            </section>
+            
             <!-- Contact Form -->
             <section id="contact-form" class="my-5">
-                <h2 class="text-center mb-4">Get in Touch</h2>
+                <h2 class="text-center mb-4">Contact Us</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form class="web3-form">
+                        <form class="web3-form" action="process_contact.php" method="post">
                             <div class="mb-3">
-                                <label for="name-swindon" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name-swindon" placeholder="Your Name" required>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="email-swindon" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email-swindon" placeholder="name@example.com" required>
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
                             </div>
                             <div class="mb-3">
-                                <label for="service-swindon" class="form-label">Select Service</label>
-                                <select class="form-select" id="service-swindon" required>
+                                <label for="service" class="form-label">Select Service</label>
+                                <select class="form-select" id="service" name="service" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option value="premium-wash">Premium Wash</option>
                                     <option value="deluxe-detailing">Deluxe Detailing</option>
@@ -186,8 +486,8 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="message-swindon" class="form-label">Additional Details</label>
-                                <textarea class="form-control" id="message-swindon" rows="3" placeholder="Any specific requests or comments..."></textarea>
+                                <label for="message" class="form-label">Additional Details</label>
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -203,6 +503,16 @@
                         <!-- Calendly Inline Widget -->
                         <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/swindon-appointment" style="min-width:320px;height:630px;"></div>
                         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Interactive Map -->
+            <section id="map" class="my-5">
+                <h2 class="text-center mb-4">Our Service Area</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243667.891543362!2d-1.7545253999999998!3d51.566667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487619f1c12b8e21%3A0x7a5d8c3a7a1f6e3!2sSwindon%2C%20UK!5e0!3m2!1sen!2s!4v1682620123456!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
@@ -253,7 +563,7 @@
             <!-- Newsletter Signup -->
             <div class="mt-4">
                 <h5>Subscribe to Our Newsletter</h5>
-                <form class="d-flex justify-content-center" action="#" method="post">
+                <form class="d-flex justify-content-center" action="subscribe.php" method="post">
                     <input type="email" name="email" class="form-control w-50 me-2" placeholder="Enter your email" required aria-label="Email Address">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane me-2"></i>Subscribe</button>
                 </form>
@@ -261,7 +571,8 @@
         </div>
     </footer>
     
-    <!-- JavaScript for Smooth Scrolling and Active Link Highlighting -->
+    <!-- JavaScript for Smooth Scrolling, Active Link Highlighting, and FAQs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Smooth Scroll for In-Page Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -294,6 +605,20 @@
                 if (link.getAttribute('href').substring(1) === current) {
                     link.classList.add('active');
                 }
+            });
+        });
+
+        // FAQs Toggle
+        var faqButtons = document.querySelectorAll('.accordion-button');
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                faqButtons.forEach(btn => {
+                    if (btn !== this) {
+                        btn.classList.remove('collapsed');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
             });
         });
     </script>

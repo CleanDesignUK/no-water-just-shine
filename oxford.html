@@ -32,11 +32,208 @@
 
     <!-- Additional Styles for Oxford Page -->
     <link rel="stylesheet" href="oxford.css">
+
+    <style>
+        /* Additional Oxford-specific Styles */
+
+        /* Hero Banner */
+        #hero .hero-banner {
+            background: linear-gradient(rgba(0, 102, 204, 0.6), rgba(0, 102, 204, 0.6)), url('images/oxford-hero.jpg') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #hero .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+        }
+
+        #hero .hero-content p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        #hero .hero-content .btn-primary {
+            padding: 10px 30px;
+            font-size: 1em;
+            border-radius: 25px;
+        }
+
+        /* Service Packages */
+        #packages .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Contact Form */
+        .web3-form {
+            background: linear-gradient(135deg, #0066cc, #004999);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .web3-form .form-label {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .web3-form .form-control, .web3-form .form-select, .web3-form textarea {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: none;
+            border-bottom: 2px solid #fff;
+        }
+
+        .web3-form .form-control:focus, .web3-form .form-select:focus, .web3-form textarea:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: none;
+            border-bottom: 2px solid #fff;
+        }
+
+        .web3-form .btn-primary {
+            background-color: #fff;
+            color: #0066cc;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .web3-form .btn-primary:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Calendly Booking */
+        #calendly-booking .calendly-inline-widget {
+            border-radius: 10px;
+        }
+
+        /* Service Areas */
+        #service-areas {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        #service-areas h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #service-areas ul {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+        }
+
+        #service-areas ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        #testimonials h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .testimonial {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0066cc;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial h5 {
+            margin-top: 10px;
+            color: #0066cc;
+        }
+
+        /* FAQs */
+        #faqs {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        #faqs h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .faq-item .faq-answer {
+            display: none;
+            padding-top: 10px;
+            color: #555;
+        }
+
+        /* Gallery */
+        #gallery {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+
+        #gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        #gallery .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        #gallery .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            #hero .hero-banner {
+                height: 400px;
+            }
+
+            #service-areas ul {
+                columns: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     
-    <!-- HEADER SECTION -->
-    <header id="header">
+       <!-- HEADER SECTION -->
+       <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
             <div class="container">
                 <!-- Logo -->
@@ -44,41 +241,46 @@
                     <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
                 </a>
                 <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Navbar Links with Dropdowns -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" 
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item active" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <!-- List of Services with Anchors -->
-                                <li><a class="dropdown-item" href="#package1">Premium Wash</a></li>
-                                <li><a class="dropdown-item" href="#package2">Deluxe Detailing</a></li>
-                                <li><a class="dropdown-item" href="#package3">Ultimate Protection</a></li>
+                                <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
+                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" 
-                               data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Franchise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
-                                <li><a class="dropdown-item" href="franchise.html#swindon">Swindon</a></li>
-                                <li><a class="dropdown-item" href="franchise.html#oxford">Oxford</a></li>
-                                <li><a class="dropdown-item" href="franchise.html#birmingham">Birmingham</a></li>
+                                <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
+                                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
                             </ul>
@@ -97,9 +299,7 @@
                         </li>
                         <!-- Book Now Button -->
                         <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="#book-at-branch">
-                                <i class="fa fa-book me-2"></i>Book Now
-                            </a>
+                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
                         </li>
                     </ul>
                 </div>
@@ -164,23 +364,124 @@
                 </div>
             </section>
             
+            <!-- Service Areas -->
+            <section id="service-areas">
+                <h2>Areas We Serve</h2>
+                <ul>
+                    <li>Oxford City Centre</li>
+                    <li>Abingdon</li>
+                    <li>Didcot</li>
+                    <li>Witney</li>
+                    <li>Banbury</li>
+                    <li>Highworth</li>
+                    <li>Faringdon</li>
+                    <li>Bicester</li>
+                    <li>Thame</li>
+                    <li>Wallingford</li>
+                </ul>
+            </section>
+            
+            <!-- Testimonials -->
+            <section id="testimonials">
+                <h2>What Our Customers Say</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"No Water Just Shine transformed my car without using a drop of water! The detailing was impeccable."</p>
+                            <h5>- Sarah M.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Professional service and excellent results. Highly recommend their premium wash package."</p>
+                            <h5>- James L.</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="testimonial">
+                            <p>"Eco-friendly and thorough. My car looks brand new after the ultimate protection treatment."</p>
+                            <h5>- Emily R.</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- FAQs -->
+            <section id="faqs">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is a waterless car wash?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                A waterless car wash uses specialized eco-friendly products to clean your vehicle without the need for traditional water-based methods. It's efficient, environmentally friendly, and perfect for areas with water restrictions.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                How long does a detailing service take?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The duration varies based on the package selected. Our Premium Wash takes approximately 1 hour, Deluxe Detailing around 2 hours, and Ultimate Protection about 3 hours for optimal results.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Do you offer mobile services?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer mobile car detailing services within the Oxford area. You can book an appointment at your preferred location using our online booking system.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Gallery -->
+            <section id="gallery">
+                <h2>Our Work</h2>
+                <div class="gallery-grid">
+                    <img src="images/gallery/oxford1.jpg" alt="Before and After Wash">
+                    <img src="images/gallery/oxford2.jpg" alt="Deluxe Detailing">
+                    <img src="images/gallery/oxford3.jpg" alt="Ultimate Protection">
+                    <img src="images/gallery/oxford4.jpg" alt="Eco-friendly Solutions">
+                    <img src="images/gallery/oxford5.jpg" alt="Customer Satisfaction">
+                    <img src="images/gallery/oxford6.jpg" alt="Professional Team">
+                </div>
+            </section>
+            
             <!-- Contact Form -->
             <section id="contact-form" class="my-5">
                 <h2 class="text-center mb-4">Contact Us</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form class="web3-form">
+                        <form class="web3-form" action="process_contact.php" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
                             </div>
                             <div class="mb-3">
                                 <label for="service" class="form-label">Select Service</label>
-                                <select class="form-select" id="service" required>
+                                <select class="form-select" id="service" name="service" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option value="premium-wash">Premium Wash</option>
                                     <option value="deluxe-detailing">Deluxe Detailing</option>
@@ -189,7 +490,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Additional Details</label>
-                                <textarea class="form-control" id="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -205,6 +506,16 @@
                         <!-- Calendly Inline Widget -->
                         <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/oxford-appointment" style="min-width:320px;height:630px;"></div>
                         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Interactive Map -->
+            <section id="map" class="my-5">
+                <h2 class="text-center mb-4">Our Service Area</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.96042535436!2d-1.2597731999999999!3d51.7520132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764b1bdfc10f5b%3A0x8e1a37b1e6b3a8e!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1682619732457!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </section>
@@ -255,7 +566,7 @@
             <!-- Newsletter Signup -->
             <div class="mt-4">
                 <h5>Subscribe to Our Newsletter</h5>
-                <form class="d-flex justify-content-center" action="#" method="post">
+                <form class="d-flex justify-content-center" action="subscribe.php" method="post">
                     <input type="email" name="email" class="form-control w-50 me-2" placeholder="Enter your email" required aria-label="Email Address">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane me-2"></i>Subscribe</button>
                 </form>
@@ -263,7 +574,8 @@
         </div>
     </footer>
     
-    <!-- JavaScript for Smooth Scrolling and Active Link Highlighting -->
+    <!-- JavaScript for Smooth Scrolling, Active Link Highlighting, and FAQs -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Smooth Scroll for In-Page Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -296,6 +608,20 @@
                 if (link.getAttribute('href').substring(1) === current) {
                     link.classList.add('active');
                 }
+            });
+        });
+
+        // FAQs Toggle
+        var faqButtons = document.querySelectorAll('.accordion-button');
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                faqButtons.forEach(btn => {
+                    if (btn !== this) {
+                        btn.classList.remove('collapsed');
+                        btn.setAttribute('aria-expanded', 'false');
+                    }
+                });
             });
         });
     </script>
