@@ -1,0 +1,171 @@
+/* Birmingham Branch Specific Styles */
+
+/* Parallax Hero Banner */
+#hero .parallax-banner {
+    background: url('images/birmingham-hero.jpg') no-repeat center center/cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+#hero .hero-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+}
+
+#hero .hero-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+#hero .hero-content .btn-primary {
+    padding: 12px 35px;
+    font-size: 1.1em;
+    border-radius: 30px;
+}
+
+/* Service Packages - Flip Cards */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front img {
+    width: 80%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.flip-card-back {
+    background-color: #0066cc;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.flip-card-back h5 {
+    margin-bottom: 15px;
+}
+
+.flip-card-back p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.flip-card-back .btn-primary {
+    background-color: #fff;
+    color: #0066cc;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.flip-card-back .btn-primary:hover {
+    background-color: #f0f0f0;
+}
+
+/* Contact Form */
+.web3-form {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.web3-form .form-label {
+    color: #fff;
+    font-weight: 600;
+}
+
+.web3-form .form-control, .web3-form .form-select, .web3-form textarea {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+.web3-form .form-control:focus, .web3-form .form-select:focus, .web3-form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: none;
+    border-bottom: 2px solid #fff;
+}
+
+.web3-form .btn-primary {
+    background-color: #fff;
+    color: #ff7e5f;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.web3-form .btn-primary:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+/* Calendly Booking */
+#calendly-booking .calendly-inline-widget {
+    border-radius: 15px;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero .parallax-banner {
+        height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .flip-card {
+        height: 250px;
+    }
+}
