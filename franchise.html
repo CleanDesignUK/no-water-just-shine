@@ -1,368 +1,535 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <!-- Essential Meta Tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>No Water Just Shine – Franchise</title>
-  <meta name="description" content="Join No Water Just Shine: the premium waterless car valeting franchise with unstoppable growth potential.">
-  <meta name="keywords" content="franchise, waterless car washing, eco-friendly, premium car care, no water, business opportunities">
+    <!-- Meta Tags for SEO and Responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="description" content="Join the No Water Just Shine franchise – a revolutionary, eco-friendly car valeting and detailing business opportunity.">
+    <meta name="keywords" content="waterless car wash franchise, eco-friendly business, car valeting franchise, car wash franchise, No Water Just Shine">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Water Just Shine | Franchise</title>
 
-  <!-- Open Graph (for social media) -->
-  <meta property="og:title" content="No Water Just Shine – Franchise">
-  <meta property="og:description" content="Experience a next-level franchise that merges eco-friendly innovation with premium car care. Get started today.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="#">
-  <meta property="og:image" content="images/og-image.jpg">
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="No Water Just Shine | Franchise">
+    <meta property="og:description" content="Revolutionize the car wash industry with our innovative, waterless car valeting franchise.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://www.nowaterjustshine.co.uk/franchise.html">
+    <meta property="og:type" content="website">
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- FontAwesome (icons) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="franchise.css">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Main Styles (Same as on Home Page) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Optional: Additional Franchise-Specific Styling -->
+    <style>
+      /* ------------------------------------------
+         Franchise-Specific CSS Enhancements
+      ------------------------------------------ */
+
+      /* HERO SECTION OVERRIDES */
+      #franchise-hero {
+        background: url('images/franchise-hero.jpg') no-repeat center center / cover;
+        min-height: 70vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #franchise-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      #franchise-hero .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: var(--white);
+        max-width: 800px;
+      }
+      #franchise-hero .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      }
+      #franchise-hero .hero-content p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+      #franchise-hero .hero-content .btn {
+        font-weight: 600;
+        border-radius: 50px;
+        padding: 0.75rem 2rem;
+      }
+
+      /* WHY FRANCHISE SECTION */
+      .why-franchise {
+        padding: 60px 0;
+        background-color: var(--light-gray);
+      }
+      .why-franchise h2 {
+        font-size: 2.5rem;
+        color: var(--dark-royal-blue);
+        margin-bottom: 2rem;
+      }
+      .why-franchise .card {
+        background-color: var(--white);
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+      }
+      .why-franchise .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      }
+      .why-franchise .card h5 {
+        font-weight: 600;
+        color: var(--dark-royal-blue);
+      }
+      .why-franchise .card p {
+        color: #555;
+      }
+      .why-franchise .card i {
+        font-size: 2.5rem;
+        color: var(--dark-royal-blue);
+        margin-bottom: 1rem;
+      }
+
+      /* FRANCHISE DETAILS SECTION */
+      .franchise-details {
+        padding: 60px 0;
+      }
+      .franchise-details h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--dark-royal-blue);
+      }
+      .franchise-details p {
+        color: var(--dark-royal-blue);
+      }
+      .franchise-details ul {
+        list-style: none;
+        padding: 0;
+      }
+      .franchise-details ul li {
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: 0.75rem;
+        color: var(--dark-royal-blue);
+      }
+      .franchise-details ul li::before {
+        content: "\f058"; /* Font Awesome check-circle icon */
+        font-family: "Bootstrap Icons" !important; /* using Bootstrap Icons? Replace if needed */
+        position: absolute;
+        left: 0;
+        color: var(--dark-royal-blue);
+      }
+
+      /* TESTIMONIALS */
+      .franchise-testimonials {
+        background-color: var(--dark-royal-blue);
+        color: var(--white);
+        padding: 60px 0;
+      }
+      .franchise-testimonials h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+      .testimonial-quote {
+        background: var(--white);
+        color: var(--dark-royal-blue);
+        border-radius: 0.5rem;
+        padding: 2rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      .testimonial-quote i {
+        font-size: 2rem;
+        color: var(--dark-royal-blue);
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        background: var(--white);
+        border-radius: 50%;
+        padding: 8px;
+      }
+      .testimonial-quote p {
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+      .testimonial-quote .author {
+        font-weight: 600;
+      }
+
+      /* FAQ SECTION */
+      #faq-franchise {
+        background-color: var(--light-gray);
+        padding: 60px 0;
+      }
+      #faq-franchise h2 {
+        text-align: center;
+      
+        font-size: 2.5rem;
+        color: var(--dark-royal-blue);
+      }
+
+      /* CTA SECTION */
+      .cta-franchise {
+        background: var(--shiny-metallic-silver);
+        color: var(--dark-royal-blue);
+        padding: 80px 0;
+        text-align: center;
+      }
+      .cta-franchise h2 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+      .cta-franchise p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .cta-franchise .btn {
+        border-radius: 50px;
+        padding: 0.75rem 2rem;
+      }
+    </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header>
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand text-gold fw-bold" href="index.html">
-        <img src="images/logo.png" alt="No Water Just Shine" class="me-2" style="width:140px;">
-      </a>
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon custom-toggler-icon"></span>
-      </button>
+    <!-- ====================================
+         HEADER & NAVBAR (Same as Home)
+    ===================================== -->
+    <header class="navbar-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Brand / Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/no-water-just-shine-logo.webp" alt="No Water Just Shine Limited Logo" width="150">
+                    No Water Just Shine
+                </a>
 
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="services.html">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase active" href="franchise.html">Franchise</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-uppercase" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-3">
-            <a href="#contact-section" class="btn btn-gold py-2 px-4 text-uppercase">
-              <i class="fas fa-rocket me-2"></i>Get Started
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+                <!-- Hamburger menu button (mobile) -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
+                </button>
 
-<!-- HERO SECTION -->
-<section class="hero-banner">
-  <div class="hero-overlay"></div>
-  <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white position-relative hero-content">
-    <div>
-      <h1 class="display-3 fw-bold">FRANCHISE WITH US</h1>
-      <p class="lead mb-4">Elevate Car Care. Elevate Your Life.</p>
-      <a href="#contact-section" class="btn btn-gold btn-lg px-4 py-3 text-uppercase fw-bold">
-        Join The Revolution
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT SECTION -->
-<section class="py-5 about-franchise">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-md-6">
-        <div class="p-3 text-white rounded-3 tinted-bg shadow-sm">
-          <h2 class="mb-3 fw-bold">No Water, Just Pure Brilliance</h2>
-          <p class="mb-4">
-            Imagine a cutting-edge car valeting system that saves tens of thousands of litres of water every month—without sacrificing a single ounce of shine. That's exactly what we deliver at <strong>No Water Just Shine</strong>. Our proprietary products and eco-savvy approach redefine “premium car care.” 
-          </p>
-          <p class="mb-0">
-            As a franchise partner, you'll harness a proven method that wows customers, protects the environment, and sets you apart from every competitor. Ride the wave of sustainability and style to your own financial success.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <img src="https://via.placeholder.com/700x450/000000/ffffff?text=Eco+Car+Valeting+Success" alt="Eco Car Valeting" class="img-fluid rounded shadow-lg">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY INVEST SECTION -->
-<section class="py-5 why-invest">
-  <div class="container">
-    <h2 class="fw-bold text-center text-white mb-4">Why Invest In Our Franchise?</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="feature-card p-4 text-center shadow-sm">
-          <i class="fas fa-leaf fa-2x mb-3 text-green"></i>
-          <h5 class="fw-bold">Eco-Smart Solution</h5>
-          <p class="mb-0">
-            Waterless cleaning is the future—win loyal fans who love both quality and green innovation.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card p-4 text-center shadow-sm">
-          <i class="fas fa-chart-line fa-2x mb-3 text-green"></i>
-          <h5 class="fw-bold">High Profit Potential</h5>
-          <p class="mb-0">
-            Low overheads, booming demand, and premium pricing let you scale quickly.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card p-4 text-center shadow-sm">
-          <i class="fas fa-hand-holding-heart fa-2x mb-3 text-green"></i>
-          <h5 class="fw-bold">Full Support &amp; Training</h5>
-          <p class="mb-0">
-            We walk you through every step, from branding to bookings, ensuring you’re never alone.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INVESTMENT DETAILS SECTION -->
-<section class="investment-details py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">Your Investment, Your Future</h2>
-    <div class="row align-items-center g-5">
-      <div class="col-md-6">
-        <img src="https://via.placeholder.com/700x450/222222/ffffff?text=Premium+Franchise+Opportunity" alt="Franchise Investment" class="img-fluid rounded shadow-lg">
-      </div>
-      <div class="col-md-6">
-        <h3 class="fw-bold text-gold">What You Get:</h3>
-        <ul class="custom-list mt-3">
-          <li><i class="fas fa-check-circle me-2 text-green"></i>Proven waterless car care system</li>
-          <li><i class="fas fa-check-circle me-2 text-green"></i>Exclusive product supply deals</li>
-          <li><i class="fas fa-check-circle me-2 text-green"></i>Comprehensive, in-depth training</li>
-          <li><i class="fas fa-check-circle me-2 text-green"></i>On-demand business coaching</li>
-          <li><i class="fas fa-check-circle me-2 text-green"></i>All marketing &amp; branding assets</li>
-          <li><i class="fas fa-check-circle me-2 text-green"></i>Protected territory for your services</li>
-        </ul>
-        <p class="mt-4">
-          We’re currently offering a reduced franchise fee of <strong class="text-gold">£4,999</strong> (down from £14,999!) plus a small monthly support fee of <strong class="text-gold">£350</strong>. Many partners report earning up to <strong class="text-gold">£1,000+ per week</strong> after establishing their local client base. 
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials py-5 bg-dark">
-  <div class="container">
-    <h2 class="text-center fw-bold text-white mb-5">They’re Loving The Shine</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="testimonial-box p-4 bg-custom shadow-sm">
-          <i class="fas fa-quote-left fa-2x text-green"></i>
-          <p class="mt-3 mb-4">
-            “Unbelievable feedback from my customers—everyone’s amazed we don’t use water. Profits soared within my first month!”
-          </p>
-          <h6 class="fw-bold text-gold">— Lucy K.</h6>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial-box p-4 bg-custom shadow-sm">
-          <i class="fas fa-quote-left fa-2x text-green"></i>
-          <p class="mt-3 mb-4">
-            “Eco-friendly, quick, and truly premium results. I’ve never been prouder to run my own business—this brand is the real deal.”
-          </p>
-          <h6 class="fw-bold text-gold">— Darius W.</h6>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="testimonial-box p-4 bg-custom shadow-sm">
-          <i class="fas fa-quote-left fa-2x text-green"></i>
-          <p class="mt-3 mb-4">
-            “From day one, I had total support. They helped me with marketing, pricing, everything. My bookings are nonstop!”
-          </p>
-          <h6 class="fw-bold text-gold">— Rachel P.</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="faq-section py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
-    <div class="accordion" id="faqAccordion">
-      <!-- FAQ 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            How do I get started?
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Simply submit your details below, and our team will send you a comprehensive info pack. We’ll guide you step-by-step to help you launch quickly and confidently.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Is prior experience required?
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Not at all. Our immersive training programme covers everything from techniques to business operations. You'll gain the skills and confidence to succeed.
-          </div>
-        </div>
-      </div>
-      <!-- FAQ 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            What’s my earning potential?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Depending on your drive and local demand, you could see up to £1,000+ weekly revenue once you’re fully up to speed. Some go even higher with clever marketing.
-          </div>
-        </div>
-      </div>
-      <!-- Add more FAQ items as needed -->
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT / APPLICATION SECTION -->
-<section id="contact-section" class="contact-section py-5">
-  <div class="container">
-    <h2 class="fw-bold text-center mb-4">Ready to Make Your Mark?</h2>
-    <p class="text-center mb-5 lead">
-      Fill out our short form below, and we'll rush you all the information you need to start this exciting journey.
-    </p>
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <form class="web3-form" action="#" method="POST" novalidate>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="firstName" class="form-label">First Name *</label>
-              <input type="text" name="first_name" class="form-control" id="firstName" placeholder="John" required>
-              <div class="invalid-feedback">
-                Please enter your first name.
-              </div>
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a 
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="servicesDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning &amp; Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts &amp; Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax &amp; Ceramic Sealant</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="services.html">View All Services</a></li>
+                            </ul>
+                        </li>
+                        <!-- Franchise Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a 
+                                class="nav-link dropdown-toggle active"
+                                href="#"
+                                id="franchiseDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Franchise
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
+                                <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
+                                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
+                            </ul>
+                        </li>
+                        <!-- Gallery Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <!-- About Us Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <!-- FAQ Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <!-- Contact Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <!-- Book Now Button -->
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-6">
-              <label for="lastName" class="form-label">Last Name *</label>
-              <input type="text" name="last_name" class="form-control" id="lastName" placeholder="Doe" required>
-              <div class="invalid-feedback">
-                Please enter your last name.
+        </nav>
+    </header>
+
+    <!-- ====================================
+         HERO SECTION
+    ===================================== -->
+    <section id="franchise-hero">
+      <div class="hero-content container">
+        <h1>Franchise Opportunities</h1>
+        <p>Join the revolution in eco-friendly, waterless car valeting—drive your success and ours.</p>
+        <a href="#franchise-details" class="btn btn-primary">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ====================================
+         WHY FRANCHISE SECTION
+    ===================================== -->
+    <section class="why-franchise">
+      <div class="container">
+        <h2 class="text-center">Why Choose Our Franchise?</h2>
+        <p class="text-center mb-5">No Water Just Shine combines a proven business model, unrivaled eco-friendly expertise, and premium results that customers rave about. Here’s why joining us is your gateway to success:</p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <i class="bi bi-droplet-half"></i>
+              <h5 class="mt-3">Eco-Friendly Innovation</h5>
+              <p>Save hundreds of gallons of water per wash. Show your community you care about sustainability while giving cars a showroom finish.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <i class="bi bi-cash-stack"></i>
+              <h5 class="mt-3">High Profit Potential</h5>
+              <p>With low overhead and premium service packages, you can accelerate profits rapidly. Our brand recognition amplifies your local success.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-4 h-100">
+              <i class="bi bi-people-fill"></i>
+              <h5 class="mt-3">Comprehensive Support</h5>
+              <p>Receive full training, marketing assets, and ongoing mentorship. You’ll never feel alone on your journey to building a thriving business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================
+         FRANCHISE DETAILS
+    ===================================== -->
+    <section id="franchise-details" class="franchise-details">
+      <div class="container">
+        <h2>What You’ll Get as a Franchise Partner</h2>
+        <div class="row align-items-center mt-5">
+          <div class="col-md-6">
+            <img src="images/franchise-details.jpg" alt="Franchise Details" class="img-fluid rounded shadow-sm">
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <p class="mb-4">By partnering with No Water Just Shine, you gain immediate access to:</p>
+            <ul class="mb-4">
+              <li>Exclusive use of our waterless car valeting systems and top-tier products</li>
+              <li>Step-by-step training (hands-on techniques + business operations)</li>
+              <li>Branded marketing materials and local promotion support</li>
+              <li>Ongoing mentorship and advanced skill development</li>
+              <li>Territory protection to help you grow your own loyal clientele</li>
+            </ul>
+            <p class="fw-bold">Initial Franchise Fee: <span style="color: var(--dark-royal-blue);">£4,999</span> <br>
+            Monthly Support Fee: <span style="color: var(--dark-royal-blue);">£350</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================
+         TESTIMONIALS
+    ===================================== -->
+    <section class="franchise-testimonials">
+      <div class="container">
+        <h2>Real Stories, Real Success</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="testimonial-quote">
+              <i class="bi bi-quote"></i>
+              <p>“Within just a few months, I was seeing incredible returns. The eco-friendly angle really sets us apart—customers can’t believe we don’t use water!”</p>
+              <span class="author">- Jessica, Oxford Franchisee</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="testimonial-quote">
+              <i class="bi bi-quote"></i>
+              <p>“The support from No Water Just Shine was top-notch. From marketing materials to training, they made sure I hit the ground running.”</p>
+              <span class="author">- Michael, Swindon Franchisee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================
+         FAQ SECTION
+    ===================================== -->
+    <section id="faq-franchise">
+      <div class="container">
+        <h2>Franchise FAQ</h2>
+        <div class="accordion" id="franchiseFaqAccordion">
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Is previous car valeting experience needed?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#franchiseFaqAccordion">
+              <div class="accordion-body">
+                Not at all. Our in-depth training ensures you gain the skills and knowledge to deliver our premium waterless services effectively.
               </div>
             </div>
           </div>
-          <div class="mt-3">
-            <label for="emailAddress" class="form-label">Email *</label>
-            <input type="email" name="email" class="form-control" id="emailAddress" placeholder="yourname@example.com" required>
-            <div class="invalid-feedback">
-              Please provide a valid email address.
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How do I market my new franchise?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#franchiseFaqAccordion">
+              <div class="accordion-body">
+                We provide all the marketing materials you need, plus ongoing advice on local promotions, social media campaigns, and networking to boost your customer base.
+              </div>
             </div>
           </div>
-          <div class="mt-3">
-            <label for="phoneNumber" class="form-label">Phone Number</label>
-            <input type="tel" name="phone" class="form-control" id="phoneNumber" placeholder="+44 7123 456789">
-          </div>
-          <div class="mt-3">
-            <label for="experience" class="form-label">Relevant Experience (optional)</label>
-            <textarea name="experience" id="experience" class="form-control" rows="4" placeholder="Tell us about your background..."></textarea>
-          </div>
-          <div class="form-check mt-4 mb-3">
-            <input class="form-check-input" type="checkbox" value="agree" id="consentCheck" required>
-            <label class="form-check-label" for="consentCheck">
-              I consent to being contacted about No Water Just Shine franchise opportunities. I’ve read the <a href="privacy.html" class="text-decoration-none">Privacy Policy</a> &amp; <a href="terms.html" class="text-decoration-none">Terms of Service</a>.
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                When can I expect to start earning?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#franchiseFaqAccordion">
+              <div class="accordion-body">
+                Many of our franchise partners book their first paying customers within weeks of training. Earnings ramp up quickly with consistent service quality and marketing.
+              </div>
             </div>
           </div>
-          <button class="btn btn-gold w-100 py-3 fw-bold text-uppercase" type="submit">
-            Get Info Pack
-          </button>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer class="custom-footer py-4">
-  <div class="container">
-    <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
-      <p class="mb-2 mb-md-0 text-white">
-        &copy; 2025 No Water Just Shine. All Rights Reserved.
-      </p>
-      <ul class="list-unstyled d-flex mb-0">
-        <li class="me-3"><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-        <li><a href="terms.html" class="text-white text-decoration-none">Terms of Service</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+    <!-- ====================================
+         CTA SECTION
+    ===================================== -->
+    <section class="cta-franchise">
+      <div class="container">
+        <h2>Take the First Step to Ownership</h2>
+        <p>Ready to transform the way your community cares for their cars—while building an exciting, profitable future for yourself?</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Contact Us Today</a>
+      </div>
+    </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ====================================
+         FOOTER (Same as Home)
+    ===================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Column 1 -->
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#branches">Branches</a></li>
+                        <li><a href="franchise.html">Franchise</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Column 2 -->
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Info</h5>
+                    <p>Phone: <a href="tel:07703783253">07703 783253</a></p>
+                    <p>Email: <a href="mailto:info@nowaterjustshine.co.uk">info@nowaterjustshine.co.uk</a></p>
+                    <p>Address: 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
+                </div>
+                <!-- Footer Column 3 (Social) -->
+                <div class="col-md-4 mb-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/NoWaterJustShine" target="_blank" aria-label="Facebook">
+                            <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://instagram.com/NoWaterJustShine" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://twitter.com/NoWaterJustShine" target="_blank" aria-label="Twitter">
+                            <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/NoWaterJustShine" target="_blank" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2025 No Water Just Shine Limited. All rights reserved.
+                </div>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- Custom JS (Validation & Smooth Scroll) -->
-<script>
-  // Smooth Scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      // If the link is purely a hash or references an ID
-      const targetID = this.getAttribute('href');
-      if (targetID.length > 1) {
-        e.preventDefault();
-        const targetEl = document.querySelector(targetID);
-        if (targetEl) {
-          window.scrollTo({
-            top: targetEl.offsetTop - 70,
-            behavior: 'smooth'
-          });
-        }
-      }
-    });
-  });
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
-  // Form validation
-  (function () {
-    'use strict';
-    const forms = document.querySelectorAll('.web3-form');
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  })();
-</script>
 </body>
 </html>
