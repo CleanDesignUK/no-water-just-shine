@@ -3,7 +3,7 @@
 <head>
     <!-- Meta Tags for SEO and Responsiveness -->
     <meta charset="UTF-8">
-    <meta name="description" content="No Water Just Shine Limited offers premier waterless car valeting and car detailing services in Swindon, Oxford, and Birmingham. Experience eco-friendly car washing with a showroom finish at your preferred branch.">
+    <meta name="description" content="No Water Just Shine - Premier Waterless Car Valeting and Detailing Services in Swindon, Oxford, and Birmingham. Experience eco-friendly car washing with a showroom finish at your preferred branch.">
     <meta name="keywords" content="waterless car wash, car valeting, car detailing, mobile car wash, car cleaning near me, car detailing near me, waterless vehicle wash, ceramic sealant, car wash Swindon, car wash Oxford, car wash Birmingham, professional car detailing, eco-friendly car wash, premium car valeting, best car detailing services, mobile car detailing, waterless car detailing">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Water Just Shine | Premier Waterless Car Valeting Services</title>
@@ -24,70 +24,527 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- FontAwesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Swiper.js CSS for Testimonials Slider -->
-    <link href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 
+          COLOR PALETTE:
+          Dark Royal Blue: #002147
+          Shiny Metallic Silver: #C0C0C0
+          White: #FFFFFF
+          Light Gray: #F5F5F5
+        */
 
-    <!-- JavaScript Libraries -->
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+        :root {
+            --dark-royal-blue: #002147;
+            --shiny-metallic-silver: #C0C0C0;
+            --white: #FFFFFF;
+            --light-gray: #F5F5F5;
+        }
 
-    <!-- Swiper.js JS for Testimonials Slider -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+        body {
+            font-family: "Roboto", sans-serif;
+            color: var(--dark-royal-blue);
+            background-color: var(--light-gray);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
 
-    <!-- Custom JavaScript -->
-    <script src="scripts.js" defer></script>
+        /* ===========================
+           HEADER / NAV STYLES
+        ============================ */
+        header.navbar-header {
+            background-color: var(--dark-royal-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            margin-right: 10px;
+        }
+        .navbar-brand:hover {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--white) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: var(--shiny-metallic-silver) !important;
+            text-decoration: underline;
+        }
+
+        .btn-primary, .btn-outline-primary {
+            background: linear-gradient(145deg, #b0b0b0, #e0e0e0);
+            border: 1px solid #b0b0b0;
+            color: var(--dark-royal-blue);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-primary:hover, .btn-outline-primary:hover {
+            background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
+            color: var(--white);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .btn-secondary {
+            background-color: var(--shiny-metallic-silver);
+            border-color: var(--shiny-metallic-silver);
+            color: var(--dark-royal-blue);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: var(--dark-royal-blue);
+            border-color: var(--dark-royal-blue);
+            color: var(--white);
+        }
+
+        /* ===========================
+           HERO SECTION
+        ============================ */
+        #hero {
+            background-color: var(--dark-royal-blue);
+            padding: 100px 0;
+            color: var(--white);
+        }
+        #hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        #hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        #hero img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        /* ===========================
+           BRANCHES SECTION
+        ============================ */
+        #branches {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+        #branches h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--dark-royal-blue);
+        }
+        #branches p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+            color: var(--dark-royal-blue);
+        }
+        .branch-card {
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+            border: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .branch-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .branch-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .branch-card .card-body {
+            flex: 1;
+        }
+        .branch-card .card-body h5 {
+            color: var(--white);
+        }
+        .branch-card .card-body p {
+            color: var(--white);
+        }
+
+        /* ===========================
+           SERVICES OVERVIEW
+        ============================ */
+        #services-overview {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+        }
+        #services-overview h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--dark-royal-blue);
+        }
+        #services-overview p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+            color: var(--dark-royal-blue);
+        }
+        .service-card {
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+            border: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .service-card .card-body {
+            flex: 1;
+        }
+        .service-card .card-body h5 {
+            color: var(--white);
+        }
+        .service-card .card-body p {
+            color: var(--white);
+        }
+
+        /* ===========================
+           BENEFITS SECTION
+        ============================ */
+        #benefits {
+            padding: 60px 0;
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+        }
+        #benefits h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .benefit-item {
+            text-align: center;
+        }
+        .benefit-item i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--shiny-metallic-silver);
+        }
+        .benefit-item h5 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===========================
+           TESTIMONIALS SECTION
+        ============================ */
+        #testimonials {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+            color: var(--dark-royal-blue);
+        }
+        #testimonials h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .testimonial {
+            background-color: var(--white);
+            border: none;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .testimonial blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        .testimonial p {
+            font-weight: bold;
+        }
+
+        /* ===========================
+           GALLERY SECTION
+        ============================ */
+        #gallery {
+            padding: 60px 0;
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+        }
+        #gallery h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        #gallery p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+            text-align: center;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            height: 200px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: var(--white);
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /* ===========================
+           FAQ PREVIEW SECTION
+        ============================ */
+        #faq-preview {
+            padding: 60px 0;
+            background-color: var(--light-gray);
+            color: var(--dark-royal-blue);
+        }
+        #faq-preview h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            
+        }
+        .accordion-button {
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: var(--shiny-metallic-silver);
+            color: var(--dark-royal-blue);
+        }
+        .accordion-body {
+            background-color: var(--shiny-metallic-silver);
+            color: var(--dark-royal-blue);
+        }
+        .accordion-item {
+            margin-bottom: 1rem;
+        }
+
+        
+
+        /* ===========================
+           CALL TO ACTION
+        ============================ */
+        .cta-section {
+            padding: 60px 0;
+            background-color: var(--shiny-metallic-silver);
+            text-align: center;
+            color: var(--dark-royal-blue);
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .cta-section .btn {
+            background: linear-gradient(145deg, #b0b0b0, #e0e0e0);
+            border: 1px solid #b0b0b0;
+            color: var(--dark-royal-blue);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-section .btn:hover {
+            background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
+            color: var(--white);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+
+        /* ===========================
+           FOOTER
+        ============================ */
+        footer.site-footer {
+            background-color: var(--dark-royal-blue);
+            color: var(--white);
+            padding: 40px 0;
+        }
+        footer.site-footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        footer.site-footer a:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+        footer .social-icons a {
+            display: inline-block;
+            margin-right: 15px;
+            color: var(--white);
+            transition: color 0.3s ease;
+        }
+        footer .social-icons a:hover {
+            color: var(--shiny-metallic-silver);
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--shiny-metallic-silver);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 576px) {
+            .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+             .navbar-brand {font-size: 0.8rem;}
+        }
+
+        /* ===========================
+           CAROUSEL CUSTOM STYLES
+        ============================ */
+        #testimonialCarousel .carousel-item {
+            padding: 0 15px;
+        }
+
+        #testimonialCarousel .testimonial {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .card-text {color:white !important;}
+    </style>
 </head>
+
 <body>
-    
-    <!-- HEADER SECTION -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+
+    <!-- ====================================
+         HEADER & NAVBAR
+    ===================================== -->
+    <header class="navbar-header">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <!-- Logo -->
+                <!-- Brand / Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
+                    <img src="https://via.placeholder.com/150x50?text=LOGO" alt="No Water Just Shine Limited Logo" width="150">
+                    No Water Just Shine
                 </a>
-                <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+
+                <!-- Hamburger menu button (mobile) -->
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
                 </button>
-                <!-- Navbar Links with Dropdowns -->
+
+                <!-- Nav Links -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#hero">Home</a>
                         </li>
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="servicesDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning &amp; Treatment</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts &amp; Sills Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax &amp; Ceramic Sealant</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
-                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                id="franchiseDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
                                 Franchise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
@@ -106,311 +563,362 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About Us</a>
                         </li>
+                        <!-- FAQ Link -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
                         <!-- Contact Link -->
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <!-- Book Now Button -->
-                        <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
-                        </li>
+                    
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
-    <!-- HERO SECTION -->
+
+    <!-- ====================================
+         HERO SECTION
+    ===================================== -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Hero Content -->
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-4 fw-bold">Experience the Ultimate in Waterless Car Valeting</h1>
-                    <p class="lead">Premium Mobile Car Wash Services in Swindon, Oxford, and Birmingham – Convenient, Efficient, and Eco-Friendly</p>
-                    <div class="mt-4">
-                        <a href="services.html" class="btn btn-primary me-3"><i class="fa fa-concierge-bell me-2"></i>Explore Our Services</a>
-                        <a href="services.html#book-at-branch" class="btn btn-outline-light"><i class="fa fa-calendar-check me-2"></i>Book at a Branch</a>
+                <div class="col-lg-6">
+                    <h1 class="text-center text-lg-start">Experience the Ultimate in Waterless Car Valeting</h1>
+                    <p class="my-3 text-center text-lg-start">
+                        Premium Mobile Car Wash Services in Swindon, Oxford, and Birmingham – Convenient, Efficient, and Eco-Friendly
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a href="services.html" class="btn btn-primary me-3">Explore Our Services</a>
+                        <a href="booking.html" class="btn btn-outline-primary">Book Now</a>
                     </div>
                 </div>
                 <!-- Hero Image -->
-                <div class="col-lg-6 mt-4 mt-lg-0 text-center">
-                    <img src="images/hero-car.png" alt="Waterless Car Valeting Service" class="img-fluid rounded shadow">
+                <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                    <img src="https://via.placeholder.com/600x400?text=Hero+Image" alt="Waterless Car Valeting Service" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- INTRODUCTION SECTION -->
-    <section id="introduction" class="py-5">
+
+    <!-- ====================================
+         BRANCHES SECTION
+    ===================================== -->
+    <section id="branches">
         <div class="container">
-            <h2 class="text-center mb-4">Welcome to No Water Just Shine Limited</h2>
-            <p class="text-center mb-4">At <strong>No Water Just Shine Limited</strong>, we revolutionize the <strong>car wash</strong> experience by offering state-of-the-art <strong>waterless car valeting</strong> and <strong>car detailing</strong> services. Serving the vibrant communities of <strong>Swindon</strong>, <strong>Oxford</strong>, and <strong>Birmingham</strong>, our <strong>mobile car wash</strong> units deliver unparalleled convenience and top-tier quality directly to your doorstep. Whether you're at home, work, or any other convenient location, our professional valeters ensure your vehicle looks immaculate without the use of water.</p>
-            <p class="text-center">Our commitment to innovation and sustainability means you can enjoy a spotless car while contributing to significant water conservation efforts. Discover the future of car care with <strong>No Water Just Shine Limited</strong> – where excellence meets eco-responsibility.</p>
+            <h2 class="text-center mb-4">Our Branches</h2>
+            <p class="text-center mb-5">
+                Serving Swindon, Oxford, and Birmingham with top-notch car valeting and detailing services. Choose your nearest branch and experience excellence.
+            </p>
+            <div class="row g-4">
+                <!-- Swindon Branch -->
+                <div class="col-md-4">
+                    <div class="card branch-card">
+                        <img src="https://via.placeholder.com/400x200?text=Swindon+Branch" alt="Swindon Branch">
+                        <div class="card-body">
+                            <h5 class="card-title">Swindon</h5>
+                            <p class="card-text">
+                                Located in the heart of Swindon, our Swindon branch offers comprehensive car valeting services with a focus on quality and customer satisfaction.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="swindon.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oxford Branch -->
+                <div class="col-md-4">
+                    <div class="card branch-card">
+                        <img src="https://via.placeholder.com/400x200?text=Oxford+Branch" alt="Oxford Branch">
+                        <div class="card-body">
+                            <h5 class="card-title">Oxford</h5>
+                            <p class="card-text">
+                                Our Oxford branch brings expert car detailing to the bustling city, ensuring your vehicle looks its best no matter where you are.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="oxford.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Birmingham Branch -->
+                <div class="col-md-4">
+                    <div class="card branch-card">
+                        <img src="https://via.placeholder.com/400x200?text=Birmingham+Branch" alt="Birmingham Branch">
+                        <div class="card-body">
+                            <h5 class="card-title">Birmingham</h5>
+                            <p class="card-text">
+                                Serving Birmingham with pride, our Birmingham branch delivers exceptional waterless car wash services that combine convenience with superior results.
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="birmingham.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    
-    <!-- SERVICES OVERVIEW SECTION -->
-    <section id="services-overview" class="py-5 bg-light">
+
+    <!-- ====================================
+         SERVICES OVERVIEW
+    ===================================== -->
+    <section id="services-overview">
         <div class="container">
             <h2 class="text-center mb-4">Our Premier Car Valeting Services</h2>
-            <p class="text-center mb-5">We offer a comprehensive range of <strong>waterless car wash</strong> and <strong>car detailing</strong> packages tailored to meet your specific needs. From maintaining your car’s exterior shine to deep cleaning the interior, our expert technicians deliver exceptional results every time.</p>
+            <p class="text-center mb-5">
+                We offer a range of waterless car wash and car detailing packages tailored to meet your specific needs. From maintaining your car’s exterior shine to deep cleaning the interior, our expert technicians deliver exceptional results every time.
+            </p>
             <div class="row g-4">
-                <!-- Service Item 1 -->
+                <!-- Service Card 1 -->
                 <div class="col-md-4">
-                    <div class="card h-100 text-center">
+                    <div class="card service-card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Exterior+Valeting" alt="Exterior Car Valeting">
                         <div class="card-body">
-                            <i class="fa fa-car-side fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Exterior Car Valeting</h5>
-                            <p class="card-text">Maintain your vehicle’s pristine appearance with our specialized exterior valeting services. We remove dirt, grime, and contaminants without the use of water, protecting your car’s paint and finish.</p>
+                            <p class="card-text">
+                                Maintain your vehicle’s pristine appearance with our specialised exterior valeting services. We remove dirt, grime, and contaminants without the use of water, protecting your car’s paint and finish.
+                            </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#exterior-valeting" class="btn btn-outline-primary"><i class="fa fa-arrow-right me-2"></i>Learn More</a>
+                            <a href="services.html#exterior-valeting" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <!-- Service Item 2 -->
+                <!-- Service Card 2 -->
                 <div class="col-md-4">
-                    <div class="card h-100 text-center">
+                    <div class="card service-card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Interior+Detailing" alt="Interior Car Detailing">
                         <div class="card-body">
-                            <i class="fa fa-couch fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Interior Car Detailing</h5>
-                            <p class="card-text">Revitalize your car’s interior with our meticulous detailing services. From vacuuming and dusting to leather conditioning, we ensure every inch of your vehicle’s interior is spotless and refreshed.</p>
+                            <p class="card-text">
+                                Revitalise your car’s interior with our meticulous detailing services. From vacuuming and dusting to leather conditioning, we ensure every inch of your vehicle’s interior is spotless and refreshed.
+                            </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#interior-detailing" class="btn btn-outline-primary"><i class="fa fa-arrow-right me-2"></i>Learn More</a>
+                            <a href="services.html#interior-detailing" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
-                <!-- Service Item 3 -->
+                <!-- Service Card 3 -->
                 <div class="col-md-4">
-                    <div class="card h-100 text-center">
+                    <div class="card service-card h-100">
+                        <img src="https://via.placeholder.com/400x200?text=Ceramic+Sealant" alt="Ceramic Sealant Application">
                         <div class="card-body">
-                            <i class="fa fa-shield-alt fa-3x mb-3 text-primary"></i>
                             <h5 class="card-title">Ceramic Sealant Application</h5>
-                            <p class="card-text">Enhance your car’s protection and shine with our premium ceramic sealant. This advanced coating provides long-lasting defense against UV rays, dirt, and grime, ensuring your vehicle stays cleaner for longer.</p>
+                            <p class="card-text">
+                                Enhance your car’s protection and shine with our premium ceramic sealant. This advanced coating provides long-lasting defence against UV rays, dirt, and grime, ensuring your vehicle stays cleaner for longer.
+                            </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#ceramic-sealant" class="btn btn-outline-primary"><i class="fa fa-arrow-right me-2"></i>Learn More</a>
+                            <a href="services.html#ceramic-sealant" class="btn btn-outline-primary">Learn More</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- View All Services Button -->
             <div class="text-center mt-5">
-                <a href="services.html" class="btn btn-primary"><i class="fa fa-list me-2"></i>View All Services</a>
+                <a href="services.html" class="btn btn-primary">View All Services</a>
             </div>
         </div>
     </section>
-    
-    <!-- FRANCHISE LOCATIONS SECTION -->
-    <section id="franchise-locations" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Our Franchise Locations</h2>
-            <p class="text-center mb-5">We are proud to serve three major locations, providing top-notch <strong>car detailing</strong> and <strong>waterless car wash</strong> services in <strong>Swindon</strong>, <strong>Oxford</strong>, and <strong>Birmingham</strong>. Choose the location nearest to you and experience the excellence that sets us apart.</p>
-            <div class="row g-4">
-                <!-- Swindon Franchise -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <img src="images/franchise-swindon.jpg" class="card-img-top" alt="Swindon Franchise">
-                        <div class="card-body">
-                            <h5 class="card-title">Swindon</h5>
-                            <p class="card-text">Located in the heart of Swindon, our Swindon franchise offers comprehensive <strong>car valeting</strong> services with a focus on quality and customer satisfaction.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#swindon" class="btn btn-outline-primary"><i class="fa fa-calendar-check me-2"></i>Book in Swindon</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Oxford Franchise -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <img src="images/franchise-oxford.jpg" class="card-img-top" alt="Oxford Franchise">
-                        <div class="card-body">
-                            <h5 class="card-title">Oxford</h5>
-                            <p class="card-text">Our Oxford franchise brings expert <strong>car detailing</strong> to the bustling city, ensuring your vehicle looks its best no matter where you are.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#oxford" class="btn btn-outline-primary"><i class="fa fa-calendar-check me-2"></i>Book in Oxford</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Birmingham Franchise -->
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <img src="images/franchise-birmingham.jpg" class="card-img-top" alt="Birmingham Franchise">
-                        <div class="card-body">
-                            <h5 class="card-title">Birmingham</h5>
-                            <p class="card-text">Serving Birmingham with pride, our Birmingham franchise delivers exceptional <strong>waterless car wash</strong> services that combine convenience with superior results.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-top-0">
-                            <a href="services.html#birmingham" class="btn btn-outline-primary"><i class="fa fa-calendar-check me-2"></i>Book in Birmingham</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- BENEFITS SECTION -->
-    <section id="benefits" class="py-5 bg-light">
+
+    <!-- ====================================
+         BENEFITS
+    ===================================== -->
+    <section id="benefits">
         <div class="container">
             <h2 class="text-center mb-4">Why Choose Our Waterless Car Valeting?</h2>
             <div class="row g-4">
                 <!-- Benefit 1 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-tint fa-3x mb-3 text-primary"></i>
-                    <h5>Significant Water Conservation</h5>
-                    <p>Our <strong>waterless car wash</strong> methods save up to 420 liters of water per clean, making a substantial impact on environmental conservation.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-water"></i>
+                        <h5>Significant Water Conservation</h5>
+                        <p>Our <strong>waterless car wash</strong> methods save up to 420 litres of water per clean, making a substantial impact on environmental conservation.</p>
+                    </div>
                 </div>
                 <!-- Benefit 2 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-clock fa-3x mb-3 text-primary"></i>
-                    <h5>Convenient Mobile Service</h5>
-                    <p>We bring the <strong>car detailing</strong> experience to you. Our <strong>mobile car wash</strong> units operate at your preferred location, saving you time and effort.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-phone"></i>
+                        <h5>Convenient Mobile Service</h5>
+                        <p>We bring the <strong>car detailing</strong> experience to you. Our <strong>mobile car wash</strong> units operate at your preferred location, saving you time and effort.</p>
+                    </div>
                 </div>
                 <!-- Benefit 3 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-star fa-3x mb-3 text-primary"></i>
-                    <h5>High-Quality Results</h5>
-                    <p>Experience a showroom-quality finish with our advanced <strong>car valeting</strong> techniques and premium products, ensuring your vehicle looks its best.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-award"></i>
+                        <h5>High-Quality Results</h5>
+                        <p>Experience a showroom-quality finish with our advanced <strong>car valeting</strong> techniques and premium products, ensuring your vehicle looks its best.</p>
+                    </div>
                 </div>
                 <!-- Benefit 4 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-shield-alt fa-3x mb-3 text-primary"></i>
-                    <h5>Advanced Paint Protection</h5>
-                    <p>Protect your car’s paint from environmental damage with our specialized coatings and sealants, preserving its value and appearance.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-shield-lock"></i>
+                        <h5>Advanced Paint Protection</h5>
+                        <p>Protect your car’s paint from environmental damage with our specialised coatings and sealants, preserving its value and appearance.</p>
+                    </div>
                 </div>
                 <!-- Benefit 5 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-cogs fa-3x mb-3 text-primary"></i>
-                    <h5>Expert Valeters</h5>
-                    <p>Our team of professional <strong>valeters</strong> is trained in the latest <strong>waterless vehicle wash</strong> techniques, ensuring meticulous attention to detail in every service.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-person-badge"></i>
+                        <h5>Expert Valeters</h5>
+                        <p>Our team of professional <strong>valeters</strong> is trained in the latest <strong>waterless vehicle wash</strong> techniques, ensuring meticulous attention to detail in every service.</p>
+                    </div>
                 </div>
                 <!-- Benefit 6 -->
-                <div class="col-md-4 text-center">
-                    <i class="fa fa-thumbs-up fa-3x mb-3 text-primary"></i>
-                    <h5>Customer Satisfaction Guaranteed</h5>
-                    <p>We prioritize your satisfaction, delivering exceptional <strong>car detailing</strong> services that meet and exceed your expectations every time.</p>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="bi bi-emoji-smile"></i>
+                        <h5>Customer Satisfaction Guaranteed</h5>
+                        <p>We prioritise your satisfaction, delivering exceptional <strong>car detailing</strong> services that meet and exceed your expectations every time.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="py-5">
+
+    <!-- ====================================
+         TESTIMONIALS
+    ===================================== -->
+    <section id="testimonials">
         <div class="container">
             <h2 class="text-center mb-4">What Our Customers Say</h2>
-            <!-- Swiper -->
-            <div class="swiper-container" style="overflow-x:hidden ;">
-                <div class="swiper-wrapper">
+            <!-- Bootstrap Carousel -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
                     <!-- Testimonial 1 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial text-center p-4 bg-white rounded shadow">
-                            <img src="images/testimonial1.jpg" alt="Customer Testimonial - Sarah D." class="testimonial-img mb-3">
-                            <blockquote class="blockquote">
+                    <div class="carousel-item active">
+                        <div class="testimonial">
+                            <img src="https://via.placeholder.com/80x80?text=Sarah" alt="Customer Testimonial - Sarah D.">
+                            <blockquote>
                                 “No Water Just Shine Limited transformed my car without using a single drop of water! The finish is incredible, and the convenience of their mobile service is unmatched.”
                             </blockquote>
-                            <p class="mt-3"><strong>- Sarah D., Swindon</strong></p>
+                            <p><strong>- Sarah D., Swindon</strong></p>
                         </div>
                     </div>
                     <!-- Testimonial 2 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial text-center p-4 bg-white rounded shadow">
-                            <img src="images/testimonial2.jpg" alt="Customer Testimonial - Mark T." class="testimonial-img mb-3">
-                            <blockquote class="blockquote">
-                                “I was skeptical about waterless car washes, but after experiencing their car detailing services, I’m a believer. My car looks brand new and has never been easier to maintain.”
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <img src="https://via.placeholder.com/80x80?text=Mark" alt="Customer Testimonial - Mark T.">
+                            <blockquote>
+                                “I was sceptical about waterless car washes, but after experiencing their car detailing services, I’m a believer. My car looks brand new and has never been easier to maintain.”
                             </blockquote>
-                            <p class="mt-3"><strong>- Mark T., Oxford</strong></p>
+                            <p><strong>- Mark T., Oxford</strong></p>
                         </div>
                     </div>
                     <!-- Testimonial 3 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial text-center p-4 bg-white rounded shadow">
-                            <img src="images/testimonial3.jpg" alt="Customer Testimonial - Lucy K." class="testimonial-img mb-3">
-                            <blockquote class="blockquote">
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <img src="https://via.placeholder.com/80x80?text=Lucy" alt="Customer Testimonial - Lucy K.">
+                            <blockquote>
                                 “Their headlight restoration service improved my visibility and gave my car a sleek, modern look. Highly recommend for anyone looking to enhance their vehicle's appearance.”
                             </blockquote>
-                            <p class="mt-3"><strong>- Lucy K., Birmingham</strong></p>
+                            <p><strong>- Lucy K., Birmingham</strong></p>
                         </div>
                     </div>
                     <!-- Testimonial 4 -->
-                    <div class="swiper-slide">
-                        <div class="testimonial text-center p-4 bg-white rounded shadow">
-                            <img src="images/testimonial4.jpg" alt="Customer Testimonial - Emily R." class="testimonial-img mb-3">
-                            <blockquote class="blockquote">
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <img src="https://via.placeholder.com/80x80?text=Emily" alt="Customer Testimonial - Emily R.">
+                            <blockquote>
                                 “The additional services are fantastic! Engine bay detailing and upholstery cleaning have kept my car looking brand new. The team is professional and incredibly thorough.”
                             </blockquote>
-                            <p class="mt-3"><strong>- Emily R., Swindon</strong></p>
+                            <p><strong>- Emily R., Swindon</strong></p>
                         </div>
                     </div>
                 </div>
-                <!-- Add Pagination (Optional) -->
-                <div class="swiper-pagination"></div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
             </div>
             <!-- Read More Testimonials Button -->
             <div class="text-center mt-5">
-                <a href="testimonials.html" class="btn btn-primary"><i class="fa fa-book me-2"></i>Read More Testimonials</a>
+                <a href="testimonials.html" class="btn btn-primary">Read More Testimonials</a>
             </div>
         </div>
     </section>
-    
-    <!-- GALLERY SECTION -->
-    <section id="gallery" class="py-5 bg-light">
+
+    <!-- ====================================
+         GALLERY
+    ===================================== -->
+    <section id="gallery">
         <div class="container">
             <h2 class="text-center mb-4">Our Work Gallery</h2>
-            <p class="text-center mb-5">Take a look at some of our stunning before and after transformations. See the quality and attention to detail that sets us apart in the industry.</p>
+            <p class="text-center mb-5">
+                Take a look at some of our stunning before and after transformations. See the quality and attention to detail that sets us apart in the industry.
+            </p>
             <div class="row g-4">
                 <!-- Gallery Item 1 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery1.jpg" alt="Before and After - Exterior Car Wash" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Before+After" alt="Before and After - Exterior Car Valeting">
+                        <div class="gallery-caption">
                             Before and After - Exterior Car Valeting
                         </div>
                     </div>
                 </div>
                 <!-- Gallery Item 2 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery2.jpg" alt="Interior Car Detailing" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Interior+Detailing" alt="Interior Car Detailing">
+                        <div class="gallery-caption">
                             Interior Car Detailing - Spotless and Fresh
                         </div>
                     </div>
                 </div>
                 <!-- Gallery Item 3 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery3.jpg" alt="Ceramic Sealant Application" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Ceramic+Sealant" alt="Ceramic Sealant Application">
+                        <div class="gallery-caption">
                             Ceramic Sealant Application for Long-Lasting Shine
                         </div>
                     </div>
                 </div>
                 <!-- Gallery Item 4 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery4.jpg" alt="Mobile Car Wash in Action" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Mobile+Car+Wash" alt="Mobile Car Wash in Action">
+                        <div class="gallery-caption">
                             Mobile Car Wash Service at Your Location
                         </div>
                     </div>
                 </div>
                 <!-- Gallery Item 5 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery5.jpg" alt="Headlight Restoration" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Headlight+Restoration" alt="Headlight Restoration">
+                        <div class="gallery-caption">
                             Headlight Restoration - Clear and Bright
                         </div>
                     </div>
                 </div>
                 <!-- Gallery Item 6 -->
                 <div class="col-md-4">
-                    <div class="gallery-item position-relative overflow-hidden rounded shadow">
-                        <img src="images/gallery6.jpg" alt="Engine Bay Detailing" class="img-fluid">
-                        <div class="gallery-caption position-absolute bottom-0 start-0 p-2 bg-dark bg-opacity-50 text-white">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/400x200?text=Engine+Detailing" alt="Engine Bay Detailing">
+                        <div class="gallery-caption">
                             Engine Bay Detailing - Clean and Protected
                         </div>
                     </div>
@@ -418,22 +926,15 @@
             </div>
             <!-- View Full Gallery Button -->
             <div class="text-center mt-5">
-                <a href="gallery.html" class="btn btn-primary"><i class="fa fa-images me-2"></i>View Full Gallery</a>
+                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
             </div>
         </div>
     </section>
-    
-    <!-- CALL TO ACTION SECTION -->
-    <section id="cta" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-4">Ready to Shine?</h2>
-            <p class="mb-4">Book your <strong>waterless car wash</strong> and <strong>car detailing</strong> service today at your preferred branch. Experience the ultimate in convenience, quality, and eco-friendly car care with <strong>No Water Just Shine Limited</strong>.</p>
-            <a href="services.html#book-at-branch" class="btn btn-primary"><i class="fa fa-calendar-check me-2"></i>Book at a Branch</a>
-        </div>
-    </section>
-    
-    <!-- FAQ PREVIEW SECTION -->
-    <section id="faq-preview" class="py-5 bg-light">
+
+    <!-- ====================================
+         FAQ PREVIEW
+    ===================================== -->
+    <section id="faq-preview">
         <div class="container">
             <h2 class="text-center mb-4">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
@@ -446,7 +947,7 @@
                     </h2>
                     <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            A waterless car wash uses specialized cleaning products to remove dirt and grime from your vehicle’s exterior without the need for water. This method is eco-friendly and prevents water spots and scratches.
+                            We use specialised products to lift dirt and protect the paint without any water. It’s an environmentally friendly solution for a clean car.
                         </div>
                     </div>
                 </div>
@@ -505,98 +1006,88 @@
             </div>
             <!-- Read More FAQs Button -->
             <div class="text-center mt-5">
-                <a href="faq.html" class="btn btn-primary"><i class="fa fa-question-circle me-2"></i>Read More FAQs</a>
+                <a href="faq.html" class="btn btn-primary">Read More FAQs</a>
             </div>
         </div>
     </section>
-    
-    <!-- FOOTER SECTION -->
-    <footer id="footer" class="py-5 bg-dark text-white">
+
+    <!-- ====================================
+         CALL TO ACTION
+    ===================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for a Gleaming Car?</h2>
+            <p>Book your appointment now and discover the ease of waterless washing.</p>
+            <a href="booking.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- ====================================
+         FOOTER
+    ===================================== -->
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <!-- Quick Links -->
+                <!-- Footer Column 1 -->
                 <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#branches">Branches</a></li>
+                        <li><a href="franchise.html">Franchise</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
                     </ul>
                 </div>
-                <!-- Contact Information -->
+                <!-- Footer Column 2 -->
                 <div class="col-md-4 mb-4">
-                    <h5>Contact Information</h5>
-                    <p><i class="fa fa-phone me-2"></i> <a href="tel:07703783253" class="text-white text-decoration-none">07703 783253</a></p>
-                    <p><i class="fa fa-envelope me-2"></i> <a href="mailto:info@nowaterjustshine.co.uk" class="text-white text-decoration-none">info@nowaterjustshine.co.uk</a></p>
-                    <p><i class="fa fa-map-marker-alt me-2"></i> 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
+                    <h5>Contact Info</h5>
+                    <p>Phone: <a href="tel:07703783253">07703 783253</a></p>
+                    <p>Email: <a href="mailto:info@nowaterjustshine.co.uk">info@nowaterjustshine.co.uk</a></p>
+                    <p>Address: 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
                 </div>
-                <!-- Social Media Links -->
+                <!-- Footer Column 3 (Social) -->
                 <div class="col-md-4 mb-4">
                     <h5>Follow Us</h5>
-                    <ul class="list-unstyled d-flex">
-                        <li class="me-3"><a href="https://facebook.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i></a></li>
-                        <li class="me-3"><a href="https://instagram.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
-                        <li class="me-3"><a href="https://twitter.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i></a></li>
-                        <li><a href="https://linkedin.com/company/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
-                    </ul>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/NoWaterJustShine" target="_blank" aria-label="Facebook">
+                            <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://instagram.com/NoWaterJustShine" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://twitter.com/NoWaterJustShine" target="_blank" aria-label="Twitter">
+                            <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/NoWaterJustShine" target="_blank" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <!-- Footer Bottom -->
-            <div class="d-flex justify-content-between align-items-center mt-4">
-                <p class="mb-0">&copy; 2025 No Water Just Shine Limited. All Rights Reserved.</p>
-                <ul class="list-unstyled d-flex mb-0">
-                    <li class="me-3"><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="text-white text-decoration-none">Terms of Service</a></li>
-                </ul>
-            </div>
-            <!-- Newsletter Signup -->
-            <div class="mt-4">
-                <h5>Subscribe to Our Newsletter</h5>
-                <form class="d-flex justify-content-center" action="#" method="post">
-                    <input type="email" name="email" class="form-control w-50 me-2" placeholder="Enter your email" required aria-label="Email Address">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane me-2"></i>Subscribe</button>
-                </form>
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2025 No Water Just Shine Limited. All rights reserved.
+                </div>
+                <div>
+                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="terms.html">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
-    
-    <!-- Swiper.js Initialization -->
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Additional JavaScript for Smooth Scrolling (Optional) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var swiper = new Swiper('.swiper-container', {
-                // Optional parameters
-                loop: true,
-                autoplay: {
-                    delay: 7000,
-                    disableOnInteraction: false,
-                },
-                // Pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                // Remove navigation buttons
-                navigation: false,
-                // Responsive breakpoints
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                    },
-                }
-            });
-        });
+        // Optional: Add smooth scrolling for older browsers or enhance smoothness
     </script>
-    
 </body>
 </html>
