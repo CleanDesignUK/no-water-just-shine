@@ -25,9 +25,9 @@
 =========================== */
 .parallax-banner {
     position: relative;
-    background-image: url("images/swindon-hero.jpg"); /* Replace with actual image */
+    background-image: url("images/franchise-swindon.jpg"); /* Replace with actual image */
     background-attachment: fixed;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;

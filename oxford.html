@@ -33,466 +33,7 @@
     <!-- Oxford Specific CSS -->
     <link rel="stylesheet" href="oxford.css">
 
-    <style>
-        /* ===========================
-           Oxford Specific Styles
-        =========================== */
-
-        /* Hero Banner */
-        #hero {
-            background: linear-gradient(rgba(0, 102, 204, 0.6), rgba(0, 102, 204, 0.6)), url('images/oxford-hero.jpg') no-repeat center center/cover;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            color: #fff;
-            text-align: center;
-        }
-
-        #hero .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 102, 204, 0.6);
-        }
-
-        #hero .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        #hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        #hero p.lead {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        #hero .btn-primary {
-            padding: 12px 30px;
-            font-size: 1rem;
-            border-radius: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        #hero .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        /* About Section */
-        #about {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-
-        #about h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #about .about-content {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        #about .about-text {
-            flex: 1;
-        }
-
-        #about .about-text h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: #002147;
-            margin-bottom: 20px;
-        }
-
-        #about .about-text p {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        #about .about-image {
-            flex: 1;
-        }
-
-        #about .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        #about .about-image img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Services Section */
-        #services {
-            padding: 60px 0;
-        }
-
-        #services h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #services .service-item {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            transition: box-shadow 0.3s ease;
-            background-color: #fff;
-        }
-
-        #services .service-item:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        #services .service-item i {
-            font-size: 3rem;
-            color: #0066cc;
-            margin-bottom: 20px;
-        }
-
-        #services .service-item h4 {
-            font-family: 'Montserrat', sans-serif;
-            color: #002147;
-            margin-bottom: 15px;
-        }
-
-        #services .service-item p {
-            font-family: 'Roboto', sans-serif;
-            color: #555;
-            line-height: 1.5;
-        }
-
-        /* Testimonials Section */
-        #testimonials {
-            padding: 60px 0;
-            background-color: #f0f8ff;
-        }
-
-        #testimonials h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #testimonials .testimonial-carousel {
-            position: relative;
-        }
-
-        #testimonials .testimonial {
-            text-align: center;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin: 0 15px;
-        }
-
-        #testimonials .testimonial p {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        #testimonials .testimonial h5 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-        }
-
-        /* FAQ Section */
-        #faqs {
-            padding: 60px 0;
-        }
-
-        #faqs h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #faqs .accordion-button {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            background-color: #e6f0ff;
-            color: #002147;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        #faqs .accordion-button.collapsed {
-            background-color: #e6f0ff;
-            color: #002147;
-        }
-
-        #faqs .accordion-button:not(.collapsed) {
-            background-color: #0066cc;
-            color: #fff;
-        }
-
-        #faqs .accordion-button::after {
-            filter: invert(1);
-        }
-
-        #faqs .accordion-body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-        }
-
-        /* Gallery Section */
-        #gallery {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-
-        #gallery h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #gallery .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        #gallery .gallery-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        #gallery .gallery-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Contact and Booking Section */
-        #contact-and-booking {
-            padding: 60px 0;
-        }
-
-        #contact-and-booking h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: #0066cc;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        #contact-and-booking .contact-form {
-            background-color: #e6f0ff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        #contact-and-booking .contact-form label {
-            font-family: 'Montserrat', sans-serif;
-            color: #002147;
-        }
-
-        #contact-and-booking .contact-form input,
-        #contact-and-booking .contact-form select,
-        #contact-and-booking .contact-form textarea {
-            font-family: 'Roboto', sans-serif;
-            border: 1px solid #cce0ff;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 15px;
-            width: 100%;
-            background-color: #fff;
-            color: #333;
-            transition: border-color 0.3s ease;
-        }
-
-        #contact-and-booking .contact-form input:focus,
-        #contact-and-booking .contact-form select:focus,
-        #contact-and-booking .contact-form textarea:focus {
-            border-color: #0066cc;
-            outline: none;
-        }
-
-        #contact-and-booking .contact-form .btn-primary {
-            background-color: #0066cc;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        #contact-and-booking .contact-form .btn-primary:hover {
-            background-color: #004999;
-            transform: translateY(-2px);
-        }
-
-        /* Calendly Widget */
-        #calendly-booking .calendly-inline-widget {
-            border-radius: 10px;
-        }
-
-        /* Floating Service Areas Button */
-        .floating-service-areas-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #0066cc;
-            color: #fff;
-            padding: 15px 20px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            z-index: 1000;
-        }
-
-        .floating-service-areas-btn:hover {
-            background-color: #004999;
-            transform: translateY(-3px);
-        }
-
-        /* Footer Styles */
-        footer#footer {
-            background-color: #002147;
-            color: #fff;
-            padding: 40px 0;
-        }
-
-        footer#footer h5 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-
-        footer#footer p,
-        footer#footer a {
-            font-family: 'Roboto', sans-serif;
-            color: #ccc;
-            font-size: 0.95rem;
-        }
-
-        footer#footer a:hover {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        footer#footer .social-icons a {
-            margin-right: 15px;
-            color: #ccc;
-            transition: color 0.3s ease;
-        }
-
-        footer#footer .social-icons a:hover {
-            color: #0066cc;
-        }
-
-        footer#footer .footer-bottom {
-            border-top: 1px solid #444;
-            padding-top: 20px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        footer#footer .footer-bottom ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer#footer .footer-bottom ul li a {
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-
-        footer#footer .footer-bottom ul li a:hover {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        footer#footer .newsletter-form input[type="email"] {
-            border: none;
-            border-radius: 25px 0 0 25px;
-            padding: 10px 20px;
-            width: 60%;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        footer#footer .newsletter-form button {
-            border: none;
-            border-radius: 0 25px 25px 0;
-            padding: 10px 20px;
-            background-color: #0066cc;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        footer#footer .newsletter-form button:hover {
-            background-color: #004999;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            #about .about-content {
-                flex-direction: column;
-            }
-
-            footer#footer .footer-bottom {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            footer#footer .newsletter-form input[type="email"],
-            footer#footer .newsletter-form button {
-                width: 100%;
-                border-radius: 25px;
-            }
-
-            footer#footer .newsletter-form button {
-                margin-top: 10px;
-                border-radius: 25px;
-            }
-
-            .floating-service-areas-btn {
-                right: 15px;
-                bottom: 15px;
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+ 
 </head>
 <body>
     
@@ -607,7 +148,7 @@
     <!-- ====================================
          ABOUT SECTION
     ===================================== -->
-    <section id="about">
+    <section id="about" class="pt-5">
         <div class="container">
             <h2>About Our Oxford Branch</h2>
             <div class="about-content">
@@ -624,7 +165,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="images/about-oxford.jpg" alt="Our Oxford Branch Team">
+                    <img src="images/franchise-birmingham.jpg" alt="Our Oxford Branch Team">
                 </div>
             </div>
         </div>
@@ -633,14 +174,14 @@
     <!-- ====================================
          SERVICES SECTION
     ===================================== -->
-    <section id="services">
+    <section id="services" class="mt-4 py-3">
         <div class="container">
             <h2>Our Services</h2>
             <div class="row">
                 <!-- Service 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-car"></i>
+                        
                         <h4>Exterior Paintwork Cleaning</h4>
                         <p>
                             Restore your vehicle's shine with our meticulous exterior paintwork cleaning, removing dirt, grime, and minor imperfections for a flawless finish.
@@ -650,7 +191,7 @@
                 <!-- Service 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-wind"></i>
+                        
                         <h4>Interior Detailing</h4>
                         <p>
                             Enhance your car's interior with our comprehensive detailing services, including vacuuming, dashboard cleaning, and fabric protection.
@@ -660,7 +201,7 @@
                 <!-- Service 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-tire"></i>
+                    
                         <h4>Wheel & Tyre Services</h4>
                         <p>
                             Keep your wheels and tyres looking new with our specialized cleaning and treatment, ensuring optimal performance and aesthetics.
@@ -670,7 +211,7 @@
                 <!-- Service 4 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-shield-alt"></i>
+                     
                         <h4>Specialty Treatments</h4>
                         <p>
                             Protect your vehicle's surfaces with our premium wax and ceramic sealant applications, offering long-lasting shine and durability.
@@ -680,7 +221,7 @@
                 <!-- Service 5 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-water"></i>
+                       
                         <h4>Waterless Car Wash</h4>
                         <p>
                             Enjoy a spotless car without wasting water, using our eco-friendly waterless wash solutions that are tough on grime but gentle on the environment.
@@ -690,7 +231,7 @@
                 <!-- Service 6 -->
                 <div class="col-md-4 mb-4">
                     <div class="service-item">
-                        <i class="fa fa-mobile-alt"></i>
+                    
                         <h4>Mobile Detailing</h4>
                         <p>
                             Experience ultimate convenience with our mobile detailing services, bringing professional car care directly to your doorstep anywhere in Oxford.
@@ -707,29 +248,23 @@
     <section id="testimonials" class="d-flex align-items-center justify-content-center"">
         <div class="container text-center">
             <h2>What Our Customers Say</h2>
-            <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <!-- Testimonial 1 -->
-                    <div class="carousel-item active">
+       
                         <div class="testimonial">
                             <p>"No Water Just Shine transformed my car without using a drop of water! The detailing was impeccable."</p>
                             <h5>- Sarah M.</h5>
                         </div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="carousel-item">
+                   
                         <div class="testimonial">
                             <p>"Professional service and excellent results. Highly recommend their premium wash package."</p>
                             <h5>- James L.</h5>
                         </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="carousel-item">
+                   
+                   
                         <div class="testimonial">
                             <p>"Eco-friendly and thorough. My car looks brand new after the ultimate protection treatment."</p>
                             <h5>- Emily R.</h5>
                         </div>
-                    </div>
+                
                 </div>
                 <!-- Carousel Controls -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
@@ -820,22 +355,7 @@
         </div>
     </section>
     
-    <!-- ====================================
-         GALLERY SECTION
-    ===================================== -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="gallery-grid">
-                <img src="images/gallery/oxford1.jpg" alt="Before and After Wash">
-                <img src="images/gallery/oxford2.jpg" alt="Deluxe Detailing">
-                <img src="images/gallery/oxford3.jpg" alt="Ultimate Protection">
-                <img src="images/gallery/oxford4.jpg" alt="Eco-Friendly Solutions">
-                <img src="images/gallery/oxford5.jpg" alt="Customer Satisfaction">
-                <img src="images/gallery/oxford6.jpg" alt="Professional Team">
-            </div>
-        </div>
-    </section>
+   
     
     <!-- ====================================
          CONTACT AND BOOKING SECTION
