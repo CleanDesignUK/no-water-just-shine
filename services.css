@@ -24,7 +24,7 @@
    HERO / INTRO SECTION
 =========================== */
 .services-hero {
-    background: url("https://via.placeholder.com/1920x600?text=Services+Hero") no-repeat center center/cover;
+    background: url("images/services.jpg") no-repeat center center/cover;
     color: var(--white);
     text-align: center;
     padding: 120px 0;
@@ -93,7 +93,7 @@
   }
   
   .service-card .card-img-top {
-    height: 200px;
+    height: 400px;
     object-fit: cover;
   }
   
@@ -319,7 +319,7 @@
     .service-card .card-img-top,
     .branch-card .card-img-top,
     .package-card .card-img-top {
-      height: 180px;
+      height: 340px;
     }
     .floating-branches-btn {
       font-size: 1rem;
@@ -344,7 +344,7 @@
     .service-card .card-img-top,
     .branch-card .card-img-top,
     .package-card .card-img-top {
-      height: 160px;
+      height: 320px;
     }
   }
   
