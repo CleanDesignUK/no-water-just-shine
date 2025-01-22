@@ -27,177 +27,250 @@
     <!-- FontAwesome for Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Existing Custom CSS -->
+    <!-- Main Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Additional Styles for Oxford Page -->
+    <!-- Oxford Specific CSS -->
     <link rel="stylesheet" href="oxford.css">
 
     <style>
-        /* Additional Oxford-specific Styles */
+        /* ===========================
+           Oxford Specific Styles
+        =========================== */
 
         /* Hero Banner */
-        #hero .hero-banner {
+        #hero {
             background: linear-gradient(rgba(0, 102, 204, 0.6), rgba(0, 102, 204, 0.6)), url('images/oxford-hero.jpg') no-repeat center center/cover;
             height: 600px;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            color: #fff;
+            text-align: center;
         }
 
-        #hero .hero-content h1 {
+        #hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 102, 204, 0.6);
+        }
+
+        #hero .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        #hero h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 3em;
+            font-size: 3rem;
             font-weight: 700;
+            margin-bottom: 20px;
         }
 
-        #hero .hero-content p {
+        #hero p.lead {
             font-family: 'Roboto', sans-serif;
-            font-size: 1.2em;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
 
-        #hero .hero-content .btn-primary {
-            padding: 10px 30px;
-            font-size: 1em;
+        #hero .btn-primary {
+            padding: 12px 30px;
+            font-size: 1rem;
             border-radius: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Service Packages */
-        #packages .card-img-top {
-            height: 200px;
-            object-fit: cover;
+        #hero .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
 
-        /* Contact Form */
-        .web3-form {
-            background: linear-gradient(135deg, #0066cc, #004999);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        /* About Section */
+        #about {
+            padding: 60px 0;
+            background-color: #f9f9f9;
         }
 
-        .web3-form .form-label {
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .web3-form .form-control, .web3-form .form-select, .web3-form textarea {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            border: none;
-            border-bottom: 2px solid #fff;
-        }
-
-        .web3-form .form-control:focus, .web3-form .form-select:focus, .web3-form textarea:focus {
-            background-color: rgba(255, 255, 255, 0.3);
-            box-shadow: none;
-            border-bottom: 2px solid #fff;
-        }
-
-        .web3-form .btn-primary {
-            background-color: #fff;
+        #about h2 {
+            font-family: 'Montserrat', sans-serif;
             color: #0066cc;
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .web3-form .btn-primary:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* Calendly Booking */
-        #calendly-booking .calendly-inline-widget {
-            border-radius: 10px;
-        }
-
-        /* Service Areas */
-        #service-areas {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        #service-areas h2 {
+            margin-bottom: 40px;
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        #service-areas ul {
-            list-style: none;
-            padding: 0;
-            columns: 2;
+        #about .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
         }
 
-        #service-areas ul li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
+        #about .about-text {
+            flex: 1;
         }
 
-        /* Testimonials */
-        #testimonials {
-            padding: 50px 0;
-            background-color: #fff;
-        }
-
-        #testimonials h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .testimonial {
-            text-align: center;
-            padding: 20px;
+        #about .about-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #002147;
             margin-bottom: 20px;
-            border-left: 5px solid #0066cc;
-            background-color: #f0f0f0;
-            border-radius: 5px;
         }
 
-        .testimonial p {
-            font-style: italic;
-            color: #555;
-        }
-
-        .testimonial h5 {
-            margin-top: 10px;
-            color: #0066cc;
-        }
-
-        /* FAQs */
-        #faqs {
-            padding: 50px 0;
-            background-color: #f8f9fa;
-        }
-
-        #faqs h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .faq-item {
+        #about .about-text p {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
             margin-bottom: 15px;
         }
 
-        .faq-item .faq-question {
-            font-weight: 600;
-            cursor: pointer;
+        #about .about-image {
+            flex: 1;
         }
 
-        .faq-item .faq-answer {
-            display: none;
-            padding-top: 10px;
-            color: #555;
+        #about .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        /* Gallery */
-        #gallery {
-            padding: 50px 0;
+        #about .about-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        #services {
+            padding: 60px 0;
+        }
+
+        #services h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #services .service-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
             background-color: #fff;
         }
 
-        #gallery h2 {
+        #services .service-item:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        #services .service-item i {
+            font-size: 3rem;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        #services .service-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #002147;
+            margin-bottom: 15px;
+        }
+
+        #services .service-item p {
+            font-family: 'Roboto', sans-serif;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Testimonials Section */
+        #testimonials {
+            padding: 60px 0;
+            background-color: #f0f8ff;
+        }
+
+        #testimonials h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+            margin-bottom: 40px;
             text-align: center;
-            margin-bottom: 30px;
+        }
+
+        #testimonials .testimonial-carousel {
+            position: relative;
+        }
+
+        #testimonials .testimonial {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 0 15px;
+        }
+
+        #testimonials .testimonial p {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        #testimonials .testimonial h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+        }
+
+        /* FAQ Section */
+        #faqs {
+            padding: 60px 0;
+        }
+
+        #faqs h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #faqs .accordion-button {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            background-color: #e6f0ff;
+            color: #002147;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #faqs .accordion-button.collapsed {
+            background-color: #e6f0ff;
+            color: #002147;
+        }
+
+        #faqs .accordion-button:not(.collapsed) {
+            background-color: #0066cc;
+            color: #fff;
+        }
+
+        #faqs .accordion-button::after {
+            filter: invert(1);
+        }
+
+        #faqs .accordion-body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        #gallery h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+            margin-bottom: 40px;
+            text-align: center;
         }
 
         #gallery .gallery-grid {
@@ -210,7 +283,7 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
@@ -218,68 +291,278 @@
             transform: scale(1.05);
         }
 
+        /* Contact and Booking Section */
+        #contact-and-booking {
+            padding: 60px 0;
+        }
+
+        #contact-and-booking h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #0066cc;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #contact-and-booking .contact-form {
+            background-color: #e6f0ff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        #contact-and-booking .contact-form label {
+            font-family: 'Montserrat', sans-serif;
+            color: #002147;
+        }
+
+        #contact-and-booking .contact-form input,
+        #contact-and-booking .contact-form select,
+        #contact-and-booking .contact-form textarea {
+            font-family: 'Roboto', sans-serif;
+            border: 1px solid #cce0ff;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            background-color: #fff;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+
+        #contact-and-booking .contact-form input:focus,
+        #contact-and-booking .contact-form select:focus,
+        #contact-and-booking .contact-form textarea:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+        #contact-and-booking .contact-form .btn-primary {
+            background-color: #0066cc;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #contact-and-booking .contact-form .btn-primary:hover {
+            background-color: #004999;
+            transform: translateY(-2px);
+        }
+
+        /* Calendly Widget */
+        #calendly-booking .calendly-inline-widget {
+            border-radius: 10px;
+        }
+
+        /* Floating Service Areas Button */
+        .floating-service-areas-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #0066cc;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-service-areas-btn:hover {
+            background-color: #004999;
+            transform: translateY(-3px);
+        }
+
+        /* Footer Styles */
+        footer#footer {
+            background-color: #002147;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        footer#footer h5 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        footer#footer p,
+        footer#footer a {
+            font-family: 'Roboto', sans-serif;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        footer#footer a:hover {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer#footer .social-icons a {
+            margin-right: 15px;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        footer#footer .social-icons a:hover {
+            color: #0066cc;
+        }
+
+        footer#footer .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer#footer .footer-bottom ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer#footer .footer-bottom ul li a {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        footer#footer .footer-bottom ul li a:hover {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer#footer .newsletter-form input[type="email"] {
+            border: none;
+            border-radius: 25px 0 0 25px;
+            padding: 10px 20px;
+            width: 60%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer#footer .newsletter-form button {
+            border: none;
+            border-radius: 0 25px 25px 0;
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer#footer .newsletter-form button:hover {
+            background-color: #004999;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
-            #hero .hero-banner {
-                height: 400px;
+            #about .about-content {
+                flex-direction: column;
             }
 
-            #service-areas ul {
-                columns: 1;
+            footer#footer .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer#footer .newsletter-form input[type="email"],
+            footer#footer .newsletter-form button {
+                width: 100%;
+                border-radius: 25px;
+            }
+
+            footer#footer .newsletter-form button {
+                margin-top: 10px;
+                border-radius: 25px;
+            }
+
+            .floating-service-areas-btn {
+                right: 15px;
+                bottom: 15px;
+                padding: 10px 15px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
     
-       <!-- HEADER SECTION -->
-       <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <!-- ====================================
+         HEADER & NAVBAR
+    ===================================== -->
+    <header class="navbar-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
             <div class="container">
-                <!-- Logo -->
+                <!-- Brand / Logo -->
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
                 </a>
-                <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+                <!-- Hamburger menu button (mobile) -->
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar Links with Dropdowns -->
+
+                <!-- Nav Links -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
+                        <!-- Home Link -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle" 
+                                href="#" 
+                                id="servicesDropdown" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
+                                <li><a class="dropdown-item" href="services.html#exterior-services">Exterior Paintwork Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#interior-services">Interior Detailing</a></li>
+                                <li><a class="dropdown-item" href="services.html#wheel-services">Wheel & Tyre Services</a></li>
+                                <li><a class="dropdown-item" href="services.html#special-services">Specialty Treatments</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
-                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle" 
+                                href="#" 
+                                id="franchiseDropdown" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
                                 Franchise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
                                 <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
-                                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                                <li><a class="dropdown-item active" href="oxford.html">Oxford</a></li>
                                 <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
@@ -299,7 +582,9 @@
                         </li>
                         <!-- Book Now Button -->
                         <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
+                            <a class="btn btn-primary ms-lg-3" href="#contact-and-booking">
+                                <i class="fa fa-book me-2"></i>Book Now
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -307,241 +592,343 @@
         </nav>
     </header>
     
-    <!-- MAIN CONTENT -->
-    <main id="oxford-services" class="py-5">
+    <!-- ====================================
+         HERO SECTION
+    ===================================== -->
+    <section id="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Oxford Branch</h1>
+            <p class="lead">Premium Waterless Car Valeting and Detailing Services</p>
+            <a href="#services" class="btn btn-primary">Explore Our Services</a>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         ABOUT SECTION
+    ===================================== -->
+    <section id="about">
         <div class="container">
-            <!-- Hero Banner -->
-            <section id="hero">
-                <div class="hero-banner text-center text-white d-flex align-items-center justify-content-center">
-                    <div class="hero-content">
-                        <h1 class="display-4">Oxford Branch</h1>
-                        <p class="lead">Premium Waterless Car Valeting and Detailing Services</p>
-                        <a href="#packages" class="btn btn-primary btn-lg">View Packages</a>
+            <h2>About Our Oxford Branch</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Committed to Excellence in Car Care</h3>
+                    <p>
+                        At No Water Just Shine Limited's Oxford branch, we pride ourselves on delivering top-notch waterless car valeting and detailing services. Our mission is to provide exceptional car care while minimizing environmental impact, making us the preferred choice for Oxford residents who value both quality and sustainability.
+                    </p>
+                    <p>
+                        Our team of trained professionals utilizes eco-friendly products and innovative techniques to ensure your vehicle receives the best possible treatment. From routine washes to comprehensive detailing packages, we cater to all your car maintenance needs with precision and care.
+                    </p>
+                    <p>
+                        Conveniently located in the heart of Oxford, we offer both in-shop and mobile services, allowing you to choose the option that best fits your busy lifestyle. Experience the No Water Just Shine difference today and keep your car looking its absolute best.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-oxford.jpg" alt="Our Oxford Branch Team">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         SERVICES SECTION
+    ===================================== -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-car"></i>
+                        <h4>Exterior Paintwork Cleaning</h4>
+                        <p>
+                            Restore your vehicle's shine with our meticulous exterior paintwork cleaning, removing dirt, grime, and minor imperfections for a flawless finish.
+                        </p>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Service Packages -->
-            <section id="packages" class="my-5">
-                <h2 class="text-center mb-4">Our Packages</h2>
-                <div class="row">
-                    <!-- Package 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <img src="images/packages/premium-wash.jpg" class="card-img-top" alt="Premium Wash Package">
-                            <div class="card-body">
-                                <h5 class="card-title">Premium Wash</h5>
-                                <p class="card-text">A thorough exterior cleaning using eco-friendly waterless solutions. Includes paintwork and glass cleaning.</p>
-                                <p class="card-text"><strong>£49.99</strong></p>
-                                <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Package 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <img src="images/packages/deluxe-detailing.jpg" class="card-img-top" alt="Deluxe Detailing Package">
-                            <div class="card-body">
-                                <h5 class="card-title">Deluxe Detailing</h5>
-                                <p class="card-text">Comprehensive interior and exterior detailing. Includes vacuuming, dashboard cleaning, and tyre treatment.</p>
-                                <p class="card-text"><strong>£89.99</strong></p>
-                                <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Package 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100 shadow-sm">
-                            <img src="images/packages/ultimate-protection.jpg" class="card-img-top" alt="Ultimate Protection Package">
-                            <div class="card-body">
-                                <h5 class="card-title">Ultimate Protection</h5>
-                                <p class="card-text">Advanced paint protection with wax and ceramic sealant. Includes all Deluxe Detailing features.</p>
-                                <p class="card-text"><strong>£129.99</strong></p>
-                                <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
+                <!-- Service 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-wind"></i>
+                        <h4>Interior Detailing</h4>
+                        <p>
+                            Enhance your car's interior with our comprehensive detailing services, including vacuuming, dashboard cleaning, and fabric protection.
+                        </p>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Service Areas -->
-            <section id="service-areas">
-                <h2>Areas We Serve</h2>
-                <ul>
-                    <li>Oxford City Centre</li>
-                    <li>Abingdon</li>
-                    <li>Didcot</li>
-                    <li>Witney</li>
-                    <li>Banbury</li>
-                    <li>Highworth</li>
-                    <li>Faringdon</li>
-                    <li>Bicester</li>
-                    <li>Thame</li>
-                    <li>Wallingford</li>
-                </ul>
-            </section>
-            
-            <!-- Testimonials -->
-            <section id="testimonials">
-                <h2>What Our Customers Say</h2>
-                <div class="row">
-                    <div class="col-md-4">
+                <!-- Service 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-tire"></i>
+                        <h4>Wheel & Tyre Services</h4>
+                        <p>
+                            Keep your wheels and tyres looking new with our specialized cleaning and treatment, ensuring optimal performance and aesthetics.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-shield-alt"></i>
+                        <h4>Specialty Treatments</h4>
+                        <p>
+                            Protect your vehicle's surfaces with our premium wax and ceramic sealant applications, offering long-lasting shine and durability.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-water"></i>
+                        <h4>Waterless Car Wash</h4>
+                        <p>
+                            Enjoy a spotless car without wasting water, using our eco-friendly waterless wash solutions that are tough on grime but gentle on the environment.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="service-item">
+                        <i class="fa fa-mobile-alt"></i>
+                        <h4>Mobile Detailing</h4>
+                        <p>
+                            Experience ultimate convenience with our mobile detailing services, bringing professional car care directly to your doorstep anywhere in Oxford.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         TESTIMONIALS SECTION
+    ===================================== -->
+    <section id="testimonials" class="d-flex align-items-center justify-content-center"">
+        <div class="container text-center">
+            <h2>What Our Customers Say</h2>
+            <div id="testimonialCarousel" class="carousel slide testimonial-carousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
                         <div class="testimonial">
                             <p>"No Water Just Shine transformed my car without using a drop of water! The detailing was impeccable."</p>
                             <h5>- Sarah M.</h5>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item">
                         <div class="testimonial">
                             <p>"Professional service and excellent results. Highly recommend their premium wash package."</p>
                             <h5>- James L.</h5>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- Testimonial 3 -->
+                    <div class="carousel-item">
                         <div class="testimonial">
                             <p>"Eco-friendly and thorough. My car looks brand new after the ultimate protection treatment."</p>
                             <h5>- Emily R.</h5>
                         </div>
                     </div>
                 </div>
-            </section>
-            
-            <!-- FAQs -->
-            <section id="faqs">
-                <h2>Frequently Asked Questions</h2>
-                <div class="accordion" id="faqAccordion">
-                    <!-- FAQ 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What is a waterless car wash?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                A waterless car wash uses specialized eco-friendly products to clean your vehicle without the need for traditional water-based methods. It's efficient, environmentally friendly, and perfect for areas with water restrictions.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                How long does a detailing service take?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                The duration varies based on the package selected. Our Premium Wash takes approximately 1 hour, Deluxe Detailing around 2 hours, and Ultimate Protection about 3 hours for optimal results.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Do you offer mobile services?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, we offer mobile car detailing services within the Oxford area. You can book an appointment at your preferred location using our online booking system.
-                            </div>
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- ====================================
+         FAQ SECTION
+    ===================================== -->
+    <section id="faqs">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            What is a waterless car wash?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            A waterless car wash uses specialized eco-friendly products to clean your vehicle without the need for traditional water-based methods. It's efficient, environmentally friendly, and perfect for areas with water restrictions.
                         </div>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Gallery -->
-            <section id="gallery">
-                <h2>Our Work</h2>
-                <div class="gallery-grid">
-                    <img src="images/gallery/oxford1.jpg" alt="Before and After Wash">
-                    <img src="images/gallery/oxford2.jpg" alt="Deluxe Detailing">
-                    <img src="images/gallery/oxford3.jpg" alt="Ultimate Protection">
-                    <img src="images/gallery/oxford4.jpg" alt="Eco-friendly Solutions">
-                    <img src="images/gallery/oxford5.jpg" alt="Customer Satisfaction">
-                    <img src="images/gallery/oxford6.jpg" alt="Professional Team">
-                </div>
-            </section>
-            
-            <!-- Contact Form -->
-            <section id="contact-form" class="my-5">
-                <h2 class="text-center mb-4">Contact Us</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form class="web3-form" action="process_contact.php" method="post">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="service" class="form-label">Select Service</label>
-                                <select class="form-select" id="service" name="service" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="premium-wash">Premium Wash</option>
-                                    <option value="deluxe-detailing">Deluxe Detailing</option>
-                                    <option value="ultimate-protection">Ultimate Protection</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Additional Details</label>
-                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            How long does a detailing service take?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The duration varies based on the package selected. Our Premium Wash takes approximately 1 hour, Deluxe Detailing around 2 hours, and Ultimate Protection about 3 hours for optimal results.
+                        </div>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Calendly Booking -->
-            <section id="calendly-booking" class="my-5">
-                <h2 class="text-center mb-4">Schedule Your Appointment</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            Do you offer mobile services?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we offer mobile car detailing services within the Oxford area. You can book an appointment at your preferred location using our online booking system.
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional FAQs -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                            What products do you use for detailing?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We use high-quality, eco-friendly products that are safe for your vehicle and the environment. Our waterless solutions are designed to effectively clean and protect without harming natural resources.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item ">
+                    <h2 class="accordion-header" id="faqHeadingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                            How can I book an appointment?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can book an appointment directly through our website by visiting the "Book Now" button at the top of the page or by filling out our contact form below. Alternatively, you can call us at 07703 783253.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         GALLERY SECTION
+    ===================================== -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="gallery-grid">
+                <img src="images/gallery/oxford1.jpg" alt="Before and After Wash">
+                <img src="images/gallery/oxford2.jpg" alt="Deluxe Detailing">
+                <img src="images/gallery/oxford3.jpg" alt="Ultimate Protection">
+                <img src="images/gallery/oxford4.jpg" alt="Eco-Friendly Solutions">
+                <img src="images/gallery/oxford5.jpg" alt="Customer Satisfaction">
+                <img src="images/gallery/oxford6.jpg" alt="Professional Team">
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         CONTACT AND BOOKING SECTION
+    ===================================== -->
+    <section id="contact-and-booking">
+        <div class="container">
+            <h2>Get in Touch & Schedule Your Appointment</h2>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
+                    <form class="contact-form" action="process_contact.php" method="post">
+                        <div class="mb-3">
+                            <label for="name-oxford" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name-oxford" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-oxford" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email-oxford" name="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service-oxford" class="form-label">Select Service</label>
+                            <select class="form-select" id="service-oxford" name="service" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="premium-wash">Premium Wash (£49.99)</option>
+                                <option value="deluxe-detailing">Deluxe Detailing (£89.99)</option>
+                                <option value="ultimate-protection">Ultimate Protection (£129.99)</option>
+                                <option value="mobile-detailing">Mobile Detailing (£149.99)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-oxford" class="form-label">Additional Details</label>
+                            <textarea class="form-control" id="message-oxford" name="message" rows="4" placeholder="Any specific requests or comments..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- Calendly Widget -->
+                <div class="col-lg-6">
+                    <div id="calendly-booking">
+                        <h3 class="text-center mb-3">Schedule Your Appointment</h3>
                         <!-- Calendly Inline Widget -->
                         <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/oxford-appointment" style="min-width:320px;height:630px;"></div>
                         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Interactive Map -->
-            <section id="map" class="my-5">
-                <h2 class="text-center mb-4">Our Service Area</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.96042535436!2d-1.2597731999999999!3d51.7520132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764b1bdfc10f5b%3A0x8e1a37b1e6b3a8e!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1682619732457!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
     
-    <!-- FOOTER SECTION -->
-    <footer id="footer" class="py-5 bg-dark text-white">
+    <!-- ====================================
+         INTERACTIVE MAP SECTION
+    ===================================== -->
+    <section id="map">
+        <div class="container">
+            <h2>Our Service Area</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.96042535436!2d-1.2597731999999999!3d51.7520132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764b1bdfc10f5b%3A0x8e1a37b1e6b3a8e!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1682619732457!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         FOOTER SECTION
+    ===================================== -->
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <!-- Quick Links -->
                 <div class="col-md-4 mb-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="gallery.html" class="text-white">Gallery</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
                     </ul>
                 </div>
                 <!-- Contact Information -->
                 <div class="col-md-4 mb-4">
                     <h5>Contact Information</h5>
-                    <p><i class="fa fa-phone me-2"></i> <a href="tel:07703783253" class="text-white text-decoration-none">07703 783253</a></p>
-                    <p><i class="fa fa-envelope me-2"></i> <a href="mailto:oxford@nowaterjustshine.co.uk" class="text-white text-decoration-none">oxford@nowaterjustshine.co.uk</a></p>
+                    <p><i class="fa fa-phone me-2"></i> <a href="tel:07703783253" class="text-white">07703 783253</a></p>
+                    <p><i class="fa fa-envelope me-2"></i> <a href="mailto:oxford@nowaterjustshine.co.uk" class="text-white">oxford@nowaterjustshine.co.uk</a></p>
                     <p><i class="fa fa-map-marker-alt me-2"></i> 123 Oxford Street, Oxford OX1 2JD</p>
                 </div>
                 <!-- Social Media Links -->
@@ -556,26 +943,36 @@
                 </div>
             </div>
             <!-- Footer Bottom -->
-            <div class="d-flex justify-content-between align-items-center mt-4">
+            <div class="footer-bottom d-flex justify-content-between align-items-center mt-4">
                 <p class="mb-0">&copy; 2025 No Water Just Shine Limited. All Rights Reserved.</p>
                 <ul class="list-unstyled d-flex mb-0">
-                    <li class="me-3"><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="text-white text-decoration-none">Terms of Service</a></li>
+                    <li class="me-3"><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="text-white">Terms of Service</a></li>
                 </ul>
             </div>
             <!-- Newsletter Signup -->
-            <div class="mt-4">
+            <div class="newsletter-form mt-4">
                 <h5>Subscribe to Our Newsletter</h5>
-                <form class="d-flex justify-content-center" action="subscribe.php" method="post">
-                    <input type="email" name="email" class="form-control w-50 me-2" placeholder="Enter your email" required aria-label="Email Address">
+                <form class="d-flex" action="subscribe.php" method="post">
+                    <input type="email" name="email" class="form-control me-2" placeholder="Enter your email" required aria-label="Email Address">
                     <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane me-2"></i>Subscribe</button>
                 </form>
             </div>
         </div>
     </footer>
     
-    <!-- JavaScript for Smooth Scrolling, Active Link Highlighting, and FAQs -->
+    <!-- ====================================
+         FLOATING SERVICE AREAS BUTTON
+    ===================================== -->
+    <a href="#service-areas" class="floating-service-areas-btn" aria-label="View Service Areas">
+        <i class="fa fa-map-marker-alt me-2"></i>
+        Service Areas
+    </a>
+    
+    <!-- Bootstrap JS (Bundle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script>
         // Smooth Scroll for In-Page Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -611,18 +1008,10 @@
             });
         });
 
-        // FAQs Toggle
-        var faqButtons = document.querySelectorAll('.accordion-button');
-
-        faqButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                faqButtons.forEach(btn => {
-                    if (btn !== this) {
-                        btn.classList.remove('collapsed');
-                        btn.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
+        // Initialize Carousel
+        var testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+            interval: 5000,
+            ride: 'carousel'
         });
     </script>
 </body>

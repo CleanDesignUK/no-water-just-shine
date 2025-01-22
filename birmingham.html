@@ -35,56 +35,82 @@
 </head>
 <body>
     
-    <!-- HEADER SECTION -->
-    <!-- HEADER SECTION -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <!-- ====================================
+         HEADER & NAVBAR
+    ===================================== -->
+    <header class="navbar-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
             <div class="container">
-                <!-- Logo -->
+                <!-- Brand / Logo -->
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
                 </a>
-                <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+                <!-- Hamburger menu button (mobile) -->
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNavDropdown" 
+                    aria-controls="navbarNavDropdown" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!-- Navbar Links with Dropdowns -->
+
+                <!-- Nav Links -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
+                        <!-- Home Link -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle active" 
+                                href="#" 
+                                id="servicesDropdown" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
                                 Services
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
+                                <li><a class="dropdown-item" href="services.html#exterior-services">Exterior Paintwork Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#exterior-glass-cleaning">Exterior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#alloy-wheels-cleaning">Alloy Wheels Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#tyre-cleaning-treatment">Tyre Cleaning & Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#plastic-trim-treatment">Plastic Trim Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#door-sills-cleaning">Door Shuts & Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#interior-vacuuming">Interior Vacuuming</a></li>
+                                <li><a class="dropdown-item" href="services.html#dashboard-dusting">Dashboard Dusting</a></li>
+                                <li><a class="dropdown-item" href="services.html#interior-glass-cleaning">Interior Glass Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#console-wiping">Console Wiping</a></li>
+                                <li><a class="dropdown-item" href="services.html#paint-treatment">Paint Treatment with Wax & Ceramic Sealant</a></li>
+                                <li><a class="dropdown-item" href="services.html#glass-repellent">Glass Repellent Solution</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
-                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a 
+                                class="nav-link dropdown-toggle" 
+                                href="#" 
+                                id="franchiseDropdown" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
                                 Franchise
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
                                 <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
                                 <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
-                                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
+                                <li><a class="dropdown-item active" href="birmingham.html">Birmingham</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
                             </ul>
@@ -103,7 +129,9 @@
                         </li>
                         <!-- Book Now Button -->
                         <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
+                            <a class="btn btn-primary ms-lg-3" href="#contact-and-booking">
+                                <i class="fa fa-book me-2"></i>Book Now
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -111,262 +139,484 @@
         </nav>
     </header>
     
-    <!-- MAIN CONTENT -->
-    <main id="birmingham-services" class="py-5">
-        <div class="container">
-            <!-- Hero Banner with Parallax Effect -->
-            <section id="hero">
-                <div class="parallax-banner text-white d-flex align-items-center justify-content-center">
-                    <div class="hero-content text-center">
-                        <h1 class="display-4">Birmingham Branch</h1>
-                        <p class="lead">Exceptional Waterless Car Valeting and Detailing Services</p>
-                        <a href="#packages" class="btn btn-primary btn-lg">View Our Packages</a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service Packages with Flip Cards -->
-            <section id="packages" class="my-5">
-                <h2 class="text-center mb-4">Our Packages</h2>
-                <div class="row">
-                    <!-- Package 1 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="images/packages/premium-wash-birmingham.jpg" class="img-fluid" alt="Premium Wash Package">
-                                    <h5 class="mt-3">Premium Wash</h5>
-                                </div>
-                                <div class="flip-card-back">
-                                    <h5>Premium Wash</h5>
-                                    <p>A comprehensive exterior cleaning using eco-friendly waterless techniques. Includes paintwork and glass cleaning for a spotless finish.</p>
-                                    <p><strong>£49.99</strong></p>
-                                    <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Package 2 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="images/packages/deluxe-detailing-birmingham.jpg" class="img-fluid" alt="Deluxe Detailing Package">
-                                    <h5 class="mt-3">Deluxe Detailing</h5>
-                                </div>
-                                <div class="flip-card-back">
-                                    <h5>Deluxe Detailing</h5>
-                                    <p>Comprehensive interior and exterior detailing. Includes vacuuming, dashboard cleaning, and tyre treatment for a pristine interior.</p>
-                                    <p><strong>£89.99</strong></p>
-                                    <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Package 3 -->
-                    <div class="col-md-4 mb-4">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <img src="images/packages/ultimate-protection-birmingham.jpg" class="img-fluid" alt="Ultimate Protection Package">
-                                    <h5 class="mt-3">Ultimate Protection</h5>
-                                </div>
-                                <div class="flip-card-back">
-                                    <h5>Ultimate Protection</h5>
-                                    <p>Advanced paint protection with wax and ceramic sealant. Includes all Deluxe Detailing features plus long-lasting shine.</p>
-                                    <p><strong>£129.99</strong></p>
-                                    <a href="#contact-form" class="btn btn-primary">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service Areas -->
-            <section id="service-areas">
-                <h2 class="text-center mb-4">Areas We Serve</h2>
-                <ul class="list-unstyled">
-                    <li>Birmingham City Centre</li>
-                    <li>Sutton Coldfield</li>
-                    <li>Solihull</li>
-                    <li>Redditch</li>
-                    <li>Warwick</li>
-                    <li>Walsall</li>
-                    <li>Birmingham Airport</li>
-                    <li>West Bromwich</li>
-                    <li>West Midlands</li>
-                    <li>Harborne</li>
-                </ul>
-            </section>
-            
-            <!-- Testimonials -->
-            <section id="testimonials">
-                <h2 class="text-center mb-4">What Our Customers Say</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="testimonial">
-                            <p>"Amazing service! My car has never looked better after the Deluxe Detailing."</p>
-                            <h5>- Olivia K.</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial">
-                            <p>"Professional and efficient. The Ultimate Protection package is worth every penny."</p>
-                            <h5>- Liam H.</h5>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial">
-                            <p>"Love the eco-friendly approach. No Water Just Shine exceeded my expectations."</p>
-                            <h5>- Ava W.</h5>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- FAQs -->
-            <section id="faqs">
-                <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-                <div class="accordion" id="faqAccordion">
-                    <!-- FAQ 1 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What makes your services eco-friendly?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We utilize specialized waterless cleaning products that effectively remove dirt and grime without the extensive use of water, reducing our environmental footprint while delivering exceptional results.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 2 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                How do I prepare my car for a detailing appointment?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Please remove all personal belongings from your vehicle's interior. It's also helpful if your car is dry and free from excessive dirt for the best results.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Do you offer any discounts or packages?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Yes, we offer bundled packages that provide comprehensive services at a discounted rate. Additionally, we have seasonal promotions and loyalty programs for our regular customers.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Additional FAQs -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFour">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Can I customize my detailing package?
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Absolutely! We offer customizable packages to cater to your specific needs. Contact us with your requirements, and we'll tailor a package just for you.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingFive">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                What payment methods do you accept?
-                            </button>
-                        </h2>
-                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                We accept all major credit and debit cards, mobile payments, and cash. For your convenience, you can also book and pay online through our website.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Gallery -->
-            <section id="gallery">
-                <h2 class="text-center mb-4">Our Work</h2>
-                <div class="gallery-grid">
-                    <img src="images/gallery/birmingham1.jpg" alt="Before and After Wash">
-                    <img src="images/gallery/birmingham2.jpg" alt="Deluxe Detailing">
-                    <img src="images/gallery/birmingham3.jpg" alt="Ultimate Protection">
-                    <img src="images/gallery/birmingham4.jpg" alt="Eco-friendly Solutions">
-                    <img src="images/gallery/birmingham5.jpg" alt="Customer Satisfaction">
-                    <img src="images/gallery/birmingham6.jpg" alt="Professional Team">
-                </div>
-            </section>
-            
-            <!-- Contact Form -->
-            <section id="contact-form" class="my-5">
-                <h2 class="text-center mb-4">Get in Touch</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form class="web3-form" action="process_contact.php" method="post">
-                            <div class="mb-3">
-                                <label for="name-birmingham" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name-birmingham" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email-birmingham" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email-birmingham" name="email" placeholder="name@example.com" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="service-birmingham" class="form-label">Select Service</label>
-                                <select class="form-select" id="service-birmingham" name="service" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="premium-wash">Premium Wash</option>
-                                    <option value="deluxe-detailing">Deluxe Detailing</option>
-                                    <option value="ultimate-protection">Ultimate Protection</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message-birmingham" class="form-label">Additional Details</label>
-                                <textarea class="form-control" id="message-birmingham" name="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Calendly Booking -->
-            <section id="calendly-booking" class="my-5">
-                <h2 class="text-center mb-4">Schedule Your Appointment</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <!-- Calendly Inline Widget -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/birmingham-appointment" style="min-width:320px;height:630px;"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Interactive Map -->
-            <section id="map" class="my-5">
-                <h2 class="text-center mb-4">Our Service Area</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243657.89012345678!2d-1.890132!3d52.486243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c7f1a2b8e123%3A0x9a5d8c3b7a1f6e3!2sBirmingham%2C%20UK!5e0!3m2!1sen!2s!4v1682620123456!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </section>
+    <!-- ====================================
+         HERO / INTRO SECTION
+    ===================================== -->
+    <section id="hero" class="parallax-banner text-white d-flex align-items-center justify-content-center">
+        <div class="overlay"></div>
+        <div class="container text-center position-relative">
+            <h1 class="display-4 fw-bold">Birmingham Branch</h1>
+            <p class="lead">Exceptional Waterless Car Valeting and Detailing Services</p>
+            <a href="#packages" class="btn btn-primary btn-lg">View Our Packages</a>
         </div>
-    </main>
+    </section>
     
-    <!-- FOOTER SECTION -->
+    <!-- ====================================
+         ABOUT OUR BIRMINGHAM BRANCH
+    ===================================== -->
+    <section id="birmingham-about" class="py-5">
+      <div class="container">
+
+        <!-- Sub-Section 1: Premium Eco-Friendly Car Detailing in Birmingham -->
+        <div class="row mb-5 align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <!-- Placeholder Image on the LEFT -->
+            <img 
+              src="https://via.placeholder.com/600x400?text=Eco-Friendly+Car+Detailing" 
+              class="img-fluid rounded shadow" 
+              alt="Eco-Friendly Car Detailing in Birmingham"
+            >
+          </div>
+          <div class="col-md-6">
+            <!-- Headings & Text on the RIGHT -->
+            <h2 class="mb-3">Premium Eco-Friendly Car Detailing in Birmingham</h2>
+            <p>
+              Discover unmatched quality with our waterless car valeting and
+              detailing services in Birmingham. At No Water Just Shine Limited, we
+              focus on eco-friendly cleaning solutions to protect the environment
+              while delivering outstanding results. Whether you’re in Birmingham
+              City Centre, Sutton Coldfield, or Solihull, our mobile team brings
+              professional car care to your doorstep.
+            </p>
+            <p>
+              Experience a sparkling clean vehicle with services like exterior
+              paintwork cleaning, alloy wheel treatments, and advanced interior
+              detailing. Choose us for efficient, reliable, and environmentally
+              conscious car care within a 25-mile radius of Birmingham. Book today
+              and enjoy a pristine car without harming the planet.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sub-Section 2: Mobile Car Cleaning for Birmingham’s Busy Lifestyles -->
+        <div class="row mb-5 align-items-center">
+          <!-- Reverse the order on desktop for a varied layout -->
+          <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Mobile+Car+Cleaning" 
+              class="img-fluid rounded shadow" 
+              alt="Mobile Car Cleaning in Birmingham"
+            >
+          </div>
+          <div class="col-md-6 order-md-1">
+            <h2 class="mb-3">Mobile Car Cleaning for Birmingham’s Busy Lifestyles</h2>
+            <p>
+              Busy schedule? Let No Water Just Shine Limited make car care 
+              convenient with our mobile services. From tyre treatments to 
+              ceramic wax sealants, our team transforms your car while you 
+              focus on what matters. Serving areas like Redditch, Warwick, 
+              and West Bromwich, we bring professional-grade car valeting 
+              to your home or office.
+            </p>
+            <p>
+              Our eco-friendly products ensure a thorough clean without wasting 
+              water, perfect for environmentally conscious Birmingham residents. 
+              With affordable packages tailored to your needs, keeping your car 
+              spotless has never been easier. <strong>Contact us today</strong> 
+              for premium mobile car detailing near Birmingham.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sub-Section 3: Elevate Your Ride with Birmingham’s Best Car Valeting -->
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Elevate+Your+Ride" 
+              class="img-fluid rounded shadow" 
+              alt="Best Car Valeting in Birmingham"
+            >
+          </div>
+          <div class="col-md-6">
+            <h2 class="mb-3">Elevate Your Ride with Birmingham’s Best Car Valeting</h2>
+            <p>
+              Experience a new standard in car valeting at our Birmingham branch. 
+              Our waterless car wash solutions use advanced products that are 
+              safe for your vehicle’s finish and the environment. Whether you’re 
+              heading to Birmingham Airport or exploring West Midlands attractions, 
+              we keep your car in top condition.
+            </p>
+            <p>
+              Choose from our Bronze, Silver, or Gold packages, each designed to 
+              meet your needs. Enjoy services like dashboard dusting, console 
+              wiping, and glass repellent treatments. Don’t settle for less 
+              when it comes to car care—schedule your eco-friendly detailing 
+              session today and let your vehicle shine.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+    
+    <!-- ====================================
+         SERVICE PACKAGES
+    ===================================== -->
+    <section id="packages" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Packages</h2>
+            <div class="row">
+                <!-- Bronze Package -->
+                <div class="col-md-4 mb-4">
+                    <div class="card package-card h-100">
+                        <img src="https://via.placeholder.com/350x200?text=Bronze+Package" class="card-img-top" alt="Bronze Package">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bronze Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li><i class="fa fa-check me-2 text-primary"></i>Exterior Paintwork Cleaning</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Exterior Glass Cleaning</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Alloy Wheels Cleaning</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Tyre Cleaning & Treatment</li>
+                            </ul>
+                            <p class="mt-3"><strong>From £50</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Silver Package -->
+                <div class="col-md-4 mb-4">
+                    <div class="card package-card h-100">
+                        <img src="https://via.placeholder.com/350x200?text=Silver+Package" class="card-img-top" alt="Silver Package">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Silver Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li><i class="fa fa-check me-2 text-primary"></i>All services from Bronze Package</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Interior Vacuuming</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Dashboard Dusting</li>
+                            </ul>
+                            <p class="mt-3"><strong>From £60</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gold Package -->
+                <div class="col-md-4 mb-4">
+                    <div class="card package-card h-100">
+                        <img src="https://via.placeholder.com/350x200?text=Gold+Package" class="card-img-top" alt="Gold Package">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gold Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li><i class="fa fa-check me-2 text-primary"></i>All services from Silver Package</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Console Wiping</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Paint Treatment with Wax & Ceramic Sealant</li>
+                                <li><i class="fa fa-check me-2 text-primary"></i>Glass Repellent Solution</li>
+                            </ul>
+                            <p class="mt-3"><strong>From £65</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         SERVICE AREAS
+    ===================================== -->
+    <section id="service-areas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Areas We Serve</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-3">
+                        <div class="col text-center">
+                            <p>Birmingham City Centre</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Sutton Coldfield</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Solihull</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Redditch</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Warwick</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Walsall</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>Birmingham Airport</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>West Bromwich</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>West Midlands</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-3">Serving within a 25-mile radius of Birmingham.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         TESTIMONIALS
+    ===================================== -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-primary"></i>
+                        <p>"Amazing service! My car has never looked better after the Bronze Package."</p>
+                        <h5 class="mt-3">- Olivia K.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-primary"></i>
+                        <p>"Professional and efficient. The Silver Package exceeded my expectations."</p>
+                        <h5 class="mt-3">- Liam H.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-primary"></i>
+                        <p>"Love the eco-friendly approach. The Gold Package provided unmatched shine and protection."</p>
+                        <h5 class="mt-3">- Ava W.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         FAQ SECTION
+    ===================================== -->
+    <section id="faqs" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button 
+                            class="accordion-button" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="true" 
+                            aria-controls="collapseOne"
+                        >
+                            What makes your services eco-friendly?
+                        </button>
+                    </h2>
+                    <div 
+                        id="collapseOne" 
+                        class="accordion-collapse collapse show" 
+                        aria-labelledby="headingOne" 
+                        data-bs-parent="#faqAccordion"
+                    >
+                        <div class="accordion-body">
+                            We utilise specialised waterless cleaning products that effectively remove dirt and grime without the extensive use of water, reducing our environmental footprint whilst delivering exceptional results.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseTwo" 
+                            aria-expanded="false" 
+                            aria-controls="collapseTwo"
+                        >
+                            How do I prepare my car for a detailing appointment?
+                        </button>
+                    </h2>
+                    <div 
+                        id="collapseTwo" 
+                        class="accordion-collapse collapse" 
+                        aria-labelledby="headingTwo" 
+                        data-bs-parent="#faqAccordion"
+                    >
+                        <div class="accordion-body">
+                            Please remove all personal belongings from your vehicle's interior. It's also helpful if your car is dry and free from excessive dirt for the best results.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseThree" 
+                            aria-expanded="false" 
+                            aria-controls="collapseThree"
+                        >
+                            Do you offer any discounts or packages?
+                        </button>
+                    </h2>
+                    <div 
+                        id="collapseThree" 
+                        class="accordion-collapse collapse" 
+                        aria-labelledby="headingThree" 
+                        data-bs-parent="#faqAccordion"
+                    >
+                        <div class="accordion-body">
+                            Yes, we offer bundled packages that provide comprehensive services at a discounted rate. Additionally, we have seasonal promotions and loyalty programmes for our regular customers.
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional FAQs -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFour" 
+                            aria-expanded="false" 
+                            aria-controls="collapseFour"
+                        >
+                            Can I customise my detailing package?
+                        </button>
+                    </h2>
+                    <div 
+                        id="collapseFour" 
+                        class="accordion-collapse collapse" 
+                        aria-labelledby="headingFour" 
+                        data-bs-parent="#faqAccordion"
+                    >
+                        <div class="accordion-body">
+                            Absolutely! We offer customised packages to cater to your specific needs. Contact us with your requirements, and we'll tailor a package just for you.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#collapseFive" 
+                            aria-expanded="false" 
+                            aria-controls="collapseFive"
+                        >
+                            What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div 
+                        id="collapseFive" 
+                        class="accordion-collapse collapse" 
+                        aria-labelledby="headingFive" 
+                        data-bs-parent="#faqAccordion"
+                    >
+                        <div class="accordion-body">
+                            We accept all major credit and debit cards, mobile payments, and cash. For your convenience, you can also book and pay online through our website.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- ====================================
+         GALLERY SECTION
+    ===================================== -->
+    <section id="gallery" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Gallery+1" alt="Before and After Wash" class="img-fluid rounded shadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Bronze+Package+Detailing" alt="Bronze Package Detailing" class="img-fluid rounded shadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Silver+Package+Detailing" alt="Silver Package Detailing" class="img-fluid rounded shadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Gold+Package+Detailing" alt="Gold Package Detailing" class="img-fluid rounded shadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Eco-Friendly+Solutions" alt="Eco-friendly Solutions" class="img-fluid rounded shadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/350x200?text=Professional+Team" alt="Professional Team" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         CONTACT FORM AND CALENDLY BOOKING
+    ===================================== -->
+    <section id="contact-and-booking" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
+                    <form class="web3-form" action="process_contact.php" method="post">
+                        <div class="mb-3">
+                            <label for="name-birmingham" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name-birmingham" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-birmingham" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email-birmingham" name="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="service-birmingham" class="form-label">Select Package</label>
+                            <select class="form-select" id="service-birmingham" name="service" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="bronze-package">Bronze Package (from £50)</option>
+                                <option value="silver-package">Silver Package (from £60)</option>
+                                <option value="gold-package">Gold Package (from £65)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-birmingham" class="form-label">Additional Details</label>
+                            <textarea class="form-control" id="message-birmingham" name="message" rows="3" placeholder="Any specific requests or comments..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- Calendly Widget -->
+                <div class="col-lg-6">
+                    <!-- Calendly Inline Widget -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/birmingham-appointment" style="min-width:320px;height:630px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         INTERACTIVE MAP
+    ===================================== -->
+    <section id="map" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Service Area</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243657.89012345678!2d-1.890132!3d52.486243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c7f1a2b8e123%3A0x9a5d8c3b7a1f6e3!2sBirmingham%2C%20UK!5e0!3m2!1sen!2s!4v1682620123456!5m2!1sen!2s" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ====================================
+         FOOTER
+    ===================================== -->
     <footer id="footer" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -418,8 +668,18 @@
         </div>
     </footer>
     
-    <!-- JavaScript for Smooth Scrolling, Active Link Highlighting, and FAQs -->
+    <!-- ====================================
+         FLOATING SERVICE AREAS BUTTON
+    ===================================== -->
+    <a href="#service-areas" class="floating-branches-btn" aria-label="View Service Areas">
+        <i class="fa fa-map-marker-alt me-2"></i>
+        Service Areas
+    </a>
+    
+    <!-- Bootstrap JS (Bundle) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script>
         // Smooth Scroll for In-Page Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -454,9 +714,6 @@
                 }
             });
         });
-
-        // FAQs Toggle (Optional if using Bootstrap's accordion)
-        // No additional JavaScript needed as Bootstrap handles accordion functionality
     </script>
 </body>
 </html>
