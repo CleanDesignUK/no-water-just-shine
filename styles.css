@@ -297,7 +297,7 @@
             overflow: hidden;
             border-radius: 0.5rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            height: 200px;
+            
         }
         .gallery-item img {
             width: 100%;
