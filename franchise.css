@@ -1,0 +1,229 @@
+/********************************************
+ * FRANCHISE.CSS
+ * Overrides & custom styles 
+ * for "franchise.html"
+ ********************************************/
+
+/* ===========================
+   COLOUR VARIABLES
+=========================== */
+:root {
+  --dark-royal-blue: #002147;   /* As requested */
+  --white: #ffffff;
+  --metallic-silver: #C0C0C0;   /* As requested */
+  --text-dark: #333333;
+}
+
+/* ===========================
+ GENERAL RESETS/OVERRIDES
+=========================== */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+/* Remove default .navbar-dark bg-dark overrides */
+.navbar-dark.bg-dark-royal {
+  background-color: var(--dark-royal-blue) !important;
+}
+
+/* Remove default bootstrap toggler icon color if needed */
+.navbar-dark .navbar-toggler-icon {
+  background-image: none !important;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  padding: 3px;
+}
+
+/* Remove default link hover colors */
+.navbar-nav .nav-link {
+  color: var(--white) !important;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--metallic-silver) !important;
+}
+
+/* For the "Book Now" button in navbar */
+.btn.btn-shine {
+  background-color: var(--metallic-silver);
+  color: var(--dark-royal-blue);
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn.btn-shine:hover {
+  background-color: #B0B0B0;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+ HERO BANNER
+=========================== */
+.hero-banner {
+  position: relative;
+  height: 600px;
+  background: url("https://via.placeholder.com/1920x600/002147/ffffff?text=No+Water+Just+Shine+Franchise") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content {
+  z-index: 1;
+}
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+.hero-content p.lead {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+/* CTA Button in Hero */
+.btn-shine.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+}
+
+/* ===========================
+ SECTION TITLES
+=========================== */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ===========================
+ COLOUR CLASSES
+=========================== */
+.bg-dark-royal {
+  background-color: var(--dark-royal-blue) !important;
+}
+.text-dark-blue {
+  color: var(--dark-royal-blue) !important;
+}
+.bg-silver {
+  background-color: var(--metallic-silver) !important;
+  color: var(--dark-royal-blue) !important;
+}
+
+/* ===========================
+ INFO BOXES & CARDS
+=========================== */
+.info-box {
+  border-left: 4px solid var(--dark-royal-blue);
+}
+.info-box h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+.testimonial-card {
+  border-left: 4px solid var(--dark-royal-blue);
+  background-color: var(--white);
+}
+
+/* ===========================
+ CONTACT FORM
+=========================== */
+.web3-form {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.web3-form .form-label {
+  font-weight: 600;
+  color: var(--dark-royal-blue);
+}
+.web3-form .form-control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+.web3-form .form-control:focus {
+  box-shadow: none;
+  border-color: var(--dark-royal-blue);
+}
+.web3-form button[type="submit"] {
+  background-color: var(--dark-royal-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.web3-form button[type="submit"]:hover {
+  background-color: #001535; /* Darker shade of royal blue */
+  transform: translateY(-2px);
+}
+
+/* ===========================
+ FOOTER
+=========================== */
+#footer {
+  background-color: var(--dark-royal-blue);
+}
+#footer h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+#footer p, 
+#footer a {
+  font-size: 0.95rem;
+  color: var(--white);
+}
+#footer a:hover {
+  color: var(--metallic-silver);
+}
+
+/* ===========================
+ RESPONSIVE MEDIA QUERIES
+=========================== */
+@media (max-width: 992px) {
+  .hero-banner {
+      height: 500px;
+  }
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+      height: 400px;
+  }
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+  .hero-content p.lead {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+      height: 300px;
+  }
+  .hero-content h1 {
+      font-size: 1.75rem;
+  }
+  .hero-content p.lead {
+      font-size: 0.9rem;
+  }
+}

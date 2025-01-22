@@ -90,34 +90,73 @@
 }
 
 /* ===========================
-   FRANCHISE INFORMATION SECTION
+   FRANCHISE PREVIEW SECTION
 =========================== */
-#franchise-info h2 {
+#franchise-preview h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
     margin-bottom: 1.5rem;
 }
 
-#franchise-info h3 {
+#franchise-preview h3 {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-#franchise-info h4 {
+#franchise-preview p {
     font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+#franchise-preview .btn-secondary {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#franchise-preview .btn-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+/* ===========================
+   FRANCHISE FAQS SECTION
+=========================== */
+#franchise-faqs h2 {
+    font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
-    margin-top: 1rem;
+
 }
 
-#franchise-info ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+#franchise-faqs .accordion-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#franchise-faqs .accordion-button.collapsed {
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
+}
+
+#franchise-faqs .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#franchise-faqs .accordion-button::after {
+    filter: invert(1);
+}
+
+#franchise-faqs .accordion-body {
     font-family: 'Roboto', sans-serif;
-}
-
-#franchise-info ul li {
-    margin-bottom: 0.5rem;
+    color: #333;
 }
 
 /* ===========================
