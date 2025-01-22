@@ -1,783 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Tags for SEO and Responsiveness -->
-    <meta charset="UTF-8">
-    <meta name="description" content="Discover premium waterless car valeting and detailing services with No Water Just Shine Limited. Serving Swindon, Oxford, Birmingham, and surrounding areas within a 25-mile radius. Book your eco-friendly car wash today.">
-    <meta name="keywords" content="waterless car wash, car valeting, car detailing, mobile car wash, car cleaning services, car detailing services, waterless vehicle wash, ceramic sealant, car wash Swindon, car wash Oxford, car wash Birmingham, professional car detailing, eco-friendly car wash, premium car valeting, best car detailing services, mobile car detailing, waterless car detailing">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | No Water Just Shine Limited</title>
+  <!-- Meta Tags for SEO and Responsiveness -->
+  <meta charset="UTF-8">
+  <meta name="description" content="Explore our comprehensive waterless car valeting and detailing services. No Water Just Shine Limited provides eco-friendly, high-quality solutions in Swindon, Oxford, Birmingham, and surrounding areas.">
+  <meta name="keywords" content="waterless car wash, car valeting, car detailing, mobile car wash, eco-friendly, best car cleaning, ceramic sealant, professional car detailers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Water Just Shine Limited | Our Services</title>
 
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="Our Services | No Water Just Shine Limited">
-    <meta property="og:description" content="Explore our extensive range of waterless car valeting and detailing services available in Swindon, Oxford, Birmingham, and surrounding areas within a 25-mile radius. Book your service today!">
-    <meta property="og:image" content="images/og-services.jpg">
-    <meta property="og:url" content="https://www.nowaterjustshine.co.uk/services.html">
-    <meta property="og:type" content="website">
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="No Water Just Shine Limited | Our Services">
+  <meta property="og:description" content="Discover a wide range of premium waterless car valeting and detailing services tailored to every vehicle's needs.">
+  <meta property="og:image" content="images/og-services.jpg">
+  <meta property="og:url" content="https://www.nowaterjustshine.co.uk/services.html">
+  <meta property="og:type" content="website">
 
-    <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- FontAwesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- FontAwesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Existing Custom CSS -->
-  
-    <link rel="stylesheet" href="styles.css">
-    <!-- Additional Styles for Services Page -->
-    <style>
-        /* Unique Styles for Each Service Section */
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="styles.css">
 
-        /* 1. Hero Banner Layout */
-        #service-1 {
-            background: url('images/services/exterior-paintwork.jpg') no-repeat center center/cover;
-            color: #fff;
-            position: relative;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #service-1::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 102, 204, 0.6);
-        }
-
-        #service-1 .content {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* 2. Two-Column Layout: Image Left, Text Right */
-        #service-2 {
-            padding: 80px 0;
-        }
-
-        /* 3. Two-Column Layout: Text Left, Image Right */
-        #service-3 {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-        }
-
-        /* 4. Text Overlay on Image */
-        #service-4 {
-            position: relative;
-            background: url('images/services/exterior-glass.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        #service-4 .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 102, 204, 0.7);
-            padding: 20px 40px;
-            border-radius: 10px;
-        }
-
-        /* 5. Image Top, Text Below */
-        #service-5 {
-            padding: 80px 0;
-        }
-
-        /* 6. Text Top, Image Below */
-        #service-6 {
-            background-color: #f0f8ff;
-            padding: 80px 0;
-        }
-
-        /* 7. Side Image with Floating Text Box */
-        #service-7 {
-            position: relative;
-            padding: 80px 0;
-        }
-
-        #service-7 .floating-box {
-            position: absolute;
-            top: 50%;
-            left: 60%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-
-        /* 8. Interactive Flip Card Layout */
-        #service-8 .flip-card {
-            background-color: transparent;
-            width: 100%;
-            height: 300px;
-            perspective: 1000px;
-        }
-
-        #service-8 .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-
-        #service-8 .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-        }
-
-        #service-8 .flip-card-front, #service-8 .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 10px;
-        }
-
-        #service-8 .flip-card-front {
-            background: url('images/services/tyres-cleaned.jpg') no-repeat center center/cover;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-        }
-
-        #service-8 .flip-card-back {
-            background-color: #fff;
-            color: #333;
-            transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        /* 9. Icon-Based Grid Layout */
-        #service-9 {
-            padding: 80px 0;
-        }
-
-        #service-9 .feature-icon {
-            font-size: 3em;
-            color: #0066cc;
-            margin-bottom: 15px;
-        }
-
-        /* 10. Timeline or Step-by-Step Layout */
-        #service-10 {
-            background-color: #f8f9fa;
-            padding: 80px 0;
-        }
-
-        #service-10 .timeline {
-            position: relative;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        #service-10 .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: #0066cc;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
-        }
-
-        #service-10 .timeline-step {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        #service-10 .timeline-step::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -13px;
-            background-color: #fff;
-            border: 4px solid #0066cc;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        #service-10 .timeline-step.left {
-            left: 0;
-        }
-
-        #service-10 .timeline-step.right {
-            left: 50%;
-        }
-
-        /* 11. Parallax Scrolling Section */
-        #service-11 {
-            position: relative;
-            background: url('images/services/interior-glass.jpg') no-repeat center center/cover;
-            color: #fff;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background-attachment: fixed;
-        }
-
-        #service-11::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 102, 204, 0.6);
-        }
-
-        #service-11 .content {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* 12. Split Screen with Multiple Columns */
-        #service-12 {
-            padding: 80px 0;
-        }
-
-        #service-12 .split-column {
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        #service-12 .split-column:hover {
-            transform: translateY(-5px);
-        }
-
-        #service-12 .split-column img {
-            width: 100%;
-            border-radius: 10px 10px 0 0;
-            object-fit: cover;
-        }
-
-        #service-12 .split-column h4 {
-            margin-top: 15px;
-            color: #0066cc;
-        }
-
-        #service-12 .split-column p {
-            color: #555;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            #service-7 .floating-box {
-                position: static;
-                transform: none;
-                margin-top: 20px;
-            }
-
-            #service-10 .timeline::after {
-                left: 20px;
-            }
-
-            #service-10 .timeline-step {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-
-            #service-10 .timeline-step.left, #service-10 .timeline-step.right {
-                left: 0;
-            }
-
-            #service-10 .timeline-step::after {
-                left: 18px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            #service-8 .flip-card {
-                height: 250px;
-            }
-
-            #service-9 .feature-icon {
-                font-size: 2.5em;
-            }
-
-            #service-10 .timeline-step::after {
-                top: 10px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            #service-1 {
-                height: 300px;
-            }
-
-            #service-4 .overlay-text {
-                padding: 15px 20px;
-                font-size: 0.9em;
-            }
-
-            #service-7 .floating-box {
-                margin-top: 20px;
-                position: static;
-            }
-
-            #service-11 {
-                height: 300px;
-            }
-        }
-    </style>
+  <!-- Page-Specific Stylesheet for Services Page -->
+  <link rel="stylesheet" href="services.css">
 </head>
+
 <body>
-    
-     <!-- HEADER SECTION -->
-     <header id="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" alt="No Water Just Shine Limited Logo" width="150">
-                </a>
-                <!-- Toggler for Mobile Menu -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navbar Links with Dropdowns -->
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <!-- Services Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="services.html">View All Services</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- Franchise Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="franchiseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Franchise
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
-                                <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
-                                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
-                                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
-                            </ul>
-                        </li>
-                        <!-- Gallery Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="gallery.html">Gallery</a>
-                        </li>
-                        <!-- About Us Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <!-- Contact Link -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Book Now Button -->
-                        <li class="nav-item">
-                            <a class="btn btn-primary ms-lg-3" href="services.html#book-at-branch"><i class="fa fa-book me-2"></i>Book Now</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-    <!-- MAIN CONTENT -->
-    <main id="services" class="py-5">
-        <div class="container">
-            <!-- Service 1: Hero Banner Layout -->
-            <section id="service-1">
-                <div class="content">
-                    <h1 class="display-4">Exterior Paintwork Cleaning</h1>
-                    <p class="lead">Experience a vibrant and protected vehicle finish with our premium exterior paintwork cleaning service.</p>
-                    <a href="#book-at-branch" class="btn btn-primary btn-lg">Book Now</a>
-                </div>
-            </section>
+
+  <!-- ====================================
+       HEADER & NAVBAR
+  ===================================== -->
+  <header class="navbar-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <!-- Brand / Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img 
+            src="https://via.placeholder.com/150x50?text=LOGO" 
+            alt="No Water Just Shine Limited Logo" 
+            width="150" 
+            class="me-2"
+          >
+          No Water Just Shine
+        </a>
+
+        <!-- Hamburger menu button (mobile) -->
+        <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars text-white" style="font-size: 1.5rem;"></i>
+        </button>
+
+        <!-- Nav Links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <!-- Home Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- Services Link (Active) -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="services.html">Services</a>
+            </li>
+            <!-- Gallery Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <!-- Franchise Link -->
+            <li class="nav-item dropdown">
+              <a 
+                class="nav-link dropdown-toggle" 
+                href="#" 
+                id="franchiseDropdown" 
+                role="button" 
+                data-bs-toggle="dropdown" 
+                aria-expanded="false"
+              >
+                Franchise
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
+                <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
+                <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
+              </ul>
+            </li>
+            <!-- About Us Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <!-- FAQ Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <!-- Contact Link -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
             
-            <!-- Service 2: Two-Column Layout: Image Left, Text Right -->
-            <section id="service-2">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="images/services/exterior-paintwork-detail.jpg" alt="Detailed Exterior Paintwork Cleaning by No Water Just Shine Limited" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Exterior Paintwork Cleaning</h2>
-                        <p>Our exterior paintwork cleaning service ensures your vehicle's paint remains vibrant and free from contaminants. Utilizing advanced waterless techniques, we meticulously remove dirt, grime, and pollutants without compromising the integrity of your car's finish. This eco-friendly approach not only enhances the appearance of your vehicle but also contributes to environmental conservation.</p>
-                        <a href="#book-at-branch" class="btn btn-primary">Book Exterior Paintwork Cleaning</a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 3: Two-Column Layout: Text Left, Image Right -->
-            <section id="service-3">
-                <div class="row align-items-center">
-                    <div class="col-md-6 order-md-2">
-                        <img src="images/services/exterior-glass-detail.jpg" alt="Professional Exterior Glass Cleaning Service" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Exterior Glass Cleaning</h2>
-                        <p>Achieve crystal-clear visibility with our exterior glass cleaning service. We eliminate streaks, smudges, and dirt from all glass surfaces, ensuring optimal clarity and safety. Our specialized waterless cleaning solutions are both effective and environmentally friendly, providing a spotless finish without the need for water usage.</p>
-                        <a href="#book-at-branch" class="btn btn-primary">Book Exterior Glass Cleaning</a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 4: Text Overlay on Image -->
-            <section id="service-4">
-                <div class="overlay-text">
-                    <h2>Alloy Wheels Cleaning</h2>
-                    <p>Restore the shine and luster of your alloy wheels with our comprehensive cleaning service. We remove brake dust, dirt, and grime, ensuring your wheels look as good as new.</p>
-                    <a href="#book-at-branch" class="btn btn-primary">Book Alloy Wheels Cleaning</a>
-                </div>
-            </section>
-            
-            <!-- Service 5: Image Top, Text Below -->
-            <section id="service-5">
-                <div class="row">
-                    <div class="col-12">
-                        <img src="images/services/tyre-cleaning.jpg" alt="Thorough Tyre Cleaning and Treatment" class="img-fluid rounded mb-4">
-                    </div>
-                    <div class="col-12">
-                        <h2>Tyre Cleaning & Treatment</h2>
-                        <p>Maintain the longevity and appearance of your tyres with our tyre cleaning and treatment service. We thoroughly clean your tyres, removing dirt and grime, and apply protective treatments that prevent future buildup. This not only enhances your vehicle's look but also ensures safer driving conditions.</p>
-                        <a href="#book-at-branch" class="btn btn-primary">Book Tyre Cleaning & Treatment</a>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 6: Text Top, Image Below -->
-            <section id="service-6">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Plastic Trim Treatment</h2>
-                        <p>Protect and enhance your vehicle's plastic trim with our specialized treatment service. We apply treatments that shield your trim from UV damage, dirt, and grime, ensuring it remains vibrant and well-maintained.</p>
-                        <a href="#book-at-branch" class="btn btn-primary mb-4">Book Plastic Trim Treatment</a>
-                    </div>
-                    <div class="col-12">
-                        <img src="images/services/plastic-trim.jpg" alt="Durable Plastic Trim Treatment Service" class="img-fluid rounded">
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 7: Side Image with Floating Text Box -->
-            <section id="service-7">
-                <div class="position-relative">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="images/services/door-shuts.jpg" alt="Comprehensive Door Shuts & Sills Cleaning" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6">
-                            <h2>Door Shuts & Sills Cleaning</h2>
-                            <p>Ensure the smooth operation of your vehicle's doors with our door shuts and sills cleaning service. We remove dirt and debris from door components, preventing sticking and ensuring seamless functionality.</p>
-                            <a href="#book-at-branch" class="btn btn-primary">Book Door Shuts & Sills Cleaning</a>
-                        </div>
-                    </div>
-                    <div class="floating-box d-none d-md-block">
-                        <h3>Why Choose Us?</h3>
-                        <p>Our expert team uses eco-friendly products to deliver top-notch cleaning services that protect your vehicle and the environment.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 8: Interactive Flip Card Layout -->
-            <section id="service-8">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-                                    <h3>Interior Vacuuming</h3>
-                                </div>
-                                <div class="flip-card-back">
-                                    <p>Keep your vehicle's interior spotless with our thorough vacuuming service. We remove dust, dirt, and allergens from carpets, seats, and other surfaces, promoting a healthier environment for you and your passengers.</p>
-                                    <a href="#book-at-branch" class="btn btn-primary">Book Interior Vacuuming</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 9: Icon-Based Grid Layout -->
-            <section id="service-9">
-                <div class="text-center mb-5">
-                    <h2>Dashboard Dusting</h2>
-                    <p>Maintain a clean and fresh dashboard with our meticulous dusting service. We ensure all surfaces are free from dust and grime, enhancing the overall aesthetic of your vehicle's interior.</p>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-4 mb-4">
-                        <i class="fas fa-broom feature-icon"></i>
-                        <h4>Deep Cleaning</h4>
-                        <p>Comprehensive cleaning to remove all dust and dirt from your dashboard.</p>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <i class="fas fa-leaf feature-icon"></i>
-                        <h4>Eco-Friendly Products</h4>
-                        <p>We use environmentally safe products that protect your dashboard.</p>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <i class="fas fa-shield-alt feature-icon"></i>
-                        <h4>Protective Finish</h4>
-                        <p>Apply protective coatings to keep your dashboard looking new.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 10: Timeline or Step-by-Step Layout -->
-            <section id="service-10">
-                <div class="container">
-                    <h2 class="text-center mb-5">Interior Glass Cleaning Process</h2>
-                    <div class="timeline">
-                        <div class="timeline-step left">
-                            <i class="fas fa-check-circle"></i>
-                            <h4>Inspection</h4>
-                            <p>We begin with a thorough inspection of all interior glass surfaces to identify areas needing attention.</p>
-                        </div>
-                        <div class="timeline-step right">
-                            <i class="fas fa-spray-can"></i>
-                            <h4>Application</h4>
-                            <p>Apply our specialized waterless cleaning solution to effectively remove streaks and smudges.</p>
-                        </div>
-                        <div class="timeline-step left">
-                            <i class="fas fa-wind"></i>
-                            <h4>Wiping</h4>
-                            <p>Using microfiber cloths, we meticulously wipe down all glass surfaces for a spotless finish.</p>
-                        </div>
-                        <div class="timeline-step right">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>Protection</h4>
-                            <p>Apply a protective coating to repel future dirt and maintain clarity.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Service 11: Parallax Scrolling Section -->
-            <section id="service-11">
-                <div class="content">
-                    <h2>Console Wiping</h2>
-                    <p>Keep your vehicle's console looking pristine with our console wiping service. We carefully clean all surfaces, removing dust, spills, and grime to ensure a fresh and inviting interior.</p>
-                    <a href="#book-at-branch" class="btn btn-primary btn-lg">Book Console Wiping</a>
-                </div>
-            </section>
-            
-            <!-- Service 12: Split Screen with Multiple Columns -->
-            <section id="service-12">
-                <div class="text-center mb-5">
-                    <h2>Paint Treatment with Wax & Ceramic Sealant</h2>
-                    <p>Enhance and protect your vehicle's paint with our advanced wax and ceramic sealant treatment. This service provides a durable barrier against environmental factors, keeping your car's finish looking new longer.</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="split-column">
-                            <img src="images/services/wax-application.jpg" alt="Wax Application Process">
-                            <h4>Wax Application</h4>
-                            <p>Apply high-quality wax to seal and protect your vehicle's paintwork.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="split-column">
-                            <img src="images/services/ceramic-sealant.jpg" alt="Ceramic Sealant Application">
-                            <h4>Ceramic Sealant</h4>
-                            <p>Use advanced ceramic sealant for long-lasting protection and shine.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="split-column">
-                            <img src="images/services/protective-finish.jpg" alt="Protective Finish">
-                            <h4>Protective Finish</h4>
-                            <p>Ensure a smooth, glossy finish that resists scratches and stains.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Branch Selection Section -->
-            <section id="book-at-branch" class="py-5 bg-light">
-                <div class="container">
-                    <h2 class="text-center mb-4">Select Your Nearest Branch</h2>
-                    <p class="text-center mb-5">Choose the branch closest to you within a 25-mile radius of our main locations in Swindon, Oxford, and Birmingham. Enjoy our premium waterless car valeting and detailing services at a convenient location near you.</p>
-                    <div class="row g-4">
-                        <!-- Swindon Branch -->
-                        <div class="col-md-4">
-                            <div class="branch-card">
-                                <img src="images/branches/swindon-branch.jpg" alt="Swindon Branch - No Water Just Shine Limited" class="img-fluid">
-                                <div class="branch-card-body">
-                                    <h3 class="branch-card-title">Swindon</h3>
-                                    <p class="branch-card-text">Located in the heart of Swindon, our Swindon branch serves surrounding areas within a 25-mile radius, including Highworth, Cricklade, Wroughton, South Marston, and Stratton St Margaret. Experience our comprehensive waterless car valeting and detailing services at a location that’s convenient for you.</p>
-                                </div>
-                                <div class="branch-card-footer">
-                                    <a href="swindon.html" class="btn btn-primary"><i class="fa fa-calendar-check me-2"></i>Book in Swindon</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Oxford Branch -->
-                        <div class="col-md-4">
-                            <div class="branch-card">
-                                <img src="images/branches/oxford-branch.jpg" alt="Oxford Branch - No Water Just Shine Limited" class="img-fluid">
-                                <div class="branch-card-body">
-                                    <h3 class="branch-card-title">Oxford</h3>
-                                    <p class="branch-card-text">Our Oxford branch caters to the Oxford area and nearby towns within a 25-mile radius, including Didcot, Abingdon, Witney, Thame, and Bicester. Benefit from our expert car detailing and waterless car wash services delivered at your preferred location.</p>
-                                </div>
-                                <div class="branch-card-footer">
-                                    <a href="oxford.html" class="btn btn-primary"><i class="fa fa-calendar-check me-2"></i>Book in Oxford</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Birmingham Branch -->
-                        <div class="col-md-4">
-                            <div class="branch-card">
-                                <img src="images/branches/birmingham-branch.jpg" alt="Birmingham Branch - No Water Just Shine Limited" class="img-fluid">
-                                <div class="branch-card-body">
-                                    <h3 class="branch-card-title">Birmingham</h3>
-                                    <p class="branch-card-text">Serving Birmingham and its surrounding areas within a 25-mile radius, including Sutton Coldfield, Solihull, Redditch, Warwick, and Walsall. Our Birmingham branch offers top-notch waterless car wash and car detailing services right at your doorstep.</p>
-                                </div>
-                                <div class="branch-card-footer">
-                                    <a href="birmingham.html" class="btn btn-primary"><i class="fa fa-calendar-check me-2"></i>Book in Birmingham</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          </ul>
         </div>
-    </main>
-    
-    <!-- FOOTER SECTION -->
-    <footer id="footer" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <!-- Quick Links -->
-                <div class="col-md-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
-                        <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Information -->
-                <div class="col-md-4 mb-4">
-                    <h5>Contact Information</h5>
-                    <p><i class="fa fa-phone me-2"></i> <a href="tel:07703783253" class="text-white text-decoration-none">07703 783253</a></p>
-                    <p><i class="fa fa-envelope me-2"></i> <a href="mailto:info@nowaterjustshine.co.uk" class="text-white text-decoration-none">info@nowaterjustshine.co.uk</a></p>
-                    <p><i class="fa fa-map-marker-alt me-2"></i> 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
-                </div>
-                <!-- Social Media Links -->
-                <div class="col-md-4 mb-4">
-                    <h5>Follow Us</h5>
-                    <ul class="list-unstyled d-flex">
-                        <li class="me-3"><a href="https://facebook.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i></a></li>
-                        <li class="me-3"><a href="https://instagram.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
-                        <li class="me-3"><a href="https://twitter.com/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i></a></li>
-                        <li><a href="https://linkedin.com/company/NoWaterJustShine" target="_blank" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Footer Bottom -->
-            <div class="d-flex justify-content-between align-items-center mt-4">
-                <p class="mb-0">&copy; 2025 No Water Just Shine Limited. All Rights Reserved.</p>
-                <ul class="list-unstyled d-flex mb-0">
-                    <li class="me-3"><a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="terms.html" class="text-white text-decoration-none">Terms of Service</a></li>
-                </ul>
-            </div>
-            <!-- Newsletter Signup -->
-            <div class="mt-4">
-                <h5>Subscribe to Our Newsletter</h5>
-                <form class="d-flex justify-content-center" action="#" method="post">
-                    <input type="email" name="email" class="form-control w-50 me-2" placeholder="Enter your email" required aria-label="Email Address">
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane me-2"></i>Subscribe</button>
-                </form>
-            </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ====================================
+       HERO / INTRO SECTION
+  ===================================== -->
+  <section id="services-hero" class="services-hero d-flex align-items-center">
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4 fw-bold mb-3">Our Waterless Car Valeting & Detailing Services</h1>
+          <p class="lead mb-4">
+            Achieve a showroom-quality finish without wasting water. Explore our range of extensive packages for both interior and exterior treatments.
+          </p>
+          <a href="#exterior-services" class="btn btn-primary me-3">Exterior Services</a>
+          <a href="#interior-services" class="btn btn-outline-primary">Interior Services</a>
         </div>
-    </footer>
-    
-    <!-- JavaScript for Smooth Scrolling and Active Link Highlighting -->
-    <script>
-        // Smooth Scroll for In-Page Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80, // Adjust for fixed navbar
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+      </div>
+    </div>
+  </section>
 
-        // Active Link Highlighting Based on Scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            let current = '';
+  <!-- MAIN CONTENT WRAPPER -->
+  <main id="services-content" class="py-5">
+    <div class="container">
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
+      <!-- ====================================
+           EXTERIOR SERVICES
+      ===================================== -->
+      <section id="exterior-services" class="mb-5">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Exterior Services</h2>
+          <p>
+            Our exterior packages cover everything from basic paintwork cleansing to advanced ceramic sealants. 
+            We prioritise eco-friendly, waterless solutions to deliver a spectacular shine whilst conserving resources.
+          </p>
+        </div>
 
-            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+        <div class="row g-4">
+          <!-- Exterior Service 1 -->
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <img 
+                src="https://via.placeholder.com/400x200?text=Paintwork+Cleaning" 
+                alt="Exterior Paintwork Cleaning" 
+                class="card-img-top"
+              >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Exterior Paintwork Cleaning</h5>
+                <p class="card-text">
+                  Our core service for removing surface grime, road film, and light contaminants. Specially formulated waterless agents encapsulate dirt particles, allowing a flawless wipe-off that safeguards your car’s paint.
+                </p>
+                <p class="card-text">
+                  <strong>Key Benefits:</strong>
+                  <ul>
+                    <li>Gentle, scratch-free finish</li>
+                    <li>Eco-responsible: minimal water usage</li>
+                    <li>Protective layer prevents future dirt buildup</li>
+                  </ul>
+                </p>
+                <div class="mt-auto">
+                  <a href="#packages" class="btn btn-outline-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Exterior Service 2 -->
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <img 
+                src="https://via.placeholder.com/400x200?text=Alloy+Wheels+Cleaning" 
+                alt="Alloy Wheels Cleaning" 
+                class="card-img-top"
+              >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Alloy Wheels Cleaning</h5>
+                <p class="card-text">
+                  Remove stubborn brake dust, tar, and road salt to restore the original lustre of your alloy wheels. We use non-acidic, pH-balanced cleaners safe for all types of wheel finishes.
+                </p>
+                <p class="card-text">
+                  <strong>Highlights:</strong>
+                  <ul>
+                    <li>Brake dust & grime removal without harsh acids</li>
+                    <li>Safe for chrome, polished, or painted wheels</li>
+                    <li>High-gloss, streak-free finish</li>
+                  </ul>
+                </p>
+                <div class="mt-auto">
+                  <a href="#packages" class="btn btn-outline-primary">View Branches</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Exterior Service 3 -->
+          <div class="col-md-4">
+            <div class="card service-card h-100">
+              <img 
+                src="https://via.placeholder.com/400x200?text=Ceramic+Sealant" 
+                alt="Ceramic Sealant Application" 
+                class="card-img-top"
+              >
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Ceramic Sealant Application</h5>
+                <p class="card-text">
+                  Extend the longevity of your car’s shine with our advanced ceramic coating. Enjoy superior protection against UV rays, acid rain, and pollutants for months on end.
+                </p>
+                <p class="card-text">
+                  <strong>Features:</strong>
+                  <ul>
+                    <li>Exceptional hydrophobicity</li>
+                    <li>Scratch-resistant barrier</li>
+                    <li>Maintains gloss for extended periods</li>
+                  </ul>
+                </p>
+                <div class="mt-auto">
+                  <a href="#packages" class="btn btn-outline-primary">Find a Branch</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================
+           INTERIOR SERVICES
+      ===================================== -->
+      <section id="interior-services" class="mb-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Interior Services</h2>
+            <p>
+              Step into a refreshed cabin every day. Our interior packages include detailed vacuuming, upholstery care, 
+              and protective treatments to keep your car’s interior spotless and welcoming.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Interior Service 1 -->
+            <div class="col-md-6">
+              <div class="card service-card h-100">
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Interior+Vacuum+%26+Upholstery" 
+                  alt="Interior Vacuuming & Upholstery Care" 
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Interior Vacuuming & Upholstery Care</h5>
+                  <p class="card-text">
+                    Eliminate dirt, crumbs, and pet hair from your seats and carpets. Our upholstery treatment neutralises odours and revives fabric or leather surfaces to a clean, hygienic condition.
+                  </p>
+                  <p class="card-text">
+                    <strong>Includes:</strong>
+                    <ul>
+                      <li>Seat and carpet vacuuming</li>
+                      <li>Fabric shampoo or leather conditioning</li>
+                      <li>Odour removal and refreshing finish</li>
+                    </ul>
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#packages" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Interior Service 2 -->
+            <div class="col-md-6">
+              <div class="card service-card h-100">
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Dashboard+Detailing" 
+                  alt="Dashboard & Console Detailing" 
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Dashboard & Console Detailing</h5>
+                  <p class="card-text">
+                    Keep your interior surfaces looking brand-new. We carefully remove dust, smudges, and spills from all hard surfaces, applying protective conditioners to prevent fading or cracking.
+                  </p>
+                  <p class="card-text">
+                    <strong>What You Get:</strong>
+                    <ul>
+                      <li>Deep cleanse of dashboard and console</li>
+                      <li>UV-protective coating</li>
+                      <li>Restored, factory-fresh finish</li>
+                    </ul>
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#packages" class="btn btn-outline-primary">Explore This Service</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================
+           SPECIALISED TREATMENTS
+      ===================================== -->
+      <section id="special-treatments" class="mb-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Specialised Treatments</h2>
+            <p>
+              Some vehicles require that extra touch. From plastic trim restoration to door sill cleaning, 
+              we offer niche services that complete your valeting experience.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-center">
+            <!-- Plastic Trim Restoration -->
+            <div class="col-md-4">
+              <img 
+                src="https://via.placeholder.com/400x200?text=Plastic+Trim+Restoration" 
+                alt="Plastic Trim Restoration" 
+                class="img-fluid rounded shadow"
+              >
+            </div>
+            <div class="col-md-8">
+              <h5>Plastic Trim Restoration</h5>
+              <p>
+                Don’t let faded or discoloured plastic ruin your car’s appearance. Our trim restoration service revitalises plastic components, 
+                adding a protective layer against UV rays to prevent future fading.
+              </p>
+              <ul>
+                <li>Revives dull plastics to a deep, rich tone</li>
+                <li>Blocks harmful UV radiation</li>
+                <li>Protective barrier for long-lasting results</li>
+              </ul>
+              <a href="#packages" class="btn btn-outline-primary">Find Out More</a>
+            </div>
+          </div>
+
+          <hr class="my-5">
+
+          <div class="row g-4 align-items-center flex-row-reverse">
+            <!-- Door Sills Cleaning -->
+            <div class="col-md-4">
+              <img 
+                src="https://via.placeholder.com/400x200?text=Door+Sills+Cleaning" 
+                alt="Door Sills Cleaning" 
+                class="img-fluid rounded shadow"
+              >
+            </div>
+            <div class="col-md-8">
+              <h5>Door Shuts & Sills Cleaning</h5>
+              <p>
+                Often neglected, door sills and shuts can accumulate dirt, grease, and debris that affect the operation of your car’s doors. 
+                We meticulously clean these areas to maintain functionality and overall aesthetics.
+              </p>
+              <ul>
+                <li>Removal of lodged debris</li>
+                <li>Prevents rust or corrosion</li>
+                <li>Improves door mechanism longevity</li>
+              </ul>
+              <a href="#packages" class="btn btn-outline-primary">Explore This Service</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================
+           PAINT PROTECTION PACKAGES
+      ===================================== -->
+      <section id="packages" class="mb-5 bg-light py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Complete Paint Protection Packages</h2>
+            <p>
+              Combine multiple exterior treatments in one go. Our packages bundle cleaning, decontamination, 
+              polishing, and protective coatings for ultimate efficiency and value.
+            </p>
+          </div>
+          <div class="row g-4">
+            <!-- Bronze Package -->
+            <div class="col-md-4">
+              <div class="card package-card h-100">
+                <div class="card-header bg-dark text-white">
+                  <h5 class="card-title mb-0">Bronze Service</h5>
+                </div>
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Bronze+Package" 
+                  alt="Bronze Package" 
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text">
+                    Our Bronze Service is perfect for those seeking essential exterior care without compromising quality. 
+                    It includes a comprehensive clean to keep your car looking its best.
+                  </p>
+                  <p class="card-text">
+                    <strong>Includes:</strong>
+                    <ul>
+                      <li>All Exterior Paintwork Cleaned</li>
+                      <li>All Exterior Glass Cleaned</li>
+                      <li>Alloy Wheels Cleaned</li>
+                      <li>Tyres Cleaned and Treated</li>
+                      <li>All Plastic Exterior Trim Treated</li>
+                      <li>Door Shuts and Sills Cleaned</li>
+                    </ul>
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#branches" class="btn btn-primary">Book Your Visit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Silver Package -->
+            <div class="col-md-4">
+              <div class="card package-card h-100">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Silver Service</h5>
+                </div>
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Silver+Package" 
+                  alt="Silver Package" 
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text">
+                    Elevate your car’s appearance with our Silver Service, offering enhanced exterior care and additional protective treatments. 
+                    Perfect for maintaining a pristine look with added benefits.
+                  </p>
+                  <p class="card-text">
+                    <strong>Includes:</strong>
+                    <ul>
+                      <li>All Exterior Paintwork Cleaned</li>
+                      <li>All Exterior Glass Cleaned</li>
+                      <li>Alloy Wheels Cleaned</li>
+                      <li>Tyres Cleaned and Treated</li>
+                      <li>All Plastic Exterior Trim Treated</li>
+                      <li>Door Shuts and Sills Cleaned</li>
+                      <li>Interior Vacuum</li>
+                      <li>Dust Dashboard</li>
+                      <li>Interior Glass Cleaned</li>
+                      <li>Wipe down Console</li>
+                    </ul>
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#branches" class="btn btn-primary">Book Your Visit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Gold Package -->
+            <div class="col-md-4">
+              <div class="card package-card h-100">
+                <div class="card-header bg-warning text-dark">
+                  <h5 class="card-title mb-0">Gold Service</h5>
+                </div>
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Gold+Package" 
+                  alt="Gold Package" 
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <p class="card-text">
+                    Our premium Gold Service offers comprehensive care for both exterior and interior aspects of your vehicle. 
+                    This package is designed for those who demand the highest level of detail and protection.
+                  </p>
+                  <p class="card-text">
+                    <strong>Includes:</strong>
+                    <ul>
+                      <li>All Exterior Paintwork Cleaned</li>
+                      <li>All Exterior Glass Cleaned</li>
+                      <li>Alloy Wheels Cleaned</li>
+                      <li>Tyres Cleaned and Treated</li>
+                      <li>All Plastic Exterior Trim Treated</li>
+                      <li>Door Shuts and Sills Cleaned</li>
+                      <li>Interior Vacuum</li>
+                      <li>Dust Dashboard</li>
+                      <li>Interior Glass Cleaned</li>
+                      <li>Wipe down Console</li>
+                      <li>Exterior Paint treated with Wax and Ceramic Sealant</li>
+                      <li>Exterior Glass treated with Glass Repellent Solution</li>
+                    </ul>
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#branches" class="btn btn-primary">Book Your Visit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================
+           BRANCHES SECTION
+      ===================================== -->
+      <section id="branches" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">Find Your Nearest Branch</h2>
+            <p>
+              We currently operate in Swindon, Oxford, and Birmingham. Select your closest branch to arrange 
+              a waterless car valeting or detailing session at your convenience.
+            </p>
+          </div>
+          <div class="row g-4">
+            <!-- Swindon Branch -->
+            <div class="col-md-4">
+              <div class="card branch-card h-100">
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Swindon+Branch" 
+                  alt="Swindon Branch"
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Swindon Branch</h5>
+                  <p class="card-text">
+                    Serving Swindon and surrounding towns with top-notch waterless solutions. 
+                    Perfect for those who want an eco-friendly, high-quality car care service.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="swindon.html" class="btn btn-primary">
+                      Learn about Swindon
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Oxford Branch -->
+            <div class="col-md-4">
+              <div class="card branch-card h-100">
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Oxford+Branch" 
+                  alt="Oxford Branch"
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Oxford Branch</h5>
+                  <p class="card-text">
+                    Conveniently located for residents of Oxford and neighbouring areas who seek professional 
+                    valeting without the wasted water or harsh chemicals.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="oxford.html" class="btn btn-primary">
+                      Learn about Oxford
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Birmingham Branch -->
+            <div class="col-md-4">
+              <div class="card branch-card h-100">
+                <img 
+                  src="https://via.placeholder.com/400x200?text=Birmingham+Branch" 
+                  alt="Birmingham Branch"
+                  class="card-img-top"
+                >
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Birmingham Branch</h5>
+                  <p class="card-text">
+                    Our flagship branch in Birmingham caters to city dwellers looking for top-tier 
+                    detailing without harming the environment.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="birmingham.html" class="btn btn-primary">
+                      Learn about Birmingham
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- row -->
+        </div><!-- container -->
+      </section>
+
+    </div><!-- container end -->
+  </main>
+
+  <!-- ====================================
+       FOOTER
+  ===================================== -->
+  <footer class="site-footer bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Footer Column 1 -->
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+            <li><a href="gallery.html" class="text-white text-decoration-none">Gallery</a></li>
+            <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Footer Column 2 -->
+        <div class="col-md-4 mb-4">
+          <h5>Contact Info</h5>
+          <p>Phone: <a href="tel:07703783253" class="text-white text-decoration-none">07703 783253</a></p>
+          <p>Email: <a href="mailto:info@nowaterjustshine.co.uk" class="text-white text-decoration-none">info@nowaterjustshine.co.uk</a></p>
+          <p>Address: 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
+        </div>
+        <!-- Footer Column 3 (Social) -->
+        <div class="col-md-4 mb-4">
+          <h5>Follow Us</h5>
+          <div class="social-icons d-flex">
+            <a href="https://facebook.com/NoWaterJustShine" target="_blank" aria-label="Facebook" class="text-white me-3">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com/NoWaterJustShine" target="_blank" aria-label="Instagram" class="text-white me-3">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com/NoWaterJustShine" target="_blank" aria-label="Twitter" class="text-white me-3">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com/company/NoWaterJustShine" target="_blank" aria-label="LinkedIn" class="text-white">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Footer -->
+      <div class="footer-bottom d-flex justify-content-between align-items-center mt-4 flex-wrap">
+        <div>&copy; 2025 No Water Just Shine Limited. All rights reserved.</div>
+        <div>
+          <a href="privacy.html" class="text-white text-decoration-none me-3">Privacy Policy</a>
+          <a href="terms.html" class="text-white text-decoration-none">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================
+       FLOATING BRANCHES BUTTON
+  ===================================== -->
+  <a href="#branches" class="floating-branches-btn" aria-label="View Branches">
+    <i class="fa fa-map-marker-alt me-2"></i>
+    Branches
+  </a>
+
+  <!-- Bootstrap JS (Bundle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
