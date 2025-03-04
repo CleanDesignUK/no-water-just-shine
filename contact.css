@@ -1,33 +1,28 @@
 /********************************************
  * contact.css
  * Page-Specific Styles for contact.html
- * (Relies on color variables and 
- *  shared layouts from styles.css)
+ * 
+ * Uses the same color variables from styles.css:
+ * :root {
+ *   --dark-royal-blue: #002147;
+ *   --shiny-metallic-silver: #C0C0C0;
+ *   --white: #FFFFFF;
+ *   --light-gray: #F5F5F5;
+ *   --primary-color: #0066cc;
+ * }
  ********************************************/
-
-/* ===========================
-   VARIABLES (Ensure these are in styles.css)
-=========================== */
-:root {
-    --dark-royal-blue: #002147;
-    --shiny-metallic-silver: #C0C0C0;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-    --primary-color: #0066cc;
-    --hover-color: #e0e0e0;
-}
 
 /* ===========================
    PARALLAX BANNER
 =========================== */
 .parallax-banner {
     position: relative;
-    background-image: url("images/franchise-oxford.jpg"); /* Replace with actual image */
+    background-image: url("images/contact-hero.jpg"); /* Replace with an appropriate contact page banner */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,13 +39,8 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.parallax-banner .hero-content {
-    position: relative;
-    z-index: 2;
-}
-
 .parallax-banner h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
 }
@@ -76,87 +66,47 @@
 /* ===========================
    ABOUT US SECTION
 =========================== */
+#about-us {
+    background-color: var(--light-gray);
+}
 #about-us h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
     margin-bottom: 1rem;
 }
-
 #about-us p {
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* ===========================
    FRANCHISE PREVIEW SECTION
 =========================== */
+#franchise-preview {
+    background-color: var(--white);
+}
 #franchise-preview h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
-    margin-bottom: 1.5rem;
 }
-
+#franchise-preview .text-primary {
+    color: var(--primary-color);
+}
 #franchise-preview h3 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--primary-color);
     margin-bottom: 1rem;
+    font-weight: 600;
 }
-
 #franchise-preview p {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    line-height: 1.6;
 }
-
-#franchise-preview .btn-secondary {
-    background-color: var(--secondary-color);
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-#franchise-preview .btn-secondary:hover {
-    background-color: darken(var(--secondary-color), 10%);
-}
-
-/* ===========================
-   FRANCHISE FAQS SECTION
-=========================== */
-#franchise-faqs h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--dark-royal-blue);
-
-}
-
-#franchise-faqs .accordion-button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
-    background-color: var(--light-gray);
-    color: var(--dark-royal-blue);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#franchise-faqs .accordion-button.collapsed {
-    background-color: var(--light-gray);
-    color: var(--dark-royal-blue);
-}
-
-#franchise-faqs .accordion-button:not(.collapsed) {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-#franchise-faqs .accordion-button::after {
-    filter: invert(1);
-}
-
-#franchise-faqs .accordion-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
+#franchise-preview img {
+    border-radius: 10px;
 }
 
 /* ===========================
@@ -165,38 +115,35 @@
 #general-inquiries h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
-
 #general-inquiries p {
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
 }
 
 /* ===========================
    CONTACT FORM SECTION
 =========================== */
+#contact-form {
+    background-color: var(--light-gray);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 #contact-form h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--dark-royal-blue);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
-
-.web3-form {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.web3-form .form-label {
+#contact-form p {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    font-weight: 500;
 }
-
 .web3-form .form-control,
 .web3-form .form-select,
 .web3-form textarea {
@@ -204,63 +151,51 @@
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 1rem;
-    width: 100%;
     background-color: #fff;
     color: #333;
     transition: border-color 0.3s ease;
 }
-
 .web3-form .form-control:focus,
 .web3-form .form-select:focus,
 .web3-form textarea:focus {
     border-color: var(--primary-color);
     box-shadow: none;
 }
-
 .web3-form .btn-primary {
     background-color: var(--primary-color);
     border: none;
-    border-radius: 20px;
-    padding: 10px 25px;
+    border-radius: 30px;
+    padding: 12px 25px;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    width: 100%;
 }
-
 .web3-form .btn-primary:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: #004999; /* Darker shade of var(--primary-color) */
 }
 
-/* ===========================
-   FOOTER STYLING
-=========================== */
-footer#footer h5 {
+/* Additional styling for the columns in the form */
+.web3-form .row.g-3 .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+.web3-form label.form-label {
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 1rem;
-}
-
-footer#footer p, 
-footer#footer a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.95rem;
-}
-
-footer#footer a:hover {
-    color: var(--primary-color);
-}
-
-footer#footer .social-icons a {
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
-
-footer#footer .social-icons a:hover {
-    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 
 /* ===========================
-   FLOATING BRANCHES BUTTON
+   FOOTER & FLOATING BUTTON
 =========================== */
+.footer-bottom {
+    border-top: 1px solid var(--shiny-metallic-silver);
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 .floating-branches-btn {
     position: fixed;
     bottom: 30px;
@@ -279,7 +214,6 @@ footer#footer .social-icons a:hover {
     z-index: 9999;
     transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
-
 .floating-branches-btn:hover {
     background: linear-gradient(145deg, #e0e0e0, var(--shiny-metallic-silver));
     color: var(--white);
@@ -289,39 +223,29 @@ footer#footer .social-icons a:hover {
 /* ===========================
    RESPONSIVE MEDIA QUERIES
 =========================== */
-@media (max-width: 992px) {
-    .parallax-banner h1 {
-        font-size: 2rem;
-    }
-    .parallax-banner p.lead {
-        font-size: 1rem;
-    }
-}
-
 @media (max-width: 768px) {
     .parallax-banner {
-        height: 400px;
+        height: 350px;
     }
     .parallax-banner h1 {
         font-size: 1.75rem;
     }
     .parallax-banner p.lead {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 }
-
 @media (max-width: 576px) {
     .parallax-banner {
         height: 300px;
     }
     .parallax-banner h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .parallax-banner p.lead {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
     .floating-branches-btn {
         font-size: 1rem;
-        padding: 10px 16px;
+        padding: 10px 14px;
     }
 }

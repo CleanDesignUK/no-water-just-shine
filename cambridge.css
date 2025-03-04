@@ -1,0 +1,405 @@
+/********************************************
+ * cambridge.css
+ * Page-Specific Styles for cambridge.html
+ * (Relies on color variables and shared 
+ *  styling from styles.css)
+ ********************************************/
+
+/*
+  In your "styles.css", be sure to define 
+  variables like:
+  
+  :root {
+      --dark-royal-blue: #002147;
+      --shiny-metallic-silver: #C0C0C0;
+      --white: #FFFFFF;
+      --light-gray: #F5F5F5;
+      --primary-color: #0066cc;
+      --secondary-color: #ff9900;
+      --hover-color: #e0e0e0;
+  }
+*/
+
+/* ===========================
+   PARALLAX HERO BANNER
+=========================== */
+#hero {
+    position: relative;
+    background-image: url("images/franchise-cambridge.jpg"); /* Use your actual Cambridge banner image */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p.lead {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+#hero .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#hero .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   ABOUT OUR CAMBRIDGE BRANCH
+=========================== */
+#cambridge-about h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    margin-bottom: 1rem;
+}
+
+#cambridge-about p {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+#cambridge-about img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ===========================
+   PACKAGE CARDS
+=========================== */
+.package-card {
+    border: 1px solid var(--shiny-metallic-silver);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.package-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+}
+
+.package-card ul li {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.package-card ul li i {
+    color: var(--primary-color);
+}
+
+/* ===========================
+   SERVICE AREAS LIST
+=========================== */
+#service-areas h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+}
+
+#service-areas p {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+#service-areas .row-cols-2 .col,
+#service-areas .row-cols-md-3 .col {
+    font-size: 1rem;
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+#testimonials h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.testimonial h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+/* ===========================
+   FAQ SECTION
+=========================== */
+#faqs h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#faqs .accordion-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#faqs .accordion-button.collapsed {
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
+}
+
+#faqs .accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+#faqs .accordion-button::after {
+    filter: invert(1);
+}
+
+#faqs .accordion-body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* ===========================
+   CONTACT & BOOKING
+=========================== */
+#contact-and-booking h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    background-color: var(--light-gray);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    font-family: 'Montserrat', sans-serif;
+    color: #002147;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #004999;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   MAP SECTION
+=========================== */
+#map h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ===========================
+   FOOTER STYLING
+=========================== */
+footer.site-footer {
+    background-color: #002147;
+    color: var(--white);
+    padding: 40px 0;
+}
+
+footer.site-footer h5 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+footer.site-footer p,
+footer.site-footer a {
+    font-family: 'Roboto', sans-serif;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+footer.site-footer a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer.site-footer .social-icons a {
+    margin-right: 15px;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+footer.site-footer .social-icons a:hover {
+    color: var(--primary-color);
+}
+
+footer.site-footer .footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===========================
+   FLOATING SERVICE AREAS BUTTON
+=========================== */
+.floating-service-areas-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
+}
+
+.floating-service-areas-btn:hover {
+    background-color: #004999;
+    color: var(--white);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   RESPONSIVE MEDIA QUERIES
+=========================== */
+@media (max-width: 992px) {
+    #hero {
+        height: 500px;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p.lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: 400px;
+    }
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero p.lead {
+        font-size: 1rem;
+    }
+    .package-card .card-title {
+        font-size: 1.25rem;
+    }
+    .package-card ul li {
+        font-size: 0.95rem;
+    }
+    .package-card p strong {
+        font-size: 1rem;
+    }
+    #map iframe {
+        height: 350px;
+    }
+    .floating-service-areas-btn {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero {
+        height: 350px;
+    }
+    #hero h1 {
+        font-size: 1.75rem;
+    }
+    #hero p.lead {
+        font-size: 0.9rem;
+    }
+    .package-card .card-title {
+        font-size: 1.1rem;
+    }
+    .package-card ul li {
+        font-size: 0.85rem;
+    }
+    .package-card p strong {
+        font-size: 0.9rem;
+    }
+    #map iframe {
+        height: 250px;
+    }
+    .floating-service-areas-btn {
+        font-size: 0.95rem;
+        padding: 8px 14px;
+    }
+}
