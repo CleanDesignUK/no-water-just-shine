@@ -19,24 +19,31 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet"
+    >
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
     <!-- FontAwesome for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet"
+    >
 
-    <!-- Main Custom CSS -->
+    <!-- Main Custom CSS (Global) -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Oxford Specific CSS -->
+    <!-- Oxford-Specific CSS -->
     <link rel="stylesheet" href="oxford.css">
-
- 
 </head>
+
 <body>
-    
     <!-- ====================================
          HEADER & NAVBAR
     ===================================== -->
@@ -45,11 +52,15 @@
             <div class="container">
                 <!-- Brand / Logo -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/no-water-just-shine-logo.webp" alt="No Water Just Shine Limited Logo" width="60">
+                    <img
+                        src="images/no-water-just-shine-logo.webp"
+                        alt="No Water Just Shine Limited Logo"
+                        width="60"
+                    >
                     No Water Just Shine
                 </a>
 
-                <!-- Hamburger menu button (mobile) -->
+                <!-- Hamburger menu (mobile) -->
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -66,8 +77,15 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a 
+                                class="nav-link active"
+                                aria-current="page"
+                                href="index.html"
+                            >
+                                Home
+                            </a>
                         </li>
+                        
                         <!-- Services Dropdown -->
                         <li class="nav-item dropdown">
                             <a 
@@ -84,18 +102,19 @@
                                 <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning &amp; Treatment</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning & Treatment</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts &amp; Sills Cleaning</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-7">Door Shuts & Sills Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
                                 <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
-                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax &amp; Ceramic Sealant</a></li>
+                                <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax & Ceramic Sealant</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="services.html">View All Services</a></li>
                             </ul>
                         </li>
+                        
                         <!-- Franchise Dropdown -->
                         <li class="nav-item dropdown">
                             <a 
@@ -117,318 +136,539 @@
                                 <li><a class="dropdown-item" href="franchise.html">Join Our Franchise</a></li>
                             </ul>
                         </li>
-                        <!-- Gallery Link -->
-                   
+                        
                         <!-- Contact Link -->
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="contact.html">
+                                Contact
+                            </a>
                         </li>
-                        <!-- Book Now Button -->
-                    
+                        <!-- (Optional "Book Now" Button can be added here) -->
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
     <!-- ====================================
-         HERO SECTION
+         HERO / INTRO SECTION
     ===================================== -->
-    <section id="hero">
+    <section id="hero" class="text-white d-flex align-items-center justify-content-center">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Oxford Branch</h1>
+            <h1 class="mb-3">Oxford Branch</h1>
             <p class="lead">Premium Waterless Car Valeting and Detailing Services</p>
-            <a href="#services" class="btn btn-primary">Explore Our Services</a>
+            <a href="#packages" class="btn btn-primary btn-lg">View Our Packages</a>
         </div>
     </section>
-    
+
     <!-- ====================================
-         ABOUT SECTION
+         ABOUT OUR OXFORD BRANCH
     ===================================== -->
-    <section id="about" class="pt-5">
+    <section id="oxford-about" class="py-5">
         <div class="container">
-            <h2>About Our Oxford Branch</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Committed to Excellence in Car Care</h3>
-                    <p>
-                        At No Water Just Shine Limited's Oxford branch, we pride ourselves on delivering top-notch waterless car valeting and detailing services. Our mission is to provide exceptional car care while minimizing environmental impact, making us the preferred choice for Oxford residents who value both quality and sustainability.
-                    </p>
-                    <p>
-                        Our team of trained professionals utilizes eco-friendly products and innovative techniques to ensure your vehicle receives the best possible treatment. From routine washes to comprehensive detailing packages, we cater to all your car maintenance needs with precision and care.
-                    </p>
-                    <p>
-                        Conveniently located in the heart of Oxford, we offer both in-shop and mobile services, allowing you to choose the option that best fits your busy lifestyle. Experience the No Water Just Shine difference today and keep your car looking its absolute best.
-                    </p>
+            
+            <!-- Sub-Section 1 -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img
+                        src="images/mobile-detailing-oxford.jpg"
+                        class="img-fluid rounded shadow"
+                        alt="Eco-Friendly Car Detailing in Oxford"
+                    >
                 </div>
-                <div class="about-image">
-                    <img src="images/franchise-birmingham.jpg" alt="Our Oxford Branch Team">
+                <div class="col-md-6">
+                    <h2 class="mb-3">Premium Eco-Friendly Car Detailing in Oxford</h2>
+                    <p>
+                        No Water Just Shine Limited provides Oxford’s premier eco-friendly
+                        car valeting services. Our waterless methods deliver an exceptional 
+                        clean while conserving valuable resources. From the city centre 
+                        to Cowley or Headington, our mobile team ensures your car receives
+                        a top-class treatment wherever you are.
+                    </p>
+                    <p>
+                        We offer services like tyre cleaning, plastic trim treatments, 
+                        and ceramic wax sealants to keep your car in showroom condition. 
+                        Ideal for busy professionals and families, our packages are 
+                        designed to fit your lifestyle. Choose the sustainable car 
+                        cleaning option in Oxford and join us in caring for the 
+                        environment—one wash at a time.
+                    </p>
                 </div>
             </div>
+
+            <!-- Sub-Section 2 -->
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <img
+                        src="images/mobile-car-cleaning-oxford.jpg"
+                        class="img-fluid rounded shadow"
+                        alt="Mobile Car Cleaning in Oxford"
+                    >
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <h2 class="mb-3">Mobile Car Cleaning for Oxford's Busy Lifestyles</h2>
+                    <p>
+                        Don’t let your schedule stop you from having a pristine car.
+                        At No Water Just Shine Limited, we bring our waterless car
+                        detailing services right to your doorstep. From the
+                        university district to surrounding villages, we’ll
+                        transform your vehicle while you focus on what
+                        matters most.
+                    </p>
+                    <p>
+                        Our waterless approach is gentle on paintwork and the planet,
+                        ensuring you get top-tier results with minimal environmental
+                        impact. Enjoy a clean, polished car without the hassle 
+                        of driving to a traditional car wash. <strong>Contact us now</strong> 
+                        for reliable, on-the-spot car valeting in and around Oxford.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sub-Section 3 -->
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img
+                        src="images/oxford-best-car-valeting.jpg"
+                        class="img-fluid rounded shadow"
+                        alt="Oxford’s Best Car Valeting"
+                    >
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Oxford’s Trusted Name in Car Detailing</h2>
+                    <p>
+                        Your car is a reflection of your style—keep it looking its best
+                        with Oxford’s most trusted car valeting service. We prioritize
+                        quality, convenience, and eco-responsibility in every job we do.
+                        Whether you’re preparing for a special event or simply
+                        maintaining your everyday ride, we tailor our packages to
+                        suit your needs.
+                    </p>
+                    <p>
+                        Choose from Bronze, Silver, or Gold packages, each combining
+                        different detailing services like console wiping, wax
+                        treatments, and interior vacuuming. Let us elevate your
+                        ride while doing our part to protect the environment.
+                        Book your spot today and experience the 
+                        No Water Just Shine difference.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
-    
+
     <!-- ====================================
-         SERVICES SECTION
+         SERVICE PACKAGES
     ===================================== -->
-    <section id="services" class="mt-4 py-3">
+    <section id="packages" class="my-5">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2 class="text-center mb-4">Our Packages</h2>
             <div class="row">
-                <!-- Service 1 -->
+                <!-- Bronze Package -->
                 <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                        
-                        <h4>Exterior Paintwork Cleaning</h4>
-                        <p>
-                            Restore your vehicle's shine with our meticulous exterior paintwork cleaning, removing dirt, grime, and minor imperfections for a flawless finish.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                        
-                        <h4>Interior Detailing</h4>
-                        <p>
-                            Enhance your car's interior with our comprehensive detailing services, including vacuuming, dashboard cleaning, and fabric protection.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                    
-                        <h4>Wheel & Tyre Services</h4>
-                        <p>
-                            Keep your wheels and tyres looking new with our specialized cleaning and treatment, ensuring optimal performance and aesthetics.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                     
-                        <h4>Specialty Treatments</h4>
-                        <p>
-                            Protect your vehicle's surfaces with our premium wax and ceramic sealant applications, offering long-lasting shine and durability.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 5 -->
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                       
-                        <h4>Waterless Car Wash</h4>
-                        <p>
-                            Enjoy a spotless car without wasting water, using our eco-friendly waterless wash solutions that are tough on grime but gentle on the environment.
-                        </p>
-                    </div>
-                </div>
-                <!-- Service 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="service-item">
-                    
-                        <h4>Mobile Detailing</h4>
-                        <p>
-                            Experience ultimate convenience with our mobile detailing services, bringing professional car care directly to your doorstep anywhere in Oxford.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- ====================================
-         TESTIMONIALS SECTION
-    ===================================== -->
-    <section id="testimonials" class="d-flex align-items-center justify-content-center"">
-        <div class="container text-center">
-            <h2>What Our Customers Say</h2>
-       
-                        <div class="testimonial">
-                            <p>"No Water Just Shine transformed my car without using a drop of water! The detailing was impeccable."</p>
-                            <h5>- Sarah M.</h5>
+                    <div class="card package-card h-100">
+                        <img
+                            src="images/bronze-package.webp"
+                            class="card-img-top"
+                            alt="Bronze Package"
+                        >
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bronze Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Exterior Paintwork Cleaning
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Exterior Glass Cleaning
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Alloy Wheels Cleaning
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Tyre Cleaning &amp; Treatment
+                                </li>
+                            </ul>
+                            <p class="mt-3"><strong>From £50</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
                         </div>
-                   
-                        <div class="testimonial">
-                            <p>"Professional service and excellent results. Highly recommend their premium wash package."</p>
-                            <h5>- James L.</h5>
-                        </div>
-                   
-                   
-                        <div class="testimonial">
-                            <p>"Eco-friendly and thorough. My car looks brand new after the ultimate protection treatment."</p>
-                            <h5>- Emily R.</h5>
-                        </div>
+                    </div>
+                </div>
                 
+                <!-- Silver Package -->
+                <div class="col-md-4 mb-4">
+                    <div class="card package-card h-100">
+                        <img
+                            src="images/silver-package.webp"
+                            class="card-img-top"
+                            alt="Silver Package"
+                        >
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Silver Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>All services from Bronze Package
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Interior Vacuuming
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Dashboard Dusting
+                                </li>
+                            </ul>
+                            <p class="mt-3"><strong>From £60</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Carousel Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                
+                <!-- Gold Package -->
+                <div class="col-md-4 mb-4">
+                    <div class="card package-card h-100">
+                        <img
+                            src="images/gold-package.webp"
+                            class="card-img-top"
+                            alt="Gold Package"
+                        >
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gold Package</h5>
+                            <ul class="list-unstyled flex-grow-1">
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>All services from Silver Package
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Console Wiping
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Paint Treatment with Wax &amp; Ceramic Sealant
+                                </li>
+                                <li>
+                                    <i class="fa fa-check me-2 text-primary"></i>Glass Repellent Solution
+                                </li>
+                            </ul>
+                            <p class="mt-3"><strong>From £65</strong></p>
+                            <a href="#contact-and-booking" class="btn btn-primary mt-auto">Book Now</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    
+
+    <!-- ====================================
+         SERVICE AREAS
+    ===================================== -->
+    <section id="service-areas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Areas We Serve</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row row-cols-2 row-cols-md-3 g-3">
+                        <div class="col text-center"><p>Oxford City Centre</p></div>
+                        <div class="col text-center"><p>Cowley</p></div>
+                        <div class="col text-center"><p>Headington</p></div>
+                        <div class="col text-center"><p>Botley</p></div>
+                        <div class="col text-center"><p>Kidlington</p></div>
+                        <div class="col text-center"><p>Wheatley</p></div>
+                        <div class="col text-center"><p>Summertown</p></div>
+                        <div class="col text-center"><p>Marston</p></div>
+                        <div class="col text-center"><p>Abingdon</p></div>
+                    </div>
+                    <p class="text-center mt-3">Serving within a 25-mile radius of Oxford.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================
+         TESTIMONIALS
+    ===================================== -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-dark"></i>
+                        <p>
+                            "No Water Just Shine transformed my car without using a drop of water! 
+                            The detailing was impeccable."
+                        </p>
+                        <h5 class="mt-3">- Sarah M.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-dark"></i>
+                        <p>
+                            "Professional service and excellent results. Highly recommend
+                            their mobile wash package."
+                        </p>
+                        <h5 class="mt-3">- James L.</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial text-center">
+                        <i class="fa fa-quote-left fa-2x mb-3 text-dark"></i>
+                        <p>
+                            "Eco-friendly and thorough. My car looks brand new after the 
+                            Ultimate Protection treatment."
+                        </p>
+                        <h5 class="mt-3">- Emily R.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ====================================
          FAQ SECTION
     ===================================== -->
-    <section id="faqs">
+    <section id="faqs" class="my-5">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
             <div class="accordion" id="faqAccordion">
                 <!-- FAQ 1 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button
+                            class="accordion-button"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne"
+                            aria-expanded="true"
+                            aria-controls="collapseOne"
+                        >
                             What is a waterless car wash?
                         </button>
                     </h2>
-                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                    <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion"
+                    >
                         <div class="accordion-body">
-                            A waterless car wash uses specialized eco-friendly products to clean your vehicle without the need for traditional water-based methods. It's efficient, environmentally friendly, and perfect for areas with water restrictions.
+                            A waterless car wash uses specialized eco-friendly products to clean
+                            your vehicle without the need for traditional water-based methods. 
+                            It's efficient, environmentally friendly, and perfect for areas 
+                            with water restrictions.
                         </div>
                     </div>
                 </div>
+                
                 <!-- FAQ 2 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo"
+                            aria-expanded="false"
+                            aria-controls="collapseTwo"
+                        >
                             How long does a detailing service take?
                         </button>
                     </h2>
-                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                    <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion"
+                    >
                         <div class="accordion-body">
-                            The duration varies based on the package selected. Our Premium Wash takes approximately 1 hour, Deluxe Detailing around 2 hours, and Ultimate Protection about 3 hours for optimal results.
+                            The duration varies based on the package selected. Our Bronze Wash
+                            usually takes about 1 hour, Silver up to 1.5 hours, and Gold
+                            up to 2 hours for best results.
                         </div>
                     </div>
                 </div>
+                
                 <!-- FAQ 3 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree"
+                            aria-expanded="false"
+                            aria-controls="collapseThree"
+                        >
                             Do you offer mobile services?
                         </button>
                     </h2>
-                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                    <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion"
+                    >
                         <div class="accordion-body">
-                            Yes, we offer mobile car detailing services within the Oxford area. You can book an appointment at your preferred location using our online booking system.
+                            Yes, we offer mobile car detailing within the Oxford area. You can
+                            book an appointment at your preferred location using our 
+                            Calendly scheduler below.
                         </div>
                     </div>
                 </div>
-                <!-- Additional FAQs -->
+                
+                <!-- FAQ 4 -->
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour"
+                            aria-expanded="false"
+                            aria-controls="collapseFour"
+                        >
                             What products do you use for detailing?
                         </button>
                     </h2>
-                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                    <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion"
+                    >
                         <div class="accordion-body">
-                            We use high-quality, eco-friendly products that are safe for your vehicle and the environment. Our waterless solutions are designed to effectively clean and protect without harming natural resources.
+                            We use high-quality, eco-friendly products that are safe for 
+                            both your vehicle and the environment. Our waterless solutions 
+                            effectively clean, protect, and shine without damaging 
+                            natural resources.
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item ">
-                    <h2 class="accordion-header" id="faqHeadingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                
+                <!-- FAQ 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button
+                            class="accordion-button collapsed"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive"
+                            aria-expanded="false"
+                            aria-controls="collapseFive"
+                        >
                             How can I book an appointment?
                         </button>
                     </h2>
-                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                    <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion"
+                    >
                         <div class="accordion-body">
-                            You can book an appointment directly through our website by visiting the "Book Now" button at the top of the page or by filling out our contact form below. Alternatively, you can call us at 07703 783253.
+                            You can schedule your appointment right on this page using our
+                            Calendly booking widget, or submit your details via the 
+                            contact form below. We also accept phone bookings at 
+                            <a href="tel:07703783253">07703 783253</a>.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-   
-    
+
     <!-- ====================================
-         CONTACT AND BOOKING SECTION
+         CONTACT FORM AND CALENDLY BOOKING
     ===================================== -->
-    <section id="contact-and-booking">
+    <section id="contact-and-booking" class="my-5">
         <div class="container">
-            <h2>Get in Touch & Schedule Your Appointment</h2>
+            <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
             <div class="row">
                 <!-- Contact Form -->
                 <div class="col-lg-6 mb-4">
                     <form class="contact-form" action="process_contact.php" method="post">
                         <div class="mb-3">
                             <label for="name-oxford" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name-oxford" name="name" placeholder="Your Name" required>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name-oxford"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                            >
                         </div>
                         <div class="mb-3">
                             <label for="email-oxford" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email-oxford" name="email" placeholder="name@example.com" required>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email-oxford"
+                                name="email"
+                                placeholder="name@example.com"
+                                required
+                            >
                         </div>
                         <div class="mb-3">
-                            <label for="service-oxford" class="form-label">Select Service</label>
+                            <label for="service-oxford" class="form-label">Select Package</label>
                             <select class="form-select" id="service-oxford" name="service" required>
                                 <option selected disabled value="">Choose...</option>
-                                <option value="premium-wash">Premium Wash (£49.99)</option>
-                                <option value="deluxe-detailing">Deluxe Detailing (£89.99)</option>
-                                <option value="ultimate-protection">Ultimate Protection (£129.99)</option>
-                                <option value="mobile-detailing">Mobile Detailing (£149.99)</option>
+                                <option value="bronze-package">Bronze Package (from £50)</option>
+                                <option value="silver-package">Silver Package (from £60)</option>
+                                <option value="gold-package">Gold Package (from £65)</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="message-oxford" class="form-label">Additional Details</label>
-                            <textarea class="form-control" id="message-oxford" name="message" rows="4" placeholder="Any specific requests or comments..."></textarea>
+                            <textarea
+                                class="form-control"
+                                id="message-oxford"
+                                name="message"
+                                rows="4"
+                                placeholder="Any specific requests or comments..."
+                            ></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
                 <!-- Calendly Widget -->
                 <div class="col-lg-6">
-                    <div id="calendly-booking">
-                        <h3 class="text-center mb-3">Schedule Your Appointment</h3>
-                        <!-- Calendly Inline Widget -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/nowaterjustshine/oxford-appointment" style="min-width:320px;height:630px;"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    </div>
+                    <div class="calendly-inline-widget"
+                         data-url="https://calendly.com/nowaterjustshine/oxford-appointment"
+                         style="min-width:320px;height:630px;"
+                    ></div>
+                    <script
+                        type="text/javascript"
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        async
+                    ></script>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- ====================================
-         INTERACTIVE MAP SECTION
+         INTERACTIVE MAP
     ===================================== -->
-    <section id="map">
+    <section id="map" class="my-5">
         <div class="container">
-            <h2>Our Service Area</h2>
+            <h2 class="text-center mb-4">Our Service Area</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.96042535436!2d-1.2597731999999999!3d51.7520132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764b1bdfc10f5b%3A0x8e1a37b1e6b3a8e!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1682619732457!5m2!1sen!2s" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.96042535436!2d-1.2597731999999999!3d51.7520132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764b1bdfc10f5b%3A0x8e1a37b1e6b3a8e!2sOxford%2C%20UK!5e0!3m2!1sen!2s!4v1682619732457!5m2!1sen!2s"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- ====================================
-         FOOTER SECTION
-    ===================================== -->
-    FOOTER
+         FOOTER
     ===================================== -->
     <footer class="site-footer">
         <div class="container">
@@ -443,56 +683,81 @@
                         <li><a href="oxford.html">Oxford</a></li>
                         <li><a href="swindon.html">Swindon</a></li>
                         <li><a href="cambridge.html">Cambridge</a></li>
-                      
                         <li><a href="franchise.html">Join Our Franchise</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                       
                     </ul>
                 </div>
+                
                 <!-- Footer Column 2 -->
                 <div class="col-md-4 mb-4">
                     <h5>Contact Info</h5>
-                    <p>Phone: <a href="tel:07703783253">07703 783253</a></p>
-                    <p>Email: <a href="mailto:info@nowaterjustshine.co.uk">info@nowaterjustshine.co.uk</a></p>
-                    <p>Address: 6 Millard Rd, Blunsdon St Andrew, Swindon SN25 4EP</p>
+                    <p>
+                        Phone: <a href="tel:07703783253">07703 783253</a>
+                    </p>
+                    <p>
+                        Email: 
+                        <a href="mailto:info@nowaterjustshine.co.uk">
+                            info@nowaterjustshine.co.uk
+                        </a>
+                    </p>
+                    <p>
+                        Address: 6 Millard Rd, Blunsdon St Andrew, 
+                        Swindon SN25 4EP
+                    </p>
                 </div>
+                
                 <!-- Footer Column 3 (Social) -->
                 <div class="col-md-4 mb-4">
                     <h5>Follow Us</h5>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/NoWaterJustShine/" target="_blank" aria-label="Facebook">
+                        <a
+                            href="https://www.facebook.com/NoWaterJustShine/"
+                            target="_blank"
+                            aria-label="Facebook"
+                        >
                             <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
                         </a>
-                        <a href="https://www.instagram.com/nowaterjustshine" target="_blank" aria-label="Instagram">
+                        <a
+                            href="https://www.instagram.com/nowaterjustshine"
+                            target="_blank"
+                            aria-label="Instagram"
+                        >
                             <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
                         </a>
                     </div>
                 </div>
             </div>
+            
             <!-- Bottom Footer -->
             <div class="footer-bottom">
                 <div>
                     &copy; 2025 No Water Just Shine Limited. All rights reserved.
                 </div>
                 <div>
-                    <a href="privacy.html">Privacy Policy</a> | 
+                    <a href="privacy.html">Privacy Policy</a> |
                     <a href="terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- ====================================
          FLOATING SERVICE AREAS BUTTON
     ===================================== -->
-    <a href="#service-areas" class="floating-service-areas-btn" aria-label="View Service Areas">
+    <a
+        href="#service-areas"
+        class="floating-service-areas-btn"
+        aria-label="View Service Areas"
+    >
         <i class="fa fa-map-marker-alt me-2"></i>
         Service Areas
     </a>
-    
+
     <!-- Bootstrap JS (Bundle) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
     <!-- Custom JavaScript -->
     <script>
         // Smooth Scroll for In-Page Links
@@ -527,12 +792,6 @@
                     link.classList.add('active');
                 }
             });
-        });
-
-        // Initialize Carousel
-        var testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
-            interval: 5000,
-            ride: 'carousel'
         });
     </script>
 </body>

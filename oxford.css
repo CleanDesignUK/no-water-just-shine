@@ -1,212 +1,201 @@
 /********************************************
  * oxford.css
  * Page-Specific Styles for oxford.html
- * (Ensure these styles complement styles.css)
+ * (Relies on color variables and shared layouts 
+ *  from your global styles.css)
  ********************************************/
 
+/* 
+In your "styles.css", be sure to have color variables such as:
+:root {
+    --dark-royal-blue: #002147;
+    --shiny-metallic-silver: #C0C0C0;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --primary-color: #0066cc;
+    --secondary-color: #ff9900;
+    --hover-color: #e0e0e0;
+}
+*/
+
 /* ===========================
-   Hero Section Enhancements
+   PARALLAX HERO BANNER
 =========================== */
 #hero {
-    background: linear-gradient(rgba(0, 102, 204, 0.6), rgba(0, 102, 204, 0.6)), url('images/franchise-oxford.jpg') no-repeat center center/cover;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    color: #fff;
-    text-align: center;
+    background-image: url("images/franchise-oxford.jpg"); /* Replace with actual Oxford banner image */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 #hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 102, 204, 0.6);
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 #hero .hero-content {
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 #hero h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 #hero p.lead {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
 }
 
-#hero .btn-primary {
-    padding: 12px 30px;
+#hero .btn {
     font-size: 1rem;
-    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#hero .btn-primary:hover {
+#hero .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 /* ===========================
-   About Section Enhancements
+   ABOUT OUR OXFORD BRANCH
 =========================== */
-#about h2 {
+#oxford-about h2 {
     font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-    margin-bottom: 40px;
-    text-align: center;
+    color: var(--dark-royal-blue);
+    margin-bottom: 1rem;
 }
 
-#about .about-content {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-#about .about-text {
-    flex: 1;
-}
-
-#about .about-text h3 {
-    font-family: 'Montserrat', sans-serif;
-    color: #002147;
-    margin-bottom: 20px;
-}
-
-#about .about-text p {
+#oxford-about p {
     font-family: 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
-    margin-bottom: 15px;
 }
 
-#about .about-image {
-    flex: 1;
-}
-
-#about .about-image img {
+#oxford-about img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-#about .about-image img:hover {
-    transform: scale(1.05);
+    object-fit: cover;
 }
 
 /* ===========================
-   Services Section Enhancements
+   PACKAGE CARDS
 =========================== */
-#services h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-    margin-bottom: 40px;
-    text-align: center;
+.package-card {
+    border: 1px solid var(--shiny-metallic-silver);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#services .service-item {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    transition: box-shadow 0.3s ease;
-    background-color: #fff;
-}
-
-#services .service-item:hover {
+.package-card:hover {
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-#services .service-item i {
-    font-size: 3rem;
-    color: #0066cc;
-    margin-bottom: 20px;
-}
-
-#services .service-item h4 {
+.package-card .card-title {
     font-family: 'Montserrat', sans-serif;
-    color: #002147;
-    margin-bottom: 15px;
+    color: var(--dark-royal-blue);
 }
 
-#services .service-item p {
+.package-card ul li {
     font-family: 'Roboto', sans-serif;
-    color: #555;
-    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.package-card ul li i {
+    color: var(--primary-color);
 }
 
 /* ===========================
-   Testimonials Section Enhancements
+   SERVICE AREAS GRID
+=========================== */
+#service-areas h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+}
+
+#service-areas p {
+    font-family: 'Roboto', sans-serif;
+}
+
+#service-areas .row-cols-2 .col,
+#service-areas .row-cols-md-3 .col {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* ===========================
+   TESTIMONIALS
 =========================== */
 #testimonials h2 {
     font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-    margin-bottom: 40px;
+    color: var(--dark-royal-blue);
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-#testimonials .testimonial-carousel {
-    position: relative;
-}
-
-#testimonials .testimonial {
-    text-align: center;
-    padding: 30px;
-    background-color: #fff;
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 0 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
 }
 
-#testimonials .testimonial p {
+.testimonial p {
     font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     color: #333;
+    margin-bottom: 1rem;
     font-style: italic;
-    margin-bottom: 20px;
 }
 
-#testimonials .testimonial h5 {
+.testimonial h5 {
     font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
+    color: var(--primary-color);
 }
 
 /* ===========================
-   FAQ Section Enhancements
+   FAQ SECTION
 =========================== */
 #faqs h2 {
     font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-
+    color: var(--dark-royal-blue);
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 #faqs .accordion-button {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
-    background-color: #e6f0ff;
-    color: #002147;
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #faqs .accordion-button.collapsed {
-    background-color: #e6f0ff;
-    color: #002147;
+    background-color: var(--light-gray);
+    color: var(--dark-royal-blue);
 }
 
 #faqs .accordion-button:not(.collapsed) {
-    background-color: #0066cc;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 #faqs .accordion-button::after {
@@ -219,160 +208,96 @@
 }
 
 /* ===========================
-   Gallery Section Enhancements
-=========================== */
-#gallery h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-#gallery .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-#gallery .gallery-grid img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-#gallery .gallery-grid img:hover {
-    transform: scale(1.05);
-}
-
-/* ===========================
-   Contact and Booking Section Enhancements
+   CONTACT & BOOKING
 =========================== */
 #contact-and-booking h2 {
     font-family: 'Montserrat', sans-serif;
-    color: #0066cc;
-    margin-bottom: 40px;
+    color: var(--dark-royal-blue);
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-#contact-and-booking .contact-form {
-    background-color: #e6f0ff;
-    padding: 30px;
+.contact-form {
+    background-color: var(--light-gray);
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-#contact-and-booking .contact-form label {
+.contact-form label {
     font-family: 'Montserrat', sans-serif;
     color: #002147;
 }
 
-#contact-and-booking .contact-form input,
-#contact-and-booking .contact-form select,
-#contact-and-booking .contact-form textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     font-family: 'Roboto', sans-serif;
-    border: 1px solid #cce0ff;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
     margin-bottom: 15px;
+    padding: 10px;
     width: 100%;
-    background-color: #fff;
-    color: #333;
-    transition: border-color 0.3s ease;
 }
 
-#contact-and-booking .contact-form input:focus,
-#contact-and-booking .contact-form select:focus,
-#contact-and-booking .contact-form textarea:focus {
-    border-color: #0066cc;
-    outline: none;
-}
-
-#contact-and-booking .contact-form .btn-primary {
-    background-color: #0066cc;
+.contact-form .btn-primary {
+    width: 100%;
+    background-color: var(--primary-color);
     border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#contact-and-booking .contact-form .btn-primary:hover {
+.contact-form .btn-primary:hover {
     background-color: #004999;
     transform: translateY(-2px);
 }
 
 /* ===========================
-   Calendly Widget Enhancements
+   MAP SECTION
 =========================== */
-#calendly-booking .calendly-inline-widget {
-    border-radius: 10px;
+#map h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-royal-blue);
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 /* ===========================
-   Floating Service Areas Button Enhancements
+   FOOTER STYLING
 =========================== */
-.floating-service-areas-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #0066cc;
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
-}
-
-.floating-service-areas-btn:hover {
-    background-color: #004999;
-    transform: translateY(-3px);
-}
-
-/* ===========================
-   Footer Enhancements
-=========================== */
-footer#footer {
+footer.site-footer {
     background-color: #002147;
-    color: #fff;
+    color: var(--white);
     padding: 40px 0;
 }
 
-footer#footer h5 {
+footer.site-footer h5 {
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 20px;
-    color: #fff;
+    margin-bottom: 1rem;
 }
 
-footer#footer p,
-footer#footer a {
+footer.site-footer p,
+footer.site-footer a {
     font-family: 'Roboto', sans-serif;
     color: #ccc;
     font-size: 0.95rem;
 }
 
-footer#footer a:hover {
-    color: #0066cc;
+footer.site-footer a:hover {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
-footer#footer .social-icons a {
+footer.site-footer .social-icons a {
     margin-right: 15px;
     color: #ccc;
     transition: color 0.3s ease;
 }
 
-footer#footer .social-icons a:hover {
-    color: #0066cc;
+footer.site-footer .social-icons a:hover {
+    color: var(--primary-color);
 }
 
-footer#footer .footer-bottom {
+footer.site-footer .footer-bottom {
     border-top: 1px solid #444;
     padding-top: 20px;
     margin-top: 20px;
@@ -381,75 +306,99 @@ footer#footer .footer-bottom {
     align-items: center;
 }
 
-footer#footer .footer-bottom ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    padding: 0;
-    margin: 0;
-}
-
-footer#footer .footer-bottom ul li a {
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
-footer#footer .footer-bottom ul li a:hover {
-    color: #0066cc;
+/* ===========================
+   FLOATING SERVICE AREAS BUTTON
+=========================== */
+.floating-service-areas-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 50px;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
 }
 
-footer#footer .newsletter-form input[type="email"] {
-    border: none;
-    border-radius: 25px 0 0 25px;
-    padding: 10px 20px;
-    width: 60%;
-    font-family: 'Roboto', sans-serif;
-}
-
-footer#footer .newsletter-form button {
-    border: none;
-    border-radius: 0 25px 25px 0;
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-}
-
-footer#footer .newsletter-form button:hover {
+.floating-service-areas-btn:hover {
     background-color: #004999;
+    color: var(--white);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 /* ===========================
-   Responsive Adjustments
+   RESPONSIVE MEDIA QUERIES
 =========================== */
+@media (max-width: 992px) {
+    #hero {
+        height: 500px;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p.lead {
+        font-size: 1.1rem;
+    }
+}
+
 @media (max-width: 768px) {
-    #about .about-content {
-        flex-direction: column;
+    #hero {
+        height: 400px;
     }
-
-    footer#footer .footer-bottom {
-        flex-direction: column;
-        text-align: center;
+    #hero h1 {
+        font-size: 2rem;
     }
-
-    footer#footer .newsletter-form input[type="email"],
-    footer#footer .newsletter-form button {
-        width: 100%;
-        border-radius: 25px;
+    #hero p.lead {
+        font-size: 1rem;
     }
-
-    footer#footer .newsletter-form button {
-        margin-top: 10px;
-        border-radius: 25px;
+    .package-card .card-title {
+        font-size: 1.25rem;
     }
-
+    .package-card ul li {
+        font-size: 0.95rem;
+    }
+    .package-card p strong {
+        font-size: 1rem;
+    }
+    #map iframe {
+        height: 350px;
+    }
     .floating-service-areas-btn {
-        right: 15px;
-        bottom: 15px;
-        padding: 10px 15px;
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    #hero {
+        height: 350px;
+    }
+    #hero h1 {
+        font-size: 1.75rem;
+    }
+    #hero p.lead {
         font-size: 0.9rem;
+    }
+    .package-card .card-title {
+        font-size: 1.1rem;
+    }
+    .package-card ul li {
+        font-size: 0.85rem;
+    }
+    .package-card p strong {
+        font-size: 0.9rem;
+    }
+    #map iframe {
+        height: 250px;
+    }
+    .floating-service-areas-btn {
+        font-size: 0.95rem;
+        padding: 8px 14px;
     }
 }

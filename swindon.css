@@ -5,10 +5,9 @@
  *  shared layouts from styles.css)
  ********************************************/
 
-/* ===========================
-   VARIABLES (Ensure these are in styles.css)
-=========================== */
-/*
+/* 
+Ensure that in your "styles.css" you have the color variables:
+
 :root {
     --dark-royal-blue: #002147;
     --shiny-metallic-silver: #C0C0C0;
@@ -25,7 +24,7 @@
 =========================== */
 .parallax-banner {
     position: relative;
-    background-image: url("images/franchise-swindon.jpg"); /* Replace with actual image */
+    background-image: url("images/franchise-swindon.jpg"); /* Replace with an actual banner image for Swindon */
     background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
@@ -130,7 +129,7 @@
 }
 
 /* ===========================
-   SERVICE AREAS LIST
+   SERVICE AREAS GRID
 =========================== */
 .service-areas-list {
     list-style: none;
@@ -149,6 +148,7 @@
     content: "\2022";
     position: absolute;
     left: 0;
+    top: 0;
     color: var(--primary-color);
     font-weight: bold;
 }
@@ -205,29 +205,7 @@
 }
 
 /* ===========================
-   GALLERY GRID
-=========================== */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-/* ===========================
-   CONTACT FORM AND CALENDLY
+   CONTACT FORM & CALENDLY
 =========================== */
 #contact-and-booking .web3-form .btn-primary {
     width: 100%;
@@ -241,7 +219,7 @@ footer#footer h5 {
     margin-bottom: 1rem;
 }
 
-footer#footer p, 
+footer#footer p,
 footer#footer a {
     font-family: 'Roboto', sans-serif;
     font-size: 0.95rem;
@@ -292,6 +270,9 @@ footer#footer .social-icons a:hover {
    RESPONSIVE MEDIA QUERIES
 =========================== */
 @media (max-width: 992px) {
+    .parallax-banner {
+        height: 500px;
+    }
     .parallax-banner h1 {
         font-size: 2.5rem;
     }
@@ -299,7 +280,11 @@ footer#footer .social-icons a:hover {
         font-size: 1.1rem;
     }
 }
+
 @media (max-width: 768px) {
+    .parallax-banner {
+        height: 400px;
+    }
     .parallax-banner h1 {
         font-size: 2rem;
     }
@@ -315,8 +300,8 @@ footer#footer .social-icons a:hover {
     .package-card p strong {
         font-size: 1rem;
     }
-    .gallery-item img {
-        height: 180px;
+    .testimonial p {
+        font-size: 0.95rem;
     }
     #map iframe {
         height: 350px;
@@ -326,9 +311,10 @@ footer#footer .social-icons a:hover {
         padding: 10px 16px;
     }
 }
+
 @media (max-width: 576px) {
     .parallax-banner {
-        height: 400px;
+        height: 350px;
     }
     .parallax-banner h1 {
         font-size: 1.75rem;
@@ -345,8 +331,8 @@ footer#footer .social-icons a:hover {
     .package-card p strong {
         font-size: 0.9rem;
     }
-    .gallery-item img {
-        height: 160px;
+    .testimonial p {
+        font-size: 0.9rem;
     }
     #map iframe {
         height: 250px;
