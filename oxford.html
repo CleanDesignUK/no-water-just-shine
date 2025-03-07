@@ -32,9 +32,9 @@
 
     <!-- FontAwesome for Icons -->
     <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        rel="stylesheet"
-    >
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+>
 
     <!-- Main Custom CSS (Global) -->
     <link rel="stylesheet" href="styles.css">
@@ -507,9 +507,9 @@
                         data-bs-parent="#faqAccordion"
                     >
                         <div class="accordion-body">
-                            Yes, we offer mobile car detailing within the Oxford area. You can
-                            book an appointment at your preferred location using our 
-                            Calendly scheduler below.
+                            Yes, we offer mobile car detailing within the Oxford area. Simply 
+                            submit your details via the contact form below or call us at 
+                            <a href="tel:07810435968">07810 435968</a> to schedule a visit.
                         </div>
                     </div>
                 </div>
@@ -564,10 +564,9 @@
                         data-bs-parent="#faqAccordion"
                     >
                         <div class="accordion-body">
-                            You can schedule your appointment right on this page using our
-                            Calendly booking widget, or submit your details via the 
-                            contact form below. We also accept phone bookings at 
-                            <a href="tel:07703783253">07703 783253</a>.
+                            You can submit your details via our contact form below. 
+                            We also accept phone bookings at 
+                            <a href="tel:07810435968">07810 435968</a>.
                         </div>
                     </div>
                 </div>
@@ -576,15 +575,33 @@
     </section>
 
     <!-- ====================================
-         CONTACT FORM AND CALENDLY BOOKING
+         CONTACT FORM (NO CALENDLY)
     ===================================== -->
     <section id="contact-and-booking" class="my-5">
         <div class="container">
             <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
-            <div class="row">
-                <!-- Contact Form -->
-                <div class="col-lg-6 mb-4">
-                    <form class="contact-form" action="process_contact.php" method="post">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <!-- Updated Web3Forms Contact Form -->
+                    <form
+                        class="contact-form"
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                    >
+                        <!-- Hidden Access Key -->
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="54b7e45c-1a14-4b9e-a5f1-adb4e83730a8"
+                        />
+                        <!-- (Optional) Anti-Spam Honeypot -->
+                        <input
+                            type="text"
+                            name="honeypot"
+                            id="honeypot"
+                            style="display: none;"
+                        />
+
                         <div class="mb-3">
                             <label for="name-oxford" class="form-label">Name</label>
                             <input
@@ -609,11 +626,16 @@
                         </div>
                         <div class="mb-3">
                             <label for="service-oxford" class="form-label">Select Package</label>
-                            <select class="form-select" id="service-oxford" name="service" required>
+                            <select
+                                class="form-select"
+                                id="service-oxford"
+                                name="service"
+                                required
+                            >
                                 <option selected disabled value="">Choose...</option>
-                                <option value="bronze-package">Bronze Package (from £50)</option>
-                                <option value="silver-package">Silver Package (from £60)</option>
-                                <option value="gold-package">Gold Package (from £65)</option>
+                                <option value="Bronze Package">Bronze Package (from £50)</option>
+                                <option value="Silver Package">Silver Package (from £60)</option>
+                                <option value="Gold Package">Gold Package (from £65)</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -626,20 +648,16 @@
                                 placeholder="Any specific requests or comments..."
                             ></textarea>
                         </div>
+
+                        <!-- Redirect or Thank You Page (optional) -->
+                        <input
+                            type="hidden"
+                            name="redirect"
+                            value="https://www.nowaterjustshine.co.uk/thank-you.html"
+                        />
+
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
-                </div>
-                <!-- Calendly Widget -->
-                <div class="col-lg-6">
-                    <div class="calendly-inline-widget"
-                         data-url="https://calendly.com/nowaterjustshine/oxford-appointment"
-                         style="min-width:320px;height:630px;"
-                    ></div>
-                    <script
-                        type="text/javascript"
-                        src="https://assets.calendly.com/assets/external/widget.js"
-                        async
-                    ></script>
                 </div>
             </div>
         </div>
@@ -692,12 +710,12 @@
                 <div class="col-md-4 mb-4">
                     <h5>Contact Info</h5>
                     <p>
-                        Phone: <a href="tel:07703783253">07703 783253</a>
+                        Phone: <a href="tel:07810435968">07810 435968</a>
                     </p>
                     <p>
                         Email: 
-                        <a href="mailto:info@nowaterjustshine.co.uk">
-                            info@nowaterjustshine.co.uk
+                        <a href="mailto:darren@nowaterjustshine.co.uk">
+                            darren@nowaterjustshine.co.uk
                         </a>
                     </p>
                     <p>
@@ -740,18 +758,18 @@
             </div>
         </div>
     </footer>
+    <a 
+    href="#contact-and-booking" 
+    class="floating-contact-btn" 
+    aria-label="Make an Inquiry"
+>
+    <i class="fa fa-envelope me-2"></i>Contact Us
+</a>
 
-    <!-- ====================================
-         FLOATING SERVICE AREAS BUTTON
-    ===================================== -->
-    <a
-        href="#service-areas"
-        class="floating-service-areas-btn"
-        aria-label="View Service Areas"
-    >
-        <i class="fa fa-map-marker-alt me-2"></i>
-        Service Areas
-    </a>
+    <!-- 
+         Removed the floating service areas button per request.
+         (No Calendly floating button either for Oxford.)
+    -->
 
     <!-- Bootstrap JS (Bundle) -->
     <script

@@ -402,3 +402,21 @@ footer.site-footer .footer-bottom {
         padding: 8px 14px;
     }
 }
+
+
+.floating-contact-btn {
+    position: fixed;
+    bottom: 20px;       /* Adjust as needed */
+    right: 20px;        /* Adjust as needed */
+    z-index: 9999;
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.floating-contact-btn:hover {
+    opacity: 0.9;
+}
