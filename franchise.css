@@ -65,7 +65,7 @@ body {
 .hero-banner {
   position: relative;
   height: 600px;
-  background: url("https://via.placeholder.com/1920x600/002147/ffffff?text=No+Water+Just+Shine+Franchise") no-repeat center center;
+  background: url("images/franchise-opportunities-hero.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
   align-items: center;
