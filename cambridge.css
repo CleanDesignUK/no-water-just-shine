@@ -25,7 +25,7 @@
 =========================== */
 #hero {
     position: relative;
-    background-image: url("images/franchise-cambridge.jpg"); /* Use your actual Cambridge banner image */
+    background-image: url("images/hero-cambridge.jpg"); /* Use your actual Cambridge banner image */
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;

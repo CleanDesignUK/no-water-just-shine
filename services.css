@@ -164,7 +164,7 @@
 
 /* Keep package image short enough so the card header doesn't expand too large */
 .package-card .card-img-top {
-  height: 200px;
+  height: 300px;
   object-fit: cover;
 }
 
