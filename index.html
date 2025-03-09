@@ -36,18 +36,21 @@
         rel="stylesheet"
     >
 
-    <!-- Global Styles (Optional) -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- ^ This is where the user snippet is likely placed. -->
 
     <!-- Home-Specific Styles -->
     <link rel="stylesheet" href="home.css">
-</head>
 
+</head>
 <body>
+
     <!-- ====================================
-         HEADER & NAVBAR
+         HEADER & NAVBAR (Dark Background)
     ===================================== -->
     <header class="navbar-header">
+        <!-- Remove "navbar-light bg-light" so our dark background from styles.css applies -->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <!-- Brand / Logo -->
@@ -70,6 +73,7 @@
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
+                    <!-- Make sure toggler icon is white so it's visible on dark nav -->
                     <i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
                 </button>
 
@@ -147,7 +151,7 @@
     </header>
 
     <!-- ====================================
-         HERO SECTION
+         HERO SECTION (Dark Royal Blue)
     ===================================== -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
@@ -172,7 +176,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Hero Image -->
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
                     <img
@@ -186,7 +189,7 @@
     </section>
 
     <!-- ====================================
-         BRANCHES SECTION
+         BRANCHES SECTION (Light Gray BG)
     ===================================== -->
     <section id="branches">
         <div class="container">
@@ -202,7 +205,7 @@
                         <img
                             src="images/swindon-branch.jpg"
                             alt="Swindon Branch"
-                            class="branch-img"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title text-center pb-1">Swindon</h5>
@@ -212,7 +215,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #3 -->
                             <a href="swindon.html" class="btn btn-outline-primary">
                                 Learn About Swindon Services
                             </a>
@@ -225,7 +227,7 @@
                         <img
                             src="images/oxford-branch.jpg"
                             alt="Oxford Branch"
-                            class="branch-img"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title text-center pb-1">Oxford</h5>
@@ -235,7 +237,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #4 -->
                             <a href="oxford.html" class="btn btn-outline-primary">
                                 Discover Oxford Valeting
                             </a>
@@ -248,7 +249,7 @@
                         <img
                             src="images/birmingham-branch.jpg"
                             alt="Birmingham Branch"
-                            class="branch-img"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title text-center pb-1">Birmingham</h5>
@@ -258,7 +259,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #5 -->
                             <a href="birmingham.html" class="btn btn-outline-primary">
                                 Explore Birmingham Care
                             </a>
@@ -271,7 +271,7 @@
                         <img
                             src="images/cambridge-branch.jpg"
                             alt="Cambridge Branch"
-                            class="branch-img"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title text-center pb-1">Cambridge</h5>
@@ -281,7 +281,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #6 -->
                             <a href="cambridge.html" class="btn btn-outline-primary">
                                 Get Cambridge’s Eco Shine
                             </a>
@@ -293,7 +292,7 @@
     </section>
 
     <!-- ====================================
-         SERVICES OVERVIEW
+         SERVICES OVERVIEW (Light Gray BG)
     ===================================== -->
     <section id="services-overview">
         <div class="container">
@@ -310,6 +309,7 @@
                         <img
                             src="images/Exterior-Car-Valeting.jpg"
                             alt="Exterior Car Valeting"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title">Exterior Car Valeting</h5>
@@ -320,7 +320,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #7 -->
                             <a href="services.html#exterior-valeting" class="btn btn-outline-primary">
                                 See Exterior Options
                             </a>
@@ -333,6 +332,7 @@
                         <img
                             src="images/Interior-Car-Detailing-2.jpg"
                             alt="Interior Car Detailing"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title">Interior Car Detailing</h5>
@@ -343,7 +343,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #8 -->
                             <a href="services.html#interior-detailing" class="btn btn-outline-primary">
                                 View Interior Packages
                             </a>
@@ -356,6 +355,7 @@
                         <img
                             src="images/Ceramic-Sealant-Application.jpg"
                             alt="Ceramic Sealant Application"
+                            class="card-img-top"
                         >
                         <div class="card-body">
                             <h5 class="card-title">Ceramic Sealant Protection</h5>
@@ -365,7 +365,6 @@
                             </p>
                         </div>
                         <div class="card-footer bg-transparent border-top-0">
-                            <!-- Unique CTA #9 -->
                             <a href="services.html#ceramic-sealant" class="btn btn-outline-primary">
                                 Protect My Finish
                             </a>
@@ -375,7 +374,6 @@
             </div>
             <!-- View All Services Button -->
             <div class="text-center mt-5">
-                <!-- Unique CTA #10 -->
                 <a href="services.html" class="btn btn-primary">
                     Discover All Waterless Treatments
                 </a>
@@ -384,7 +382,7 @@
     </section>
 
     <!-- ====================================
-         BENEFITS
+         BENEFITS (Dark Royal Blue BG)
     ===================================== -->
     <section id="benefits">
         <div class="container">
@@ -461,7 +459,7 @@
     </section>
 
     <!-- ====================================
-         TESTIMONIALS
+         TESTIMONIALS SECTION (Light Gray BG)
     ===================================== -->
     <section id="testimonials">
         <div class="container">
@@ -569,7 +567,112 @@
     </section>
 
     <!-- ====================================
-         GALLERY (Masonry Style)
+         LATEST FACEBOOK REVIEWS (White BG)
+    ===================================== -->
+    <section id="customer-reviews" class="py-5">
+      <div class="container">
+          <h2 class="text-center mb-4">Latest Facebook Reviews</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+              
+              <!-- Review 1 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <!-- We override color to dark so it's not white on white -->
+                          <p class="card-text">
+                              "Brilliant service, Darren was amazing, very happy with our car clean
+                              inside and out. Very reasonable price too."
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Customer</h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="card-text">
+                              "Absolutely fantastic service received today by Darren, he cracked on no fuss
+                              and did an absolutely wonderful job with my car thank you so much 😊"
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Jessica Waine</h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="card-text">
+                              "Excellent job Darren thank you"
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Jean Hall</h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="card-text">
+                              "Super 5🌟 service. Would highly recommend and will definitely be using again."
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Sarah Robbins</h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="card-text">
+                              "I had my car valeted by Matt inside and outside at the start of the week
+                              and it was cleaner than when we picked it up from the dealership!!
+                              We were really impressed! I can highly recommend and will be using again.
+                              Thank you Matt 🤩"
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Emma Ferris</h5>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Review 6 -->
+              <div class="col">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <p class="card-text">
+                              "1st time I used Matt's services and I'm very impressed 👏 👌 😎 
+                              He did a great job on my little lion 🦁 today.
+                              I was impressed how he cleaned my car without water 💧 
+                              Very recommended. See u again!"
+                          </p>
+                      </div>
+                      <div class="card-footer bg-transparent border-top-0">
+                          <h5 class="card-title mb-0">- Paulo Sousa</h5>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- ====================================
+         GALLERY (Dark Royal Blue BG)
     ===================================== -->
     <section id="gallery">
         <div class="container">
@@ -578,73 +681,48 @@
                 Marvel at these before-and-after transformations. Each showcases our meticulous,
                 waterless approach that leaves your car spotless and shining.
             </p>
-            <div class="gallery-grid">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Before-and-After-Exterior-Car-Valeting.jpg"
-                        alt="Before and After - Exterior Car Valeting"
-                    >
-                    <div class="gallery-caption">
-                        Before and After - Exterior Car Valeting
+            <div class="row gy-4">
+                <!-- Example: 4 or 6 images in a row, or a grid -->
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img
+                            src="images/Before-and-After-Exterior-Car-Valeting.jpg"
+                            alt="Before and After - Exterior Car Valeting"
+                        >
+                        <div class="gallery-caption">
+                            Before and After - Exterior Car Valeting
+                        </div>
                     </div>
                 </div>
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Interior-Car-Detailing-2.jpg"
-                        alt="Interior Car Detailing"
-                    >
-                    <div class="gallery-caption">
-                        Interior Car Detailing - Spotless and Fresh
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img
+                            src="images/Interior-Car-Detailing-2.jpg"
+                            alt="Interior Car Detailing"
+                        >
+                        <div class="gallery-caption">
+                            Interior Car Detailing - Spotless and Fresh
+                        </div>
                     </div>
                 </div>
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Ceramic-Sealant-Application-2.jpg"
-                        alt="Ceramic Sealant Application"
-                    >
-                    <div class="gallery-caption">
-                        Ceramic Sealant Application for Long-Lasting Shine
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img
+                            src="images/Ceramic-Sealant-Application-2.jpg"
+                            alt="Ceramic Sealant Application"
+                        >
+                        <div class="gallery-caption">
+                            Ceramic Sealant Application for Long-Lasting Shine
+                        </div>
                     </div>
                 </div>
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Mobile-Car-Wash-in-Action.jpg"
-                        alt="Mobile Car Wash in Action"
-                    >
-                    <div class="gallery-caption">
-                        Mobile Car Wash Service at Your Location
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Headlight-Restoration.jpg"
-                        alt="Headlight Restoration"
-                    >
-                    <div class="gallery-caption">
-                        Headlight Restoration - Clear and Bright
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item">
-                    <img
-                        src="images/Engine-Bay-Detailing.jpg"
-                        alt="Engine Bay Detailing"
-                    >
-                    <div class="gallery-caption">
-                        Engine Bay Detailing - Clean and Protected
-                    </div>
-                </div>
+                <!-- Add more gallery items as needed -->
             </div>
         </div>
     </section>
 
     <!-- ====================================
-         FAQ PREVIEW
+         FAQ PREVIEW (Light Gray BG)
     ===================================== -->
     <section id="faq-preview">
         <div class="container">
@@ -798,7 +876,7 @@
     </section>
 
     <!-- ====================================
-         CALL TO ACTION
+         CALL TO ACTION (Shiny Metallic Silver BG)
     ===================================== -->
     <section class="cta-section">
         <div class="container">
@@ -815,7 +893,7 @@
     </section>
 
     <!-- ====================================
-         FOOTER
+         FOOTER (Dark Royal Blue)
     ===================================== -->
     <footer class="site-footer">
         <div class="container">
@@ -852,7 +930,7 @@
                             target="_blank"
                             aria-label="Facebook"
                         >
-                            <i class="bi bi-facebook text-white" style="font-size: 1.1rem;"> Facebook </i>
+                            <i class="bi bi-facebook" style="font-size: 1.1rem;"> Facebook </i>
                         </a>
                         <a
                             href="https://www.instagram.com/nowaterjustshine"
@@ -863,7 +941,6 @@
                         </a>
                     </div>
                 </div>
-               
             </div>
 
             <!-- Bottom Footer -->
