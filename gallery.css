@@ -1,0 +1,104 @@
+/* gallery.css */
+
+/* General Reset & Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar-header {
+    background-color: #002147;
+  }
+  .navbar-header .navbar-brand {
+    color: #fff;
+  }
+  .navbar-header .navbar-brand img {
+    margin-right: 10px;
+  }
+  .navbar .nav-link {
+    color: #fff;
+  }
+  .navbar .nav-link.active {
+    font-weight: bold;
+  }
+  
+  /* Before & After Section */
+  .before-after-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+  }
+  .before-after-section h1 {
+    color: #002147;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .before-after-section p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .comparison-image {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Mosaic Section */
+  .mosaic-section {
+    background-color: #fff;
+    padding: 3rem 0;
+  }
+  .mosaic-section h1 {
+    color: #002147;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .mosaic-section p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* Mosaic Grid using CSS Columns for Masonry-like Layout */
+  .mosaic-grid {
+    column-count: 3;
+    column-gap: 10px;
+  }
+  @media (max-width: 992px) {
+    .mosaic-grid {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 576px) {
+    .mosaic-grid {
+      column-count: 1;
+    }
+  }
+  .mosaic-item {
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+  .mosaic-item img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* Footer */
+  .site-footer {
+    background-color: #002147;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .site-footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
