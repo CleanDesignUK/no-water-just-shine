@@ -600,91 +600,79 @@
     </section>
 
     <!-- ====================================
-         CONTACT & BOOKING SECTION (NO PHONE, NO CALENDLY)
+         CONTACT FORM AND CALENDLY BOOKING
     ===================================== -->
     <section id="contact-and-booking" class="my-5">
         <div class="container">
             <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Updated Web3Forms Contact Form with Questions field -->
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
+                    <!-- Updated Web3Forms Contact Form -->
                     <form
-                        class="contact-form"
+                        class="web3-form"
                         action="https://api.web3forms.com/submit"
                         method="POST"
                     >
-                        <!-- Hidden Access Key -->
+                        <!-- Hidden Access Key for Web3Forms -->
                         <input
                             type="hidden"
                             name="access_key"
                             value="be8ead6a-ea6c-4b1c-bfe8-bcf823d4ce0b"
                         />
-                        <!-- Optional Honeypot for spam prevention -->
+
+                        <!-- (Optional) Add a honeypot to prevent spam -->
                         <input
                             type="text"
                             name="honeypot"
+                            id="honeypot"
                             style="display: none;"
                         />
 
                         <div class="mb-3">
-                            <label for="name-cambridge" class="form-label">Name</label>
+                            <label for="name-oxford" class="form-label">Name</label>
                             <input
                                 type="text"
                                 class="form-control"
-                                id="name-cambridge"
+                                id="name-oxford"
                                 name="name"
                                 placeholder="Your Name"
                                 required
                             >
                         </div>
                         <div class="mb-3">
-                            <label for="email-cambridge" class="form-label">Email address</label>
+                            <label for="email-oxford" class="form-label">Email address</label>
                             <input
                                 type="email"
                                 class="form-control"
-                                id="email-cambridge"
+                                id="email-oxford
                                 name="email"
                                 placeholder="name@example.com"
                                 required
                             >
                         </div>
                         <div class="mb-3">
-                            <label for="service-cambridge" class="form-label">Select Package</label>
-                            <select
-                                class="form-select"
-                                id="service-cambridge"
-                                name="service"
-                                required
-                            >
+                            <label for="service-oxford" class="form-label">Select Package</label>
+                            <select class="form-select" id="service-oxford" name="service" required>
                                 <option selected disabled value="">Choose...</option>
                                 <option value="Bronze Package">Bronze Package (from £50)</option>
                                 <option value="Silver Package">Silver Package (from £60)</option>
                                 <option value="Gold Package">Gold Package (from £65)</option>
+                                <option value="Questions">General Enquiry</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="message-cambridge" class="form-label">Additional Details</label>
+                            <label for="message-oxford" class="form-label">Additional Details</label>
                             <textarea
                                 class="form-control"
-                                id="message-cambridge"
+                                id="message-oxford"
                                 name="message"
-                                rows="4"
+                                rows="3"
                                 placeholder="Any specific requests or comments..."
                             ></textarea>
                         </div>
-                        <!-- New "Questions" field -->
-                        <div class="mb-3">
-                            <label for="questions-cambridge" class="form-label">Questions</label>
-                            <textarea
-                                class="form-control"
-                                id="questions-cambridge"
-                                name="questions"
-                                rows="3"
-                                placeholder="Feel free to ask any questions here..."
-                            ></textarea>
-                        </div>
 
-                        <!-- Optional Redirect After Submission -->
+                        <!-- Redirects (optional for Web3Forms) -->
                         <input
                             type="hidden"
                             name="redirect"
@@ -693,6 +681,22 @@
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
+                </div>
+
+                <!-- Calendly Widget -->
+                <div class="col-lg-6">
+                    <!-- Calendly inline widget begin -->
+                    <div
+                        class="calendly-inline-widget"
+                        data-url="https://calendly.com/mattmjones3379-tapv/30min?primary_color=003f9b"
+                        style="min-width:320px;height:700px;"
+                    ></div>
+                    <script
+                        type="text/javascript"
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        async
+                    ></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
@@ -707,7 +711,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94592.7844!2d0.0414791!3d52.205337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d87aae2acfe3eb%3A0x2e2c70ebaf59e12f!2sCambridge%2C%20UK!5e0!3m2!1sen!2s!4v1682622131652!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78254.31332059656!2d0.03758584610437622!3d52.19891862358385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d85d89f32a012d%3A0x63a320e1a35e3d21!2sCambridge%2C%20UK!5e0!3m2!1sen!2sid!4v1743073148856!5m2!1sen!2sid"
                         width="100%"
                         height="450"
                         style="border:0;"
@@ -719,6 +723,27 @@
             </div>
         </div>
     </section>
+
+    <!-- ====================================
+         NEW FLOATING BUTTONS FOR BOOKING & INQUIRY
+    ===================================== -->
+    <div class="floating-buttons-container">
+        <!-- Calendly Booking -->
+        <a
+            href="https://calendly.com/matt-nowaterjustshine/30min"
+            target="_blank"
+            aria-label="Book a Calendly Meeting"
+        >
+            <i class="fa fa-calendar-check me-2"></i>Book a Clean
+        </a>
+        <!-- Inquiry (scroll to form) -->
+        <a
+            href="#contact-and-booking"
+            aria-label="Make an Inquiry"
+        >
+            <i class="fa fa-envelope me-2"></i>Make an Inquiry
+        </a>
+    </div>
 
     <!-- ====================================
          FOOTER
@@ -744,12 +769,17 @@
                 <!-- Footer Column 2 -->
                 <div class="col-md-4 mb-4">
                     <h5>Contact Info</h5>
-                    <!-- Phone removed (blank) -->
+                    <p>
+                        Phone: <a href="tel:07814785178">07814 785178</a>
+                    </p>
                     <p>
                         Email: 
                         <a href="mailto:cambridge@nowaterjustshine.co.uk">
                             cambridge@nowaterjustshine.co.uk
                         </a>
+                    </p>
+                    <p>
+                        Address: Cambridge, United Kingdom
                     </p>
                 </div>
 
@@ -789,16 +819,7 @@
     </footer>
 
 
-    <!-- ====================================
-         FLOATING CONTACT BUTTON
-    ===================================== -->
-    <a
-        href="#contact-and-booking"
-        class="floating-contact-btn"
-        aria-label="Contact Us"
-    >
-        <i class="fa fa-envelope me-1"></i>Contact
-    </a>
+
 
     <!-- Bootstrap JS (Bundle) -->
     <script

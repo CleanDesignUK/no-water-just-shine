@@ -588,27 +588,30 @@
         </div>
     </section>
 
+
     <!-- ====================================
-         CONTACT FORM (NO CALENDLY)
+         CONTACT FORM AND CALENDLY BOOKING
     ===================================== -->
     <section id="contact-and-booking" class="my-5">
         <div class="container">
             <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
                     <!-- Updated Web3Forms Contact Form -->
                     <form
-                        class="contact-form"
+                        class="web3-form"
                         action="https://api.web3forms.com/submit"
                         method="POST"
                     >
-                        <!-- Hidden Access Key -->
+                        <!-- Hidden Access Key for Web3Forms -->
                         <input
                             type="hidden"
                             name="access_key"
                             value="54b7e45c-1a14-4b9e-a5f1-adb4e83730a8"
                         />
-                        <!-- (Optional) Anti-Spam Honeypot -->
+
+                        <!-- (Optional) Add a honeypot to prevent spam -->
                         <input
                             type="text"
                             name="honeypot"
@@ -632,7 +635,7 @@
                             <input
                                 type="email"
                                 class="form-control"
-                                id="email-oxford"
+                                id="email-oxford
                                 name="email"
                                 placeholder="name@example.com"
                                 required
@@ -640,16 +643,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="service-oxford" class="form-label">Select Package</label>
-                            <select
-                                class="form-select"
-                                id="service-oxford"
-                                name="service"
-                                required
-                            >
+                            <select class="form-select" id="service-oxford" name="service" required>
                                 <option selected disabled value="">Choose...</option>
                                 <option value="Bronze Package">Bronze Package (from £50)</option>
                                 <option value="Silver Package">Silver Package (from £60)</option>
                                 <option value="Gold Package">Gold Package (from £65)</option>
+                                <option value="Questions">General Enquiry</option>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -658,12 +657,12 @@
                                 class="form-control"
                                 id="message-oxford"
                                 name="message"
-                                rows="4"
+                                rows="3"
                                 placeholder="Any specific requests or comments..."
                             ></textarea>
                         </div>
 
-                        <!-- Redirect or Thank You Page (optional) -->
+                        <!-- Redirects (optional for Web3Forms) -->
                         <input
                             type="hidden"
                             name="redirect"
@@ -672,6 +671,22 @@
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
+                </div>
+
+                <!-- Calendly Widget -->
+                <div class="col-lg-6">
+                    <!-- Calendly inline widget begin -->
+                    <div
+                        class="calendly-inline-widget"
+                        data-url="https://calendly.com/mattmjones0303/30min?primary_color=003f9b"
+                        style="min-width:320px;height:700px;"
+                    ></div>
+                    <script
+                        type="text/javascript"
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        async
+                    ></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
@@ -698,6 +713,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- ====================================
          FOOTER
@@ -733,8 +749,7 @@
                         </a>
                     </p>
                     <p>
-                        Address: 6 Millard Rd, Blunsdon St Andrew, 
-                        Swindon SN25 4EP
+                        Address: Oxford, United Kingdom
                     </p>
                 </div>
                 
@@ -772,18 +787,28 @@
             </div>
         </div>
     </footer>
-    <a 
-    href="#contact-and-booking" 
-    class="floating-contact-btn" 
-    aria-label="Make an Inquiry"
->
-    <i class="fa fa-envelope me-2"></i>Contact Us
-</a>
 
-    <!-- 
-         Removed the floating service areas button per request.
-         (No Calendly floating button either for Oxford.)
-    -->
+
+        <!-- ====================================
+         NEW FLOATING BUTTONS FOR BOOKING & INQUIRY
+    ===================================== -->
+    <div class="floating-buttons-container">
+        <!-- Calendly Booking -->
+        <a
+            href="https://calendly.com/mattmjones0303/30min?primary_color=003f9b"
+            target="_blank"
+            aria-label="Book a Calendly Meeting"
+        >
+            <i class="fa fa-calendar-check me-2"></i>Book a Clean
+        </a>
+        <!-- Inquiry (scroll to form) -->
+        <a
+            href="#contact-and-booking"
+            aria-label="Make an Inquiry"
+        >
+            <i class="fa fa-envelope me-2"></i>Make an Inquiry
+        </a>
+    </div>
 
     <!-- Bootstrap JS (Bundle) -->
     <script

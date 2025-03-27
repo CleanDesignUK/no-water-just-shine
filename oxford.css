@@ -262,6 +262,35 @@ In your "styles.css", be sure to have color variables such as:
 }
 
 /* ===========================
+   CONTACT FORM & CALENDLY
+=========================== */
+#contact-and-booking .web3-form .btn-primary {
+    width: 100%;
+}
+
+      .floating-buttons-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+.floating-buttons-container a {
+    text-decoration: none;
+    padding: 12px 16px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.floating-buttons-container a:hover {
+    opacity: 0.9;
+}
+/* ===========================
    FOOTER STYLING
 =========================== */
 footer.site-footer {

@@ -643,6 +643,110 @@
         </div>
     </section>
     
+
+        <!-- ====================================
+         CONTACT FORM AND CALENDLY BOOKING
+    ===================================== -->
+    <section id="contact-and-booking" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-6 mb-4">
+                    <!-- Updated Web3Forms Contact Form -->
+                    <form
+                        class="web3-form"
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                    >
+                        <!-- Hidden Access Key for Web3Forms -->
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="be8ead6a-ea6c-4b1c-bfe8-bcf823d4ce0b"
+                        />
+
+                        <!-- (Optional) Add a honeypot to prevent spam -->
+                        <input
+                            type="text"
+                            name="honeypot"
+                            id="honeypot"
+                            style="display: none;"
+                        />
+
+                        <div class="mb-3">
+                            <label for="name-oxford" class="form-label">Name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name-oxford"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label for="email-oxford" class="form-label">Email address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email-oxford
+                                name="email"
+                                placeholder="name@example.com"
+                                required
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label for="service-oxford" class="form-label">Select Package</label>
+                            <select class="form-select" id="service-oxford" name="service" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="Bronze Package">Bronze Package (from £50)</option>
+                                <option value="Silver Package">Silver Package (from £60)</option>
+                                <option value="Gold Package">Gold Package (from £65)</option>
+                                <option value="Questions">General Enquiry</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-oxford" class="form-label">Additional Details</label>
+                            <textarea
+                                class="form-control"
+                                id="message-oxford"
+                                name="message"
+                                rows="3"
+                                placeholder="Any specific requests or comments..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Redirects (optional for Web3Forms) -->
+                        <input
+                            type="hidden"
+                            name="redirect"
+                            value="https://www.nowaterjustshine.co.uk/thank-you.html"
+                        />
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+                <!-- Calendly Widget -->
+                <div class="col-lg-6">
+                    <!-- Calendly inline widget begin -->
+                    <div
+                        class="calendly-inline-widget"
+                        data-url="https://calendly.com/mattmjones3379/30min?primary_color=003f9b"
+                        style="min-width:320px;height:700px;"
+                    ></div>
+                    <script
+                        type="text/javascript"
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        async
+                    ></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ====================================
          INTERACTIVE MAP
     ===================================== -->
@@ -652,7 +756,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243657.89012345678!2d-1.890132!3d52.486243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c7f1a2b8e123%3A0x9a5d8c3b7a1f6e3!2sBirmingham%2C%20UK!5e0!3m2!1sen!2s!4v1682620123456!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155455.27832842356!2d-2.0284415966930984!3d52.49744370046886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham%2C%20UK!5e0!3m2!1sen!2sid!4v1743073345493!5m2!1sen!2sid"
                         width="100%"
                         height="450"
                         style="border:0;"
@@ -664,6 +768,27 @@
             </div>
         </div>
     </section>
+
+    <!-- ====================================
+         NEW FLOATING BUTTONS FOR BOOKING & INQUIRY
+    ===================================== -->
+    <div class="floating-buttons-container">
+        <!-- Calendly Booking -->
+        <a
+            href="https://calendly.com/matt-nowaterjustshine/30min"
+            target="_blank"
+            aria-label="Book a Calendly Meeting"
+        >
+            <i class="fa fa-calendar-check me-2"></i>Book a Clean
+        </a>
+        <!-- Inquiry (scroll to form) -->
+        <a
+            href="#contact-and-booking"
+            aria-label="Make an Inquiry"
+        >
+            <i class="fa fa-envelope me-2"></i>Make an Inquiry
+        </a>
+    </div>
 
     <!-- ====================================
          FOOTER
@@ -688,14 +813,18 @@
                 <!-- Footer Column 2 -->
                 <div class="col-md-4 mb-4">
                     <h5>Contact Info</h5>
-                    <!-- Removed phone line since it’s blank -->
                     <p>
-                        Email:
+                        Phone: <a href="tel:07745969033">07745 969033</a>
+                    </p>
+                    <p>
+                        Email: 
                         <a href="mailto:birmingham@nowaterjustshine.co.uk">
                             birmingham@nowaterjustshine.co.uk
                         </a>
                     </p>
-              
+                    <p>
+                        Address: Birmingham, United Kingdom
+                    </p>
                 </div>
                 <!-- Footer Column 3 (Social) -->
                 <div class="col-md-4 mb-4">
@@ -729,17 +858,7 @@
         </div>
     </footer>
     
-    <!-- ====================================
-         FLOATING SERVICE AREAS BUTTON
-    ===================================== -->
-    <a
-        href="#service-areas"
-        class="floating-branches-btn"
-        aria-label="View Service Areas"
-    >
-        <i class="fa fa-map-marker-alt me-2"></i>
-        Service Areas
-    </a>
+
     
     <!-- Bootstrap JS (Bundle) -->
     <script
