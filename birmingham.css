@@ -228,7 +228,7 @@
 }
 
 /* ===========================
-   CONTACT FORM AND CALENDLY
+   CONTACT FORM
 =========================== */
 #contact-and-booking .web3-form .btn-primary {
     width: 100%;
@@ -385,4 +385,3 @@ footer#footer .social-icons a:hover {
 .floating-buttons-container a:hover {
     opacity: 0.9;
 }
-

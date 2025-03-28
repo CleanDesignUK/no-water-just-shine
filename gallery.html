@@ -20,33 +20,114 @@
   <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
-  <!-- HEADER & NAVBAR -->
-  <header class="navbar-header">
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <!-- Brand / Logo -->
-        <a class="navbar-brand" href="index.html">
-          <img src="images/no-water-just-shine-logo.jpg" alt="No Water Just Shine Logo" width="60">
-          No Water Just Shine
-        </a>
-        <!-- Mobile Hamburger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
-        </button>
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="franchise.html">Franchise</a></li>
-            <!-- Gallery link is active -->
-            <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- ====================================
+         HEADER & NAVBAR
+    ===================================== -->
+    <header class="navbar-header">
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+              <!-- Brand / Logo -->
+              <a class="navbar-brand" href="index.html">
+                  <img
+                      src="images/no-water-just-shine-logo.jpg"
+                      alt="No Water Just Shine Limited Logo"
+                      width="60"
+                  >
+                  No Water Just Shine
+              </a>
+
+              <!-- Hamburger menu button (mobile) -->
+              <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+              >
+                  <i class="bi bi-list text-white" style="font-size: 1.5rem;"></i>
+              </button>
+
+              <!-- Nav Links -->
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                          <a
+                              class="nav-link"
+                              aria-current="page"
+                              href="index.html"
+                          >
+                              Home
+                          </a>
+                      </li>
+
+                      <!-- Services Dropdown -->
+                      <li class="nav-item dropdown">
+                          <a
+                              class="nav-link dropdown-toggle"
+                              href="#"
+                              id="servicesDropdown"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                          >
+                              Services
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                              <li><a class="dropdown-item" href="services.html#service-1">Exterior Paintwork Cleaning</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-2">Exterior Glass Cleaning</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-4">Alloy Wheels Cleaning</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-5">Tyre Cleaning &amp; Treatment</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-6">Plastic Trim Treatment</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-7">Door Shuts &amp; Sills Cleaning</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-8">Interior Vacuuming</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-9">Dashboard Dusting</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-0">Interior Glass Cleaning</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-11">Console Wiping</a></li>
+                              <li><a class="dropdown-item" href="services.html#service-12">Paint Treatment with Wax &amp; Ceramic Sealant</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="services.html">View All Services</a></li>
+                          </ul>
+                      </li>
+
+                      <!-- Franchise Dropdown -->
+                      <li class="nav-item dropdown">
+                          <a
+                              class="nav-link dropdown-toggle"
+                              href="#"
+                              id="franchiseDropdown"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                          >
+                              Franchise
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="franchiseDropdown">
+                              <li><a class="dropdown-item" href="swindon.html">Swindon</a></li>
+                              <li><a class="dropdown-item" href="oxford.html">Oxford</a></li>
+                              <li><a class="dropdown-item" href="birmingham.html">Birmingham</a></li>
+                              <li><a class="dropdown-item" href="cambridge.html">Cambridge</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="franchise.html">Start a Waterless Car Wash Business</a></li>
+                          </ul>
+                      </li>
+
+                      <!-- Gallery Link -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="gallery.html">Gallery</a>
+                      </li>
+
+                      <!-- Contact Link -->
+                      <li class="nav-item">
+                          <a class="nav-link" href="contact.html">
+                              Contact
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
   </header>
 
   <!-- MAIN CONTENT -->

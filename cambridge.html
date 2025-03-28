@@ -31,11 +31,11 @@
     >
 
     <!-- FontAwesome for Icons -->
-  
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
->
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
     <!-- Main Custom CSS (Global) -->
     <link rel="stylesheet" href="styles.css">
 
@@ -274,9 +274,6 @@
     </section>
 
     <!-- ====================================
-         SERVICE PACKAGES
-    ===================================== -->
-<!-- ====================================
          SERVICE PACKAGES - Cambridge
     ===================================== -->
     <section id="packages" class="my-5">
@@ -363,7 +360,6 @@
                                 <li>
                                     <i class="fa fa-check me-2 text-primary"></i>All services from Silver Package
                                 </li>
-                                <!-- Console Wiping removed -->
                                 <li>
                                     <i class="fa fa-check me-2 text-primary"></i>Paint Treatment with Wax &amp; Ceramic Sealant
                                 </li>
@@ -380,7 +376,6 @@
         </div>
     </section>
     
-
     <!-- ====================================
          SERVICE AREAS
     ===================================== -->
@@ -645,7 +640,7 @@
                             <input
                                 type="email"
                                 class="form-control"
-                                id="email-oxford
+                                id="email-oxford"
                                 name="email"
                                 placeholder="name@example.com"
                                 required
@@ -672,12 +667,12 @@
                             ></textarea>
                         </div>
 
-                        <!-- Redirects (optional for Web3Forms) -->
-                        <input
+                        <!-- Removed redirect so there's no page navigation -->
+                        <!-- <input
                             type="hidden"
                             name="redirect"
                             value="https://www.nowaterjustshine.co.uk/thank-you.html"
-                        />
+                        /> -->
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -818,49 +813,55 @@
         </div>
     </footer>
 
-
-
-
     <!-- Bootstrap JS (Bundle) -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     ></script>
 
-    <!-- Custom JavaScript -->
+    <!-- SweetAlert2 Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Handle Form Submission with SweetAlert -->
     <script>
-        // Smooth Scroll for In-Page Links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80, // Adjust for fixed navbar
-                        behavior: 'smooth'
-                    });
-                }
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.web3-form');
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData
             });
+            const json = await response.json();
+
+            if (json.success) {
+              Swal.fire({
+                title: 'Thank You!',
+                text: 'Your form has been submitted successfully.',
+                icon: 'success',
+                confirmButtonColor: 'var(--primary-color)'
+              });
+              form.reset();
+            } else {
+              Swal.fire({
+                title: 'Error',
+                text: 'There was an error submitting your form. Please try again.',
+                icon: 'error',
+                confirmButtonColor: 'var(--primary-color)'
+              });
+            }
+          } catch (error) {
+            Swal.fire({
+              title: 'Error',
+              text: 'Unable to send your inquiry at this moment. Please try again later.',
+              icon: 'error',
+              confirmButtonColor: 'var(--primary-color)'
+            });
+          }
         });
-
-        // Active Link Highlighting Based on Scroll
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('section[id]');
-            let current = '';
-
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+      });
     </script>
 </body>
 </html>

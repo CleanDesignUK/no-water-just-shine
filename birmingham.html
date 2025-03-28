@@ -29,11 +29,10 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
-
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    rel="stylesheet"
->
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
 
     <!-- Main Custom CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -317,7 +316,6 @@
                             <h5 class="card-title">Gold Package</h5>
                             <ul class="list-unstyled flex-grow-1">
                                 <li><i class="fa fa-check me-2 text-primary"></i>All services from Silver Package</li>
-                                <!-- Console Wiping removed -->
                                 <li><i class="fa fa-check me-2 text-primary"></i>Paint Treatment with Wax &amp; Ceramic Sealant</li>
                                 <li><i class="fa fa-check me-2 text-primary"></i>Windscreen treated with Rain Repellent Solution</li>
                             </ul>
@@ -544,15 +542,14 @@
     </section>
     
     <!-- ====================================
-         CONTACT FORM (NO PHONE / NO CALENDLY)
+         CONTACT + CALENDLY SECTION (ONE FORM, PLUS WIDGET)
     ===================================== -->
     <section id="contact-and-booking" class="my-5">
         <div class="container">
             <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
-            <!-- Single-column layout since there's no Calendly or phone -->
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Updated Web3Forms Contact Form -->
+            <div class="row">
+                <!-- SINGLE Web3Forms Contact Form -->
+                <div class="col-lg-6 mb-4">
                     <form
                         class="web3-form"
                         action="https://api.web3forms.com/submit"
@@ -617,7 +614,6 @@
                                 placeholder="Any specific requests or comments..."
                             ></textarea>
                         </div>
-                        <!-- New Questions Field Example -->
                         <div class="mb-3">
                             <label for="questions-birmingham" class="form-label">Questions</label>
                             <textarea
@@ -628,120 +624,24 @@
                                 placeholder="Feel free to ask any questions here..."
                             ></textarea>
                         </div>
+                        <!-- No redirect, so no page navigation -->
 
-                        <!-- Optional Redirect After Submission -->
-                        <input
-                            type="hidden"
-                            name="redirect"
-                            value="https://www.nowaterjustshine.co.uk/thank-you.html"
-                        />
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-        <!-- ====================================
-         CONTACT FORM AND CALENDLY BOOKING
-    ===================================== -->
-    <section id="contact-and-booking" class="my-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Get in Touch & Schedule Your Appointment</h2>
-            <div class="row">
-                <!-- Contact Form -->
-                <div class="col-lg-6 mb-4">
-                    <!-- Updated Web3Forms Contact Form -->
-                    <form
-                        class="web3-form"
-                        action="https://api.web3forms.com/submit"
-                        method="POST"
-                    >
-                        <!-- Hidden Access Key for Web3Forms -->
-                        <input
-                            type="hidden"
-                            name="access_key"
-                            value="be8ead6a-ea6c-4b1c-bfe8-bcf823d4ce0b"
-                        />
-
-                        <!-- (Optional) Add a honeypot to prevent spam -->
-                        <input
-                            type="text"
-                            name="honeypot"
-                            id="honeypot"
-                            style="display: none;"
-                        />
-
-                        <div class="mb-3">
-                            <label for="name-oxford" class="form-label">Name</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="name-oxford"
-                                name="name"
-                                placeholder="Your Name"
-                                required
-                            >
-                        </div>
-                        <div class="mb-3">
-                            <label for="email-oxford" class="form-label">Email address</label>
-                            <input
-                                type="email"
-                                class="form-control"
-                                id="email-oxford
-                                name="email"
-                                placeholder="name@example.com"
-                                required
-                            >
-                        </div>
-                        <div class="mb-3">
-                            <label for="service-oxford" class="form-label">Select Package</label>
-                            <select class="form-select" id="service-oxford" name="service" required>
-                                <option selected disabled value="">Choose...</option>
-                                <option value="Bronze Package">Bronze Package (from £50)</option>
-                                <option value="Silver Package">Silver Package (from £60)</option>
-                                <option value="Gold Package">Gold Package (from £65)</option>
-                                <option value="Questions">General Enquiry</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message-oxford" class="form-label">Additional Details</label>
-                            <textarea
-                                class="form-control"
-                                id="message-oxford"
-                                name="message"
-                                rows="3"
-                                placeholder="Any specific requests or comments..."
-                            ></textarea>
-                        </div>
-
-                        <!-- Redirects (optional for Web3Forms) -->
-                        <input
-                            type="hidden"
-                            name="redirect"
-                            value="https://www.nowaterjustshine.co.uk/thank-you.html"
-                        />
-
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
                     </form>
                 </div>
 
-                <!-- Calendly Widget -->
+                <!-- Calendly Widget in the second column -->
                 <div class="col-lg-6">
-                    <!-- Calendly inline widget begin -->
                     <div
                         class="calendly-inline-widget"
                         data-url="https://calendly.com/mattmjones3379/30min?primary_color=003f9b"
-                        style="min-width:320px;height:700px;"
+                        style="min-width:320px; height:700px;"
                     ></div>
                     <script
                         type="text/javascript"
                         src="https://assets.calendly.com/assets/external/widget.js"
                         async
                     ></script>
-                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
@@ -773,7 +673,6 @@
          NEW FLOATING BUTTONS FOR BOOKING & INQUIRY
     ===================================== -->
     <div class="floating-buttons-container">
-        <!-- Calendly Booking -->
         <a
             href="https://calendly.com/matt-nowaterjustshine/30min"
             target="_blank"
@@ -781,7 +680,6 @@
         >
             <i class="fa fa-calendar-check me-2"></i>Book a Clean
         </a>
-        <!-- Inquiry (scroll to form) -->
         <a
             href="#contact-and-booking"
             aria-label="Make an Inquiry"
@@ -858,48 +756,55 @@
         </div>
     </footer>
     
-
-    
     <!-- Bootstrap JS (Bundle) -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     ></script>
-    
-    <!-- Custom JavaScript -->
+
+    <!-- SweetAlert2 Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Handle Form Submission with SweetAlert -->
     <script>
-        // Smooth Scroll for In-Page Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80, // Adjust for fixed navbar
-                        behavior: 'smooth'
-                    });
-                }
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.web3-form');
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData
             });
+            const json = await response.json();
+
+            if (json.success) {
+              Swal.fire({
+                title: 'Thank You!',
+                text: 'Your form has been submitted successfully.',
+                icon: 'success',
+                confirmButtonColor: 'var(--primary-color)'
+              });
+              form.reset();
+            } else {
+              Swal.fire({
+                title: 'Error',
+                text: 'There was an error submitting your form. Please try again.',
+                icon: 'error',
+                confirmButtonColor: 'var(--primary-color)'
+              });
+            }
+          } catch (error) {
+            Swal.fire({
+              title: 'Error',
+              text: 'Unable to send your inquiry at this moment. Please try again later.',
+              icon: 'error',
+              confirmButtonColor: 'var(--primary-color)'
+            });
+          }
         });
-
-        // Active Link Highlighting Based on Scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section[id]');
-            let current = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('active');
-                }
-            });
-        });
+      });
     </script>
 </body>
 </html>

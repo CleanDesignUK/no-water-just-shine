@@ -268,7 +268,7 @@ In your "styles.css", be sure to have color variables such as:
     width: 100%;
 }
 
-      .floating-buttons-container {
+.floating-buttons-container {
     position: fixed;
     bottom: 80px;
     right: 20px;
@@ -431,7 +431,6 @@ footer.site-footer .footer-bottom {
         padding: 8px 14px;
     }
 }
-
 
 .floating-contact-btn {
     position: fixed;
